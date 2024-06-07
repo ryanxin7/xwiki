@@ -1,0 +1,99 @@
+/* RecentUpdates.module.css */
+
+.recentUpdatesSection {
+  margin-top: 3rem;
+  padding: 0 2rem;
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recentUpdatesSection h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.recentUpdates {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding-left: 2px; /* 调整左侧填充以放置点和虚线 */
+}
+
+.updateHeaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.updateHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem; /* 确保日期和内容之间有足够的间距 */
+}
+
+.updateDot {
+  width: 10px;
+  height: 10px;
+  background-color: #00bfa5;
+  border-radius: 50%;
+  margin-right: 10px; /* 调整点与时间之间的间距 */
+}
+
+.updateDate {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.updateContent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px; /* 调整虚线与内容的间距 */
+  border-left: 2px dashed #ddd;
+  padding-left: 11px;
+}
+
+.updateTitle {
+  font-size: 1rem;
+  color: #00bfa5;
+  margin: 0;
+  margin-bottom: 0.5rem; /* 调整标题与摘要之间的间距 */
+}
+
+.updateTitle a {
+  color: #00bfa5;
+  text-decoration: none;
+}
+
+.updateTitle a:hover {
+  text-decoration: underline;
+}
+
+.updateExcerpt {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.updateImage {
+  width: 100px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+.readMore {
+  color: #00bfa5;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}

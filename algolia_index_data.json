@@ -1,0 +1,172 @@
+[
+  {
+    "objectID": "docs\\intro.md",
+    "title": "Tutorial Intro",
+    "content": "--- sidebar_position: 1 ---  # Tutorial Intro  Let's discover **Docusaurus in less than 5 minutes**.  ## Getting Started  Get started by **creating a new site**.  Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.  ### What you'll need  - [Node.js](https://nodejs.org/en/download/) version 18.0 or above:   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.  ## Generate a new site  Generate a new Docusaurus site using the **classic template**.  The classic template will automatically be added to your project after you run the command:  ```bash npm init docusaurus@latest my-website classic ```  You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.  The command also installs all necessary dependencies you need to run Docusaurus.  ## Start your site  Run the development server:  ```bash cd my-website npm run start ```  The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.  The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.  Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes. ",
+    "url": "http://localhost:3000/docs/intro",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "intro.md",
+      "lvl2": ""
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-extras\\translate-your-site.md",
+    "title": "Translate your site",
+    "content": "--- sidebar_position: 2 ---  # Translate your site  Let's translate `docs/intro.md` to French.  ## Configure i18n  Modify `docusaurus.config.js` to add support for the `fr` locale:  ```js title=\"docusaurus.config.js\" export default {   i18n: {     defaultLocale: 'en',     locales: ['en', 'fr'],   }, }; ```  ## Translate a doc  Copy the `docs/intro.md` file to the `i18n/fr` folder:  ```bash mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/  cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md ```  Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.  ## Start your localized site  Start your site on the French locale:  ```bash npm run start -- --locale fr ```  Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.  :::caution  In development, you can only use one locale at a time.  :::  ## Add a Locale Dropdown  To navigate seamlessly across languages, add a locale dropdown.  Modify the `docusaurus.config.js` file:  ```js title=\"docusaurus.config.js\" export default {   themeConfig: {     navbar: {       items: [         // highlight-start         {           type: 'localeDropdown',         },         // highlight-end       ],     },   }, }; ```  The locale dropdown now appears in your navbar:  ![Locale Dropdown](./img/localeDropdown.png)  ## Build your localized site  Build your site for a specific locale:  ```bash npm run build -- --locale fr ```  Or build your site to include all the locales at once:  ```bash npm run build ``` ",
+    "url": "http://localhost:3000/docs/tutorial-extras/translate-your-site",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-extras",
+      "lvl2": "translate-your-site"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-extras\\manage-docs-versions.md",
+    "title": "Manage Docs Versions",
+    "content": "--- sidebar_position: 1 ---  # Manage Docs Versions  Docusaurus can manage multiple versions of your docs.  ## Create a docs version  Release a version 1.0 of your project:  ```bash npm run docusaurus docs:version 1.0 ```  The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.  Your docs now have 2 versions:  - `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs - `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**  ## Add a Version Dropdown  To navigate seamlessly across versions, add a version dropdown.  Modify the `docusaurus.config.js` file:  ```js title=\"docusaurus.config.js\" export default {   themeConfig: {     navbar: {       items: [         // highlight-start         {           type: 'docsVersionDropdown',         },         // highlight-end       ],     },   }, }; ```  The docs version dropdown appears in your navbar:  ![Docs Version Dropdown](./img/docsVersionDropdown.png)  ## Update an existing version  It is possible to edit versioned docs in their respective folder:  - `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello` - `docs/hello.md` updates `http://localhost:3000/docs/next/hello` ",
+    "url": "http://localhost:3000/docs/tutorial-extras/manage-docs-versions",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-extras",
+      "lvl2": "manage-docs-versions"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-basics\\deploy-your-site.md",
+    "title": "Deploy your site",
+    "content": "--- sidebar_position: 5 ---  # Deploy your site  Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).  It builds your site as simple **static HTML, JavaScript and CSS files**.  ## Build your site  Build your site **for production**:  ```bash npm run build ```  The static files are generated in the `build` folder.  ## Deploy your site  Test your production build locally:  ```bash npm run serve ```  The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).  You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**). ",
+    "url": "http://localhost:3000/docs/tutorial-basics/deploy-your-site",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-basics",
+      "lvl2": "deploy-your-site"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-basics\\create-a-page.md",
+    "title": "Create a Page",
+    "content": "--- sidebar_position: 1 ---  # Create a Page  Add **Markdown or React** files to `src/pages` to create a **standalone page**:  - `src/pages/index.js` → `localhost:3000/` - `src/pages/foo.md` → `localhost:3000/foo` - `src/pages/foo/bar.js` → `localhost:3000/foo/bar`  ## Create your first React Page  Create a file at `src/pages/my-react-page.js`:  ```jsx title=\"src/pages/my-react-page.js\" import React from 'react'; import Layout from '@theme/Layout';  export default function MyReactPage() {   return (     <Layout>       <h1>My React page</h1>       <p>This is a React page</p>     </Layout>   ); } ```  A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).  ## Create your first Markdown Page  Create a file at `src/pages/my-markdown-page.md`:  ```mdx title=\"src/pages/my-markdown-page.md\" # My Markdown page  This is a Markdown page ```  A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page). ",
+    "url": "http://localhost:3000/docs/tutorial-basics/create-a-page",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-basics",
+      "lvl2": "create-a-page"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-basics\\create-a-document.md",
+    "title": "Create a Document",
+    "content": "--- sidebar_position: 2 ---  # Create a Document  Documents are **groups of pages** connected through:  - a **sidebar** - **previous/next navigation** - **versioning**  ## Create your first Doc  Create a Markdown file at `docs/hello.md`:  ```md title=\"docs/hello.md\" # Hello  This is my **first Docusaurus document**! ```  A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).  ## Configure the Sidebar  Docusaurus automatically **creates a sidebar** from the `docs` folder.  Add metadata to customize the sidebar label and position:  ```md title=\"docs/hello.md\" {1-4} --- sidebar_label: 'Hi!' sidebar_position: 3 ---  # Hello  This is my **first Docusaurus document**! ```  It is also possible to create your sidebar explicitly in `sidebars.js`:  ```js title=\"sidebars.js\" export default {   tutorialSidebar: [     'intro',     // highlight-next-line     'hello',     {       type: 'category',       label: 'Tutorial',       items: ['tutorial-basics/create-a-document'],     },   ], }; ``` ",
+    "url": "http://localhost:3000/docs/tutorial-basics/create-a-document",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-basics",
+      "lvl2": "create-a-document"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-basics\\create-a-blog-post.md",
+    "title": "Create a Blog Post",
+    "content": "--- sidebar_position: 3 ---  # Create a Blog Post  Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...  ## Create your first Post  Create a file at `blog/2021-02-28-greetings.md`:  ```md title=\"blog/2021-02-28-greetings.md\" --- slug: greetings title: Greetings! authors:   - name: Joel Marcey     title: Co-creator of Docusaurus 1     url: https://github.com/JoelMarcey     image_url: https://github.com/JoelMarcey.png   - name: Sébastien Lorber     title: Docusaurus maintainer     url: https://sebastienlorber.com     image_url: https://github.com/slorber.png tags: [greetings] ---  Congratulations, you have made your first post!  Feel free to play around and edit this post as much as you like. ```  A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings). ",
+    "url": "http://localhost:3000/docs/tutorial-basics/create-a-blog-post",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-basics",
+      "lvl2": "create-a-blog-post"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "docs\\tutorial-basics\\congratulations.md",
+    "title": "Congratulations!",
+    "content": "--- sidebar_position: 6 ---  # Congratulations!  You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.  Docusaurus has **much more to offer**!  Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.  Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)  ## What's next?  - Read the [official documentation](https://docusaurus.io/) - Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config) - Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration) - Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout) - Add a [search bar](https://docusaurus.io/docs/search) - Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase) - Get involved in the [Docusaurus Community](https://docusaurus.io/community/support) ",
+    "url": "http://localhost:3000/docs/tutorial-basics/congratulations",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "tutorial-basics",
+      "lvl2": "congratulations"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "src\\k8s\\intro.md",
+    "title": "Tutorial Intro",
+    "content": "--- sidebar_position: 1 date: 2024-06-04T10:00 img: /img/docusaurus.png ---  # Tutorial Intro  Let's discover **Docusaurus in less than 5 minutes**.  ## Getting Started  Get started by **creating a new site**.  Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.  ### What you'll need  - [Node.js](https://nodejs.org/en/download/) version 18.0 or above:   - When installing Node.js, you are recommended to check all checkboxes related to dependencies.  ## Generate a new site  Generate a new Docusaurus site using the **classic template**.  The classic template will automatically be added to your project after you run the command:  ```bash npm init docusaurus@latest my-website classic ```  You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.  The command also installs all necessary dependencies you need to run Docusaurus.  ## Start your site  Run the development server:  ```bash cd my-website npm run start ```  The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.  The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.  Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes. ",
+    "url": "http://localhost:3000/docs/src/k8s/intro",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "k8s",
+      "lvl2": "intro"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  },
+  {
+    "objectID": "src\\k8s\\index.md",
+    "title": "Welcome to the Kubernetes Documentation",
+    "content": "--- id: index title: Kubernetes Home date: 2024-06-03T10:00 ---  # Welcome to the Kubernetes Documentation  This is the home page for the Kubernetes documentation.",
+    "url": "http://localhost:3000/docs/src/k8s/index",
+    "hierarchy": {
+      "lvl0": "Documentation",
+      "lvl1": "k8s",
+      "lvl2": "index"
+    },
+    "language": "en",
+    "docusaurus_tag": [
+      "default",
+      "docs-default-current",
+      "docs-k8s-current"
+    ]
+  }
+]

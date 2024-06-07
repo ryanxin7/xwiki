@@ -1,0 +1,139 @@
+/* 项目部分的整体样式 */
+.projectsSection {
+  background-color: #FBFDFF;
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* 标题部分样式 */
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* 标题文字样式 */
+.sectionTitle h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 卡片容器样式 */
+.cardContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* 隐藏溢出以创建滑动效果 */
+}
+
+/* 卡片包裹样式，控制滑动动画 */
+.cardsWrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */
+  width: 100%;
+}
+
+/* 单页卡片容器样式 */
+.cardsPage {
+  display: flex;
+  flex-wrap: wrap; /* 允许换行 */
+  justify-content: space-between; /* 确保卡片之间有间距 */
+  width: 100%;
+  flex-shrink: 0; /* 防止缩小 */
+}
+
+/* 单个卡片样式 */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: calc(33.33% - 2rem); /* 每行三张卡片 */
+  box-sizing: border-box;
+}
+
+/* 卡片悬停效果 */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 卡片图像样式 */
+.cardImage img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 200px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 卡片内容样式 */
+.cardBody {
+  padding: 1rem;
+}
+
+/* 卡片标题样式 */
+.cardBody h3 {
+  position: relative;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #255fae;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* 卡片标题下划线效果 */
+.cardBody h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #255fae;
+  transition: width 0.5s;
+}
+
+/* 卡片标题悬停效果 */
+.cardBody h3:hover::after {
+  width: 100%;
+}
+
+/* 卡片描述样式 */
+.cardBody p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #8b8da3;
+  font-weight: bold;
+}
+
+/* 分页圆点容器样式 */
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* 分页圆点样式 */
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* 活动分页圆点样式 */
+.activeDot {
+  background-color: #717171;
+}
