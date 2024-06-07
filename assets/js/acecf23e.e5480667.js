@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxlog=self.webpackChunkxlog||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/xwiki/blog","blogTitle":"Blog"}')}}]);
