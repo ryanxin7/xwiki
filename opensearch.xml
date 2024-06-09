@@ -4,8 +4,8 @@
   <ShortName>Ryan&#39;s Wiki</ShortName>
   <Description>Search Ryan&#39;s Wiki</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://ryanxin7.github.io/xwiki/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://ryanxin7.github.io/xwiki/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://ryanxin7.github.io/xwiki/opensearch.xml" />
-  <moz:SearchForm>https://ryanxin7.github.io/xwiki/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://ryanxin7.github.io/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://ryanxin7.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://ryanxin7.github.io/opensearch.xml" />
+  <moz:SearchForm>https://ryanxin7.github.io/</moz:SearchForm>
 </OpenSearchDescription>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxlog=self.webpackChunkxlog||[]).push([[6307],{8007:e=>{e.exports=JSON.parse('{"tags":[{"label":"greetings","permalink":"/k8s/tags/greetings","count":1}]}')}}]);
