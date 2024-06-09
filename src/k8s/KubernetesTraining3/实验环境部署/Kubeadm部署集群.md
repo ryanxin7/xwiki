@@ -1,14 +1,15 @@
 ---
-id: 6
-sidebar_position: 5
-title: 【Kubeadm】Ubuntu20.04 部署 kubernetes 1.22.2版本集群
-date: 2024-06-07T12:33
-image: /img/algolia.1026fe5.640.png
+id: kubeadm-cluster-deployment
+title: Kubeadm 部署集群
+slug: /KubernetesTraining3/LabEnvironment/kubeadm-cluster-deployment
+date: 2024-03-07T10:23:32
 ---
+<a name="UMkO9"></a>
 # 一、集群部署
 使用 containerd 作为容器运行时搭建 Kubernetes 集群<br />现在我们使用 kubeadm 从头搭建一个使用 containerd 作为容器运行时的 Kubernetes 集群，这里我们安装最新的 v1.22.2 版本。
 
 参考：[https://www.cnblogs.com/tingfengdengyu/articles/17336942.html](https://www.cnblogs.com/tingfengdengyu/articles/17336942.html)<br />          [https://www.cnblogs.com/khtt/p/17139972.html](https://www.cnblogs.com/khtt/p/17139972.html)
+<a name="HuZbE"></a>
 ## 1.环境准备
 3 个节点，都是 Ubuntu20.04系统，在每个节点上添加 hosts 信息：
 
@@ -63,6 +64,7 @@ apt update
 ```
 
 
+<a name="IyQ4z"></a>
 ### 1.1 设置时区
 ```bash
 #时区
@@ -89,6 +91,7 @@ systemctl stop apparmor
 systemctl disable apparmor
 ```
 
+<a name="An4un"></a>
 ### 1.2 关闭ufw服务
 ```bash
 # 关闭ufw服务
@@ -98,6 +101,7 @@ systemctl stop iptables
 systemctl disable iptables
 ```
 
+<a name="GDkDv"></a>
 ### 1.3 关闭交换空间
 ```bash
 ## 关闭交换空间
@@ -108,6 +112,7 @@ sudo sed -i '/swap/ s/^/#/g' /etc/fstab
 free -h 
 ```
 
+<a name="VdIb7"></a>
 ## 2. 内核参数优化
 ```bash
 #开启内核模块
@@ -191,6 +196,7 @@ net.bridge.bridge-nf-call-iptables = 1
 ```
 
 
+<a name="M9EOI"></a>
 ## 3.安装IPVS
 ```bash
 apt install ipset ipvsadm -y
@@ -218,12 +224,15 @@ libcrc32c              16384  6 nf_conntrack,nf_nat,openvswitch,btrfs,raid456,ip
 ```
 
 
+<a name="sLiJY"></a>
 ## 二、安装Containerd 
 三个版本区别
 
 ![image.png](https://cdn.nlark.com/yuque/0/2024/png/33538388/1709261598317-433ae6be-a533-436d-b265-1fe2daa05e55.png#averageHue=%230f151e&clientId=u75d1ed6a-2085-4&from=paste&height=789&id=u0d7d4c05&originHeight=789&originWidth=1202&originalType=binary&ratio=1&rotation=0&showTitle=false&size=147126&status=done&style=none&taskId=u6691f804-0454-41ba-b7b2-21f452481ee&title=&width=1202)
 
+<a name="bDfMw"></a>
 ### 1、apt 安装
+<a name="spyUu"></a>
 #### 1.1、查看 containerd 仓库版本
 ```bash
 root@master1:~# apt-cache madison containerd
@@ -232,10 +241,12 @@ containerd | 1.6.12-0ubuntu1~22.04.3 | http://mirrors.aliyun.com/ubuntu jammy-se
 containerd | 1.5.9-0ubuntu3 | http://mirrors.aliyun.com/ubuntu jammy/main amd64 Packages
 ```
 
+<a name="jatp0"></a>
 #### 1.2、安装 containerd
 ```bash
 apt install -y containerd=1.6.12-0ubuntu1~22.04.1
 ```
+<a name="YosYi"></a>
 #### <br />1.3、查看 containerd service 文件
 ```bash
  cat /lib/systemd/system/containerd.service
@@ -281,6 +292,7 @@ OOMScoreAdjust=-999
 WantedBy=multi-user.target
 ```
 
+<a name="y5AKL"></a>
 #### 1.4、验证 runc 环境
 ```bash
 root@containerd-server:~# whereis runc
@@ -296,6 +308,7 @@ root@containerd-server:~# containerd -v
 containerd github.com/containerd/containerd 1.6.12-0ubuntu1~22.04.1
 ```
 
+<a name="C6pXW"></a>
 #### 1.5、containerd 配置文件
 ```bash
 #查看 containerd 默认配置
@@ -309,8 +322,10 @@ root@containerd-server:~# systemctl restart containerd.service
 ```
 
 
+<a name="jUhzZ"></a>
 ### 2、二进制安装 containerd
 通过官⽅⼆进制安装 containerd、runc 及 CNI，kubernetes 从 v1.24.0 开始默认使⽤ containerd 作为容器运⾏时，因此需要提前安装好 containerd 之后在安装 v1.24 或更⾼版本的 kubernetes （如果要继续使⽤ docker，则需要单独安装 docker 及 cri-dockerd，[https://github.com/Mirantis/cri-dockerd](https://github.com/Mirantis/cri-dockerd) ）
+<a name="gJjED"></a>
 #### 2.1、下载 containerd ⼆进制文件
 containerd v1.6.24 下载地址：https://github.com/containerd/containerd/releases/tag/v1.6.24
 
@@ -318,6 +333,7 @@ containerd v1.6.24 下载地址：https://github.com/containerd/containerd/relea
 
 [https://www.cnblogs.com/tingfengdengyu/articles/17336942.html](https://www.cnblogs.com/tingfengdengyu/articles/17336942.html)
 
+<a name="LiWp3"></a>
 #### 2.2、将压缩包解压到系统的各个目录中
 
 ```bash
@@ -346,6 +362,7 @@ containerd github.com/containerd/containerd v1.6.24 61f9fd88f79f081d64d6fa3bb1a0
 ```
 
 
+<a name="tk4P9"></a>
 #### 2.3 、创建 containerd service 文件(cri-containerd-cni版本默认自带了service文件)
 
 ```bash
@@ -429,6 +446,7 @@ Mar 01 11:03:52 master1 containerd[12483]: time="2024-03-01T11:03:52.180878526+0
 ```
 
 
+<a name="e97kX"></a>
 #### 2.4、验证runc版本
 ```bash
 #查看runc版本
@@ -441,6 +459,7 @@ go: go1.20.8
 libseccomp: 2.5.3
 ```
 
+<a name="rwWQn"></a>
 #### 2.5、验证CNI插件
 ```bash
 #查看CNI插件
@@ -457,6 +476,7 @@ containerd config default > /etc/containerd/config.toml
 ```
 
 
+<a name="S4lGn"></a>
 #### 2.6 、containerd 优化
 
 对于使用 systemd 作为 init system 的 Linux 的发行版，使用 systemd 作为容器的 cgroup driver 可以确保节点在资源紧张的情况更加稳定，所以推荐将 containerd 的 cgroup driver 配置为 **systemd**。
@@ -492,6 +512,7 @@ containerd config default > /etc/containerd/config.toml
 ```bash
 systemctl daemon-reload
 systemctl restart containerd
+systemctl enable containerd.service
 
 root@node1:~# systemctl status containerd.service
 ● containerd.service - containerd container runtime
@@ -543,9 +564,12 @@ RuntimeApiVersion:  v1
 
 
 
+<a name="CL6jU"></a>
 ### 3、containerd 客户端工具扩展
+<a name="fBnN1"></a>
 #### 3.2 nerdctl 推荐使用
 官方地址：[https://github.com/containerd/nerdctl](https://github.com/containerd/nerdctl)
+<a name="jS0Dd"></a>
 ##### 3.2.1、安装 nerdctl
 [https://github.com/containerd/nerdctl/releases/download/v1.7.4/nerdctl-1.7.4-linux-amd64.tar.gz](https://github.com/containerd/nerdctl/releases/download/v1.7.4/nerdctl-1.7.4-linux-amd64.tar.gz)
 ```bash
@@ -574,6 +598,7 @@ Server:
   GitCommit:	v1.1.6-0-g0f48801a
 root@k8s-master-1:~#
 ```
+<a name="f76tT"></a>
 ##### 3.2.2、nerdctl 配置文件
 ```bash
 mkdir -p /etc/nerdctl
@@ -586,6 +611,7 @@ insecure_registry = true
 EOF
 ```
 
+<a name="yr6bX"></a>
 ##### 3.2.3、nerdctl 下载 nginx 镜像
 ```bash
 root@master1:/k8s-data# nerdctl pull nginx
@@ -602,6 +628,7 @@ layer-sha256:c7f80e9cdab20387cd09e3c47121ef0eb531043cf0aca1a52aab659de3ccb704:  
 elapsed: 7.1 s                                                                    total:  28.0 M (3.9 MiB/s) 
 ```
 
+<a name="P2rJ0"></a>
 ##### 3.2.4、nerdctl 创建 nginx 容器
 ```bash
 #nerdctl 创建 nginx 容器
@@ -657,6 +684,7 @@ Commercial support is available at
 </body>
 </html>
 ```
+<a name="stLGk"></a>
 ##### 3.2.5、nerdctl 查看 nginx 容器日志
 ```bash
 nerdctl logs -f nginx-web1
@@ -683,6 +711,7 @@ nerdctl logs -f nginx-web1
 192.168.29.12 - - [01/Mar/2024:07:40:33 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://192.168.29.6/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" "-"
 
 ```
+<a name="gIPzD"></a>
 ##### 3.2.6、nerdctl 查看容器
 ```bash
 nerdctl ps -a
@@ -691,6 +720,7 @@ CONTAINER ID    IMAGE                             COMMAND                   CREA
 ```
 
 
+<a name="mYclI"></a>
 ## 二、使用 kubeadm 部署 Kubernetes
 上面的相关环境配置也完成了，现在我们就可以来安装 Kubeadm 了
 
@@ -702,6 +732,7 @@ CONTAINER ID    IMAGE                             COMMAND                   CREA
 
 
 
+<a name="CFb1B"></a>
 ### 2.1 安装kubeadm、kubectl、kubelet
 **k8s-master 服务器：**
 ```bash
@@ -719,6 +750,7 @@ apt-get install -y kubeadm=1.22.2-00 kubectl=1.22.2-00 kubelet=1.22.2-00
 ```
 <br />** kubernetes-xenial/**" 表示一个名为 "xenial" 的仓库，该仓库包含了适用于 Ubuntu 16.04 (Xenial Xerus) 的 Kubernetes 软件包。类似地，"kubernetes-trusty/" 则可能包含了适用于 Ubuntu 14.04 (Trusty Tahr) 的 Kubernetes 软件包。
 
+<a name="MBL7A"></a>
 ### 2.2 初始化集群
 当我们执行` kubelet --help` 命令的时候可以看到原来大部分命令行参数都被 DEPRECATED了，这是因为官方推荐我们使用 --config 来指定配置文件，在配置文件中指定原来这些参数的配置，可以通过官方文档 [Set Kubelet parameters via a config file](https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/) 了解更多相关信息，这样 Kubernetes 就可以支持动态 Kubelet 配置（Dynamic Kubelet Configuration）了，参考 [Reconfigure a Node’s Kubelet in a Live Cluster](https://kubernetes.io/docs/tasks/administer-cluster/reconfigure-kubelet/)。<br />然后我们可以通过下面的命令在 master 节点上输出集群初始化默认使用的配置：
 ```bash
@@ -943,7 +975,9 @@ node2     Ready    <none>                 58s     v1.22.2
 ```
 
 
+<a name="l6Vd3"></a>
 ## 三、添加节点
+<a name="aLiKy"></a>
 ### 3.1添加 node 节点
 **node1 服务器加入节点**
 ```bash
@@ -982,6 +1016,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
 ```
 
 **查看 node 节点**
+<a name="LS2n7"></a>
 ### 3.2 添加 master 节点
 **当前maste⽣成证书⽤于添加新控制节点**
 ```bash
@@ -989,6 +1024,7 @@ kubeadm init phase upload-certs --upload-certs
 ```
 
 
+<a name="CboDG"></a>
 ## 四、部署网络组件
 这个时候其实集群还不能正常使用，因为还没有安装网络插件，接下来安装网络插件，可以在文档 [https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/) 中选择我们自己的网络插件，这里我们安装 flannel:
 
@@ -1266,6 +1302,7 @@ kube-flannel-ds-pg5d5   1/1     Running   0          7m27s
 
 
 
+<a name="P2b3v"></a>
 ## 五、Dashboard
 v1.22.2 版本的集群需要安装最新的 2.0+ 版本的 Dashboard：
 ```bash
@@ -1770,6 +1807,7 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IkJUN1ZoRDFvdlZaSG1EOGViM0N3eGtoaU9od2ttSjJvcE9WQV80
 
 
 最终我们就完成了使用 kubeadm 搭建 v1.22.1 版本的 kubernetes 集群、coredns、ipvs、flannel、containerd。
+<a name="FGAby"></a>
 ## 清理
 如果你的集群安装过程中遇到了其他问题，我们可以使用下面的命令来进行重置：
 

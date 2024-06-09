@@ -17,7 +17,7 @@ const config = {
   url: 'https://ryanxin7.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/xwiki/',
+  baseUrl: '/',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ryanxin7', // Usually your GitHub org/user name.
@@ -68,7 +68,17 @@ const config = {
         id: 'k8s',
         path: 'src/k8s',
         routeBasePath: 'k8s',
-        sidebarPath: require.resolve('./sidebars-k8s.js'), // 这里需要单独的侧边栏文件
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'haproxy',
+        path: 'src/haproxy',
+        routeBasePath: 'haproxy',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
         editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
@@ -95,9 +105,15 @@ const config = {
             label: 'Tutorial',
           },
           {
-            to: 'k8s/',
+            to: 'k8s/intro',
             activeBasePath: 'k8s',
             label: 'Kubernetes',
+            position: 'left',
+          },
+          {
+            to: 'haproxy/haproxy-1',
+            activeBasePath: 'haproxy',
+            label: 'haproxy',
             position: 'left',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
@@ -161,12 +177,9 @@ const config = {
         additionalLanguages: ['bash'],
       },
       algolia: {
-        appId: 'S9YFRHE4AD',
-        apiKey: 'e2a71a2d47a9a2f159ab3335ed26dd4f',
-        indexName: 'vk',
-        contextualSearch: true,
-        searchParameters: {
-        },
+        appId: 'UTHK6Z5YDW',
+        apiKey: '674fe85b9c2e2829b4d4179196f6c7df',
+        indexName: 'xinn',
       },
     }),
 };

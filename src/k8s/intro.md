@@ -1,7 +1,5 @@
 ---
 sidebar_position: 1
-date: 2024-06-04T10:00
-img: /img/docusaurus.png
 ---
 
 # Tutorial Intro

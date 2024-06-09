@@ -13,9 +13,9 @@ function Home() {
         <div className="container">
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h1 className="hero__title">知识库&帮助中心</h1>
+              <h1 className="hero__title">Ryan's Wiki</h1>
               <p className="hero__subtitle">
-                Baklib是一款集在线编辑+存储+展现分享为一体的知识管理工具。支持Markdown、表格、代码块等专业编辑能力，支持多种格式的文档、视频上传，让你专注于创作。
+              这里是一个装满乱七八糟知识的仓库,希望这些内容对你有所帮助，也能为你带来一些乐趣和启发。
               </p>
               <div className={styles.buttons}>
                 <Link
