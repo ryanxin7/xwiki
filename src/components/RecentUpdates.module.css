@@ -41,7 +41,7 @@
 .updateDot {
   width: 10px;
   height: 10px;
-  background-color: #00bfa5;
+  background-color: #255fae;
   border-radius: 50%;
   margin-right: 10px; /* 调整点与时间之间的间距 */
 }
@@ -68,13 +68,13 @@
 
 .updateTitle {
   font-size: 1rem;
-  color: #00bfa5;
+  color: #255fae;
   margin: 0;
   margin-bottom: 0.5rem; /* 调整标题与摘要之间的间距 */
 }
 
 .updateTitle a {
-  color: #00bfa5;
+  color: #255fae;
   text-decoration: none;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .readMore {
-  color: #00bfa5;
+  color: #7994bb;
   text-decoration: none;
   margin-top: 0.5rem;
 }

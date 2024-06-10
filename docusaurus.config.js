@@ -14,7 +14,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ryanxin7.github.io',
+  url: 'http://wiki.xinn.cc',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -30,8 +30,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
   },
 
   presets: [
@@ -180,7 +180,11 @@ const config = {
         appId: 'UTHK6Z5YDW',
         apiKey: '674fe85b9c2e2829b4d4179196f6c7df',
         indexName: 'xinn',
+        contextualSearch: true,
+        searchParameters: {
+        facetFilters: [`lang:zh`], // 添加语言过滤器
       },
+    },
     }),
 };
 

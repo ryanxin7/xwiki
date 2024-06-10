@@ -1,11 +1,14 @@
 # Step 1: Use Nginx to serve the pre-built Docusaurus project
-FROM nginx:alpine
+FROM nginx
 
 # Set working directory
 WORKDIR /usr/share/nginx/html
 
 # Copy the pre-built files to the Nginx html directory
-COPY build/ .
+COPY build.tgz .
+
+# Unpack the tar file
+RUN tar -xzvf build.tgz --strip-components=1 && rm build.tgz
 
 # Expose port 80
 EXPOSE 80
