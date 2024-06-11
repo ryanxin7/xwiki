@@ -132,3 +132,56 @@
   display: inline-block;
   margin-right: 10px;
 }
+
+/* Dark 模式样式 */
+[data-theme='dark'] .recentUpdatesSection {
+  background-color: #1e1e1e;
+}
+
+[data-theme='dark'] .recentUpdatesSection h2 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .updateHeaderContent {
+  color: #cccccc;
+}
+
+[data-theme='dark'] .updateDot {
+  background-color: #4CAF50;
+}
+
+[data-theme='dark'] .updateDate {
+  color: #aaaaaa;
+}
+
+[data-theme='dark'] .updateContent {
+  border-left: 2px dashed #444;
+}
+
+[data-theme='dark'] .updateTitle {
+  color: #4fa8ff;
+}
+
+[data-theme='dark'] .updateTitle a {
+  color: #4fa8ff;
+}
+
+[data-theme='dark'] .updateExcerpt {
+  color: #cccccc;
+}
+
+[data-theme='dark'] .updateImage {
+  border: 1px solid #555;
+}
+
+[data-theme='dark'] .readMore {
+  color: #a0c4ff;
+}
+
+[data-theme='dark'] .readMore:hover {
+  text-decoration: underline;
+}
+
+[data-theme='dark'] .noMoreUpdates {
+  color: #aaaaaa;
+}

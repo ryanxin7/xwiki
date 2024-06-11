@@ -1,3 +1,4 @@
+/* 普通模式样式 */
 .heroBanner {
     display: flex;
     align-items: center;
@@ -41,8 +42,34 @@
     max-width: 50%;
   }
   
-  .heroImage img {
+  .heroImg {
     width: 100%;
     height: auto;
+  }
+  
+  /* Dark 模式样式 */
+  [data-theme='dark'] .heroBanner {
+    background: linear-gradient(to right, white 9%, #ff1449 55%), linear-gradient(to left, white 6%, #ff1493 82%);
+    background-blend-mode: multiply;
+    /**color: white;*/
+  }
+  
+  [data-theme='dark'] .heroImage img {
+    width: 70%; /* 再次缩小图片 */
+    margin-left: 5rem; /* 增加图片与文字之间的距离 */
+  }
+  
+  [data-theme='dark'] .heroContent {
+    justify-content: space-between; /* 保持文字和图片左右布局 */
+  }
+  
+  [data-theme='dark'] .heroText {
+    padding-right: 2rem; /* 确保有间距 */
+  }
+  
+  [data-theme='dark'] .hero__title,
+  [data-theme='dark'] .hero__subtitle,
+  [data-theme='dark'] .buttons {
+    text-align: left; /* 保持文本左对齐 */
   }
   

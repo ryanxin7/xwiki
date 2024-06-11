@@ -5,10 +5,20 @@
   position: relative;
 }
 
+/* Dark 模式项目部分的整体样式 */
+[data-theme='dark'] .projectsSection {
+  background-color: #1e1e1e;
+}
+
 /* 标题部分样式 */
 .sectionTitle {
   text-align: left;
   margin-bottom: 1.5rem;
+}
+
+/* Dark 模式标题部分样式 */
+[data-theme='dark'] .sectionTitle h2 {
+  color: #ffffff;
 }
 
 /* 标题文字样式 */
@@ -60,10 +70,21 @@
   box-sizing: border-box;
 }
 
+/* Dark 模式单个卡片样式 */
+[data-theme='dark'] .card {
+  background: #2e2e2e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
 /* 卡片悬停效果 */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark 模式卡片悬停效果 */
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* 卡片图像样式 */
@@ -73,6 +94,11 @@
   max-width: 100%;
   max-height: 200px;
   border-bottom: 1px solid #ddd;
+}
+
+/* Dark 模式卡片图像样式 */
+[data-theme='dark'] .cardImage img {
+  border-bottom: 1px solid #555;
 }
 
 /* 卡片内容样式 */
@@ -90,6 +116,11 @@
   transition: color 0.3s;
 }
 
+/* Dark 模式卡片标题样式 */
+[data-theme='dark'] .cardBody h3 {
+  color: #4fa8ff;
+}
+
 /* 卡片标题下划线效果 */
 .cardBody h3::after {
   content: '';
@@ -100,6 +131,11 @@
   height: 2px;
   background-color: #255fae;
   transition: width 0.5s;
+}
+
+/* Dark 模式卡片标题下划线效果 */
+[data-theme='dark'] .cardBody h3::after {
+  background-color: #4fa8ff;
 }
 
 /* 卡片标题悬停效果 */
@@ -113,6 +149,11 @@
   margin-bottom: 1rem;
   color: #8b8da3;
   font-weight: bold;
+}
+
+/* Dark 模式卡片描述样式 */
+[data-theme='dark'] .cardBody p {
+  color: #cccccc;
 }
 
 /* 分页圆点容器样式 */
@@ -133,7 +174,17 @@
   cursor: pointer;
 }
 
+/* Dark 模式分页圆点样式 */
+[data-theme='dark'] .dot {
+  background-color: #666;
+}
+
 /* 活动分页圆点样式 */
 .activeDot {
   background-color: #717171;
+}
+
+/* Dark 模式活动分页圆点样式 */
+[data-theme='dark'] .activeDot {
+  background-color: #bbbbbb;
 }
