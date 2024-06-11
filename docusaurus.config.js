@@ -98,14 +98,14 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
+          /*{
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
-          },
+          },*/
           {
-            to: 'k8s/intro',
+            to: 'k8s/KubernetesTraining3/intro',
             activeBasePath: 'k8s',
             label: 'Kubernetes',
             position: 'left',
