@@ -4,7 +4,7 @@ const projects = [
     title: 'Kubernetes',
     imageUrl: 'img/algolia.1026fe5.640.png',
     description: '在K8s的学习过程中的记录',
-    link: '/k8s/KubernetesTraining3/intro',
+    link: '/k8s/',
   },
   {
     id: 2,

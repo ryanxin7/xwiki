@@ -41,6 +41,11 @@
     flex: 1;
     max-width: 50%;
   }
+
+  .heroSvg {
+    max-width: 85%; /* 调整这里的值以缩小SVG的大小 */
+    margin-left: 20px;
+  }
   
   .heroImg {
     width: 100%;

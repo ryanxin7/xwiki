@@ -1,7 +1,6 @@
 /* 项目部分的整体样式 */
 .projectsSection {
   background-color: #FBFDFF;
-  padding: 2rem 0;
   position: relative;
 }
 
@@ -35,7 +34,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  max-width: 1200px;
+  max-width: 1450px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden; /* 隐藏溢出以创建滑动效果 */
@@ -50,11 +49,14 @@
 
 /* 单页卡片容器样式 */
 .cardsPage {
-  display: flex;
-  flex-wrap: wrap; /* 允许换行 */
-  justify-content: space-between; /* 确保卡片之间有间距 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 一行显示四个卡片 */
+  grid-template-rows: repeat(2, 1fr); /* 两行 */
+  gap: 1rem; /* 卡片之间的间距 */
   width: 100%;
   flex-shrink: 0; /* 防止缩小 */
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 /* 单个卡片样式 */
@@ -62,12 +64,12 @@
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  width: calc(33.33% - 2rem); /* 每行三张卡片 */
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 确保卡片高度一致 */
 }
 
 /* Dark 模式单个卡片样式 */
@@ -88,11 +90,13 @@
 }
 
 /* 卡片图像样式 */
+.cardImage {
+  flex: 1 0 auto; /* 确保图像部分占据剩余空间 */
+}
 .cardImage img {
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 200px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -103,7 +107,8 @@
 
 /* 卡片内容样式 */
 .cardBody {
-  padding: 1rem;
+  padding: 0.3rem;
+  flex: 0 1 auto; /* 确保内容部分在图像下方 */
 }
 
 /* 卡片标题样式 */

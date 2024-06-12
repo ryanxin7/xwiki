@@ -1,7 +1,7 @@
 ---
-id: intro
-title: Introduction to Kubernetes
-sidebar_position: 2
+id: index
+title: Kubernetes 简介
+sidebar_position: 1
 tags: [kubernetes]
 date: 2024-06-11T21:33:32
 image: /img/algolia.1026fe5.640.png

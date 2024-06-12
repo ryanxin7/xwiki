@@ -29,7 +29,7 @@ function HeroBanner() {
             {colorMode === 'dark' ? (
               <img src="/img/creativity.png" alt="Creativity Illustration" className={styles.heroImg} />
             ) : (
-              <object type="image/svg+xml" data="/img/saas-3.svg" aria-label="SaaS Illustration"></object>
+              <object type="image/svg+xml" data="/img/saas-3.svg" aria-label="SaaS Illustration"className={styles.heroSvg}></object>
             )}
           </div>
         </div>

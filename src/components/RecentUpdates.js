@@ -5,11 +5,14 @@ import styles from './RecentUpdates.module.css';
 const RecentUpdates = () => {
   const { recentUpdates } = usePluginData('docusaurus-plugin-recent-updates') || [];
 
+  // Limit the number of recent updates to a maximum of 15
+  const limitedRecentUpdates = recentUpdates.slice(0, 15);
+
   return (
     <div className={styles.recentUpdatesSection}>
       <h2>最近更新</h2>
       <div className={styles.recentUpdates}>
-        {recentUpdates.map((update, index) => (
+        {limitedRecentUpdates.map((update, index) => (
           <div key={index} className={styles.updateItem}>
             <div className={styles.updateHeaderContent}>
               <div className={styles.updateHeader}>
@@ -29,7 +32,7 @@ const RecentUpdates = () => {
             </div>
           </div>
         ))}
-        {recentUpdates.length > 0 && (
+        {recentUpdates.length > 20 && (
           <div className={styles.noMoreUpdates}>
             <p>找不到更早的更新了，就让以前随风而逝吧…</p>
           </div>
