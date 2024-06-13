@@ -82,7 +82,7 @@ const config = {
         editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
-    require.resolve('./plugins/wordCountPlugin.js'),
+    require.resolve('./plugins/word-count-plugin.js'),
     require.resolve('./plugins/docusaurus-plugin-recent-updates'),
   ],
 

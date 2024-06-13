@@ -1,0 +1,98 @@
+{
+  "/docs/intro": {
+    "words": 208
+  },
+  "/docs/tutorial-basics/congratulations": {
+    "words": 104
+  },
+  "/docs/tutorial-basics/create-a-blog-post": {
+    "words": 105
+  },
+  "/docs/tutorial-basics/create-a-document": {
+    "words": 126
+  },
+  "/docs/tutorial-basics/create-a-page": {
+    "words": 114
+  },
+  "/docs/tutorial-basics/deploy-your-site": {
+    "words": 92
+  },
+  "/docs/tutorial-extras/manage-docs-versions": {
+    "words": 147
+  },
+  "/docs/tutorial-extras/translate-your-site": {
+    "words": 199
+  },
+  "/haproxy/haproxy-1": {
+    "words": 2446
+  },
+  "/k8s/base/kubernetes-1": {
+    "words": 8884
+  },
+  "/k8s/base/kubernetes-2": {
+    "words": 1311
+  },
+  "/k8s/base/kubernetes-3": {
+    "words": 3014
+  },
+  "/k8s/base/kubernetes-4": {
+    "words": 4239
+  },
+  "/k8s/base/kubernetes-5": {
+    "words": 1424
+  },
+  "/k8s": {
+    "words": 1184
+  },
+  "/k8s/practical-case/kubernetes-10": {
+    "words": 15002
+  },
+  "/k8s/practical-case/kubernetes-11": {
+    "words": 1768
+  },
+  "/k8s/practical-case/kubernetes-12": {
+    "words": 2982
+  },
+  "/k8s/practical-case/kubernetes-13": {
+    "words": 2223
+  },
+  "/k8s/practical-case/kubernetes-14": {
+    "words": 3555
+  },
+  "/k8s/practical-case/kubernetes-15": {
+    "words": 368
+  },
+  "/k8s/practical-case/kubernetes-16": {
+    "words": 3621
+  },
+  "/k8s/practical-case/kubernetes-17": {
+    "words": 852
+  },
+  "/k8s/practical-case/kubernetes-6": {
+    "words": 1422
+  },
+  "/k8s/practical-case/kubernetes-7": {
+    "words": 3140
+  },
+  "/k8s/practical-case/kubernetes-8": {
+    "words": 2519
+  },
+  "/k8s/practical-case/kubernetes-9": {
+    "words": 678
+  },
+  "/k8s/training3/environment/kubeadm-cluster-deployment-etcd": {
+    "words": 5820
+  },
+  "/k8s/training3/environment/kubeadm-cluster-deployment": {
+    "words": 7236
+  },
+  "/k8s/training3/environment/external-cluster-controlpanel": {
+    "words": 544
+  },
+  "/k8s/training3/intro": {
+    "words": 56
+  },
+  "/pages/markdown-page": {
+    "words": 19
+  }
+}

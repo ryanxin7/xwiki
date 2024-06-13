@@ -2,6 +2,10 @@
 sidebar_position: 1
 ---
 
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
+
 # Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.

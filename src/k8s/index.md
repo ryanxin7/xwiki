@@ -7,6 +7,9 @@ date: 2024-06-11T21:33:32
 image: /img/algolia.1026fe5.640.png
 
 ---
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
 
 # Kubernetes 简介
 

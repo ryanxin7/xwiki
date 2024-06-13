@@ -4,6 +4,10 @@ title: 4.kubernetesAPI资源对象
 date: 2023-01-12
 ---
 
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
+
 
 ![资源对象](https://cdn1.ryanxin.live/1673335368520-3d26b509-0ef8-42a6-8744-fcce0df96dee.png)
 

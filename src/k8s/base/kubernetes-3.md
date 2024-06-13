@@ -4,6 +4,9 @@ title: 3.yaml文件语法基础
 date: 2023-01-12
 ---
 
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
 
 ## 1. yaml格式
 ```bash

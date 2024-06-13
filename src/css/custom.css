@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-container-width: 1240px /*页面宽度*/
+  /*--ifm-container-width: 1540px;*/
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -60,4 +60,10 @@ html[data-theme='dark'] .header-github-link:before {
   border-radius: .25rem;
   transition: background var(--ifm-transition-fast) var(--ifm-transition-timing-default);
   font-size: 14px;
+}
+
+
+.container {
+  width: 90%;       /* 使用百分比定义中间区域的宽度 */
+  max-width: 1650px; /* 设置一个最大宽度，以防在大屏幕上过宽 */
 }

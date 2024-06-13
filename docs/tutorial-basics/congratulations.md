@@ -1,6 +1,9 @@
 ---
 sidebar_position: 6
 ---
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
 
 # Congratulations!
 

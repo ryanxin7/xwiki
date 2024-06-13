@@ -1,9 +1,14 @@
 ---
 id: kubeadm-cluster-deployment
 title: Kubeadm 部署集群
-slug: /KubernetesTraining3/LabEnvironment/kubeadm-cluster-deployment
+#slug: /KubernetesTraining3/LabEnvironment/kubeadm-cluster-deployment
 date: 2024-03-07T10:23:32
 ---
+
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
+
 <a name="UMkO9"></a>
 # 一、集群部署
 使用 containerd 作为容器运行时搭建 Kubernetes 集群<br />现在我们使用 kubeadm 从头搭建一个使用 containerd 作为容器运行时的 Kubernetes 集群，这里我们安装最新的 v1.22.2 版本。

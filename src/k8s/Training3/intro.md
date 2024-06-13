@@ -8,6 +8,10 @@ image: /img/algolia.1026fe5.640.png
 
 ---
 
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
+
 # Introduction to Kubernetes
 
 Kubernetes is an open-source container orchestration platform that automates many of the manual processes involved in deploying, managing, and scaling containerized applications.

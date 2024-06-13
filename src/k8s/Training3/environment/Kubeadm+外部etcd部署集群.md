@@ -1,9 +1,13 @@
 ---
 id: kubeadm-cluster-deployment-etcd
 title: Kubeadm+外部etcd部署集群
-slug: /KubernetesTraining3/LabEnvironment/kubeadm-cluster-deployment-etcd
+#slug: /KubernetesTraining3/LabEnvironment/kubeadm-cluster-deployment-etcd
 date: 2024-03-08T10:23:32
 ---
+
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />
 
 <a name="HQDo8"></a>
 ## 一、架构图

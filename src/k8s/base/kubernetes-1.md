@@ -4,7 +4,9 @@ title: 1.Kubernetes 二进制部署
 date: 2023-01-06T10:23:32
 ---
 
+import WordCount from '@site/src/components/WordCount';
 
+<WordCount />
 
 ## 前言
 

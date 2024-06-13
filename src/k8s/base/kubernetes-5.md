@@ -664,3 +664,9 @@ upstream  tomcat_webserver {
 
 
 ![访问测试](https://cdn1.ryanxin.live/1673872226767-dd34b982-4e75-4aa6-b700-eb761d4f4dfd.png)<br />![访问测试](https://cdn1.ryanxin.live/1673872214571-9e2fc591-cfbb-4368-8d65-1072d5a9b297.png)
+
+
+
+import WordCount from '@site/src/components/WordCount';
+
+<WordCount />

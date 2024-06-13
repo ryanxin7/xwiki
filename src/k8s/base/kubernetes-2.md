@@ -4,7 +4,9 @@ title: 2.etcd 客户端使用、数据备份与恢复
 date: 2023-01-05
 ---
 
+import WordCount from '@site/src/components/WordCount';
 
+<WordCount />
 
 etcd是CoreOS团队于2013年6月发起的开源项目，它的目标是构建一个高可用的分 布式键值(key-value)数据库。etcd内部采用raft协议作为-致性算法，etcd基于Go语言实现。
 
