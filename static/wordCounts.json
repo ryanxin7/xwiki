@@ -23,8 +23,47 @@
   "/docs/tutorial-extras/translate-your-site": {
     "words": 199
   },
+  "/elk/elasticsearch-8.10.4": {
+    "words": 5780
+  },
+  "/elk/elasticsearch-kibana-https": {
+    "words": 2712
+  },
+  "/elk/install/elk-Elasticsearch": {
+    "words": 3579
+  },
+  "/elk/install/elk-experiment": {
+    "words": 849
+  },
+  "/elk/install/elk-Filebeat": {
+    "words": 755
+  },
+  "/elk/install/elk-Kibana": {
+    "words": 651
+  },
+  "/elk/install/elk-logstash": {
+    "words": 1887
+  },
+  "/elk/install/elk-practice": {
+    "words": 2499
+  },
+  "/elk/install/Grok-patterns": {
+    "words": 2137
+  },
+  "/elk/install/h3c-mirroring-port": {
+    "words": 1652
+  },
   "/haproxy/haproxy-1": {
     "words": 2446
+  },
+  "/haproxy/Haproxy-2": {
+    "words": 2082
+  },
+  "/haproxy/Haproxy-3": {
+    "words": 2241
+  },
+  "/haproxy/Haproxy-4": {
+    "words": 490
   },
   "/k8s/base/kubernetes-1": {
     "words": 8884
@@ -43,6 +82,33 @@
   },
   "/k8s": {
     "words": 1184
+  },
+  "/k8s/k8s-documented/1.利用 kubeadm部署kubernetes集群": {
+    "words": 7494
+  },
+  "/k8s/k8s-documented/Cert-manager + ZeroSSL 的一些配置的研究": {
+    "words": 407
+  },
+  "/k8s/k8s-documented/K8S-常规运维示例-14": {
+    "words": 2320
+  },
+  "/k8s/k8s-documented/Kubernetes RBAC and Multi-User Instances": {
+    "words": 3207
+  },
+  "/k8s/k8s-documented/kubernetes,pod,container与namespace资源限制": {
+    "words": 1699
+  },
+  "/k8s/k8s-documented/Kubernetes-Network": {
+    "words": 9412
+  },
+  "/k8s/k8s-documented/kubernetes配置imagePullSecrets秘钥来拉取镜像": {
+    "words": 300
+  },
+  "/k8s/k8s-documented/NFS Subdir External Provisioner": {
+    "words": 3548
+  },
+  "/k8s/k8s-documented/用label控制Pod的位置": {
+    "words": 507
   },
   "/k8s/practical-case/kubernetes-10": {
     "words": 15002
@@ -80,16 +146,16 @@
   "/k8s/practical-case/kubernetes-9": {
     "words": 678
   },
-  "/k8s/training3/environment/kubeadm-cluster-deployment-etcd": {
+  "/k8s/Training3/environment/kubeadm-cluster-deployment-etcd": {
     "words": 5820
   },
-  "/k8s/training3/environment/kubeadm-cluster-deployment": {
+  "/k8s/Training3/environment/kubeadm-cluster-deployment": {
     "words": 7236
   },
-  "/k8s/training3/environment/external-cluster-controlpanel": {
+  "/k8s/Training3/environment/external-cluster-controlpanel": {
     "words": 544
   },
-  "/k8s/training3/intro": {
+  "/k8s/Training3/intro": {
     "words": 56
   },
   "/pages/markdown-page": {

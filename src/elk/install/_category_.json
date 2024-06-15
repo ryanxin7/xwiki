@@ -1,0 +1,8 @@
+{
+  "label": "ElasticStack 日志收集",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Elastic公司开发，管理和维护的三款开源产品Elasticsearch，Logstash和Kibana的首字母缩写，随着该套解决方案的软件生态逐渐壮大，其组件和功能也渐渐多了起来，尤其是Beats组件的引入，逐渐形成了这个系列的四大支柱，然后公司将这套解决方案重新命名为：Elastic Stack，最新版本7.X。"
+  }
+}

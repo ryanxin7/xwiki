@@ -7,7 +7,6 @@
 # Generated files
 .docusaurus
 .cache-loader
-docusaurus.config.js
 
 # Misc
 .DS_Store

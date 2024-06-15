@@ -82,6 +82,16 @@ const config = {
         editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ELK',
+        path: 'src/elk',
+        routeBasePath: 'elk',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
     require.resolve('./plugins/word-count-plugin.js'),
     require.resolve('./plugins/docusaurus-plugin-recent-updates'),
   ],
@@ -115,6 +125,12 @@ const config = {
             to: 'haproxy/haproxy-1',
             activeBasePath: 'haproxy',
             label: 'haproxy',
+            position: 'left',
+          },
+          {
+            to: 'elk/elk-Elasticsearch',
+            activeBasePath: 'elk',
+            label: 'ELK',
             position: 'left',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
