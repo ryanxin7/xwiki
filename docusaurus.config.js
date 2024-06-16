@@ -222,11 +222,11 @@ const config = {
               },
               {
                 label: 'Redis',
-                to: 'redis/redis-1',
+                to: 'Redis/',
               },
               {
                 label: 'Jenkins',
-                to: 'jenkins/jenkins-install',
+                to: 'jenkins/',
               },
             ],
           },

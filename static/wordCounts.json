@@ -45,7 +45,7 @@
     "words": 2806
   },
   "/ceph/7. Ceph-FS使用": {
-    "words": 2355
+    "words": 2354
   },
   "/ceph/8. 对象存储网关RGW": {
     "words": 3472
@@ -53,14 +53,14 @@
   "/ceph/9. ceph-crush进阶": {
     "words": 3027
   },
-  "/ceph/ceph-common 依赖问题": {
-    "words": 1519
+  "/ceph/ceph-common-dependencies": {
+    "words": 1521
   },
   "/ceph": {
     "words": 755
   },
-  "/ceph/Kubernetes结合ceph实现数据持久化": {
-    "words": 7144
+  "/ceph/ceph-with-kubernetes": {
+    "words": 7126
   },
   "/docker/DockerCE-Package-install": {
     "words": 153
@@ -126,19 +126,22 @@
     "words": 490
   },
   "/jenkins/Ansibleautopassword": {
-    "words": 4879
+    "words": 4861
   },
   "/jenkins/ansible批量配置rsyslog客户端发送日志": {
-    "words": 1983
+    "words": 1966
   },
   "/jenkins/Github-SyncToGitee": {
-    "words": 642
+    "words": 624
+  },
+  "/jenkins": {
+    "words": 656
   },
   "/jenkins/Jenkins-autodeploy": {
-    "words": 528
+    "words": 508
   },
   "/jenkins/Jenkins-install": {
-    "words": 248
+    "words": 237
   },
   "/k8s/base/kubernetes-1": {
     "words": 8884
@@ -275,8 +278,11 @@
   "/Prometheus/安装Grafana": {
     "words": 908
   },
+  "/Redis": {
+    "words": 1690
+  },
   "/Redis/redis-1": {
-    "words": 1915
+    "words": 1917
   },
   "/Redis/redis-2": {
     "words": 2132
@@ -294,7 +300,7 @@
     "words": 937
   },
   "/Redis/redis-7": {
-    "words": 1611
+    "words": 1614
   },
   "/zookeeper": {
     "words": 763

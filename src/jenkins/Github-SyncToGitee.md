@@ -2,15 +2,6 @@
 author: Ryan
 title: Github Actions 自动同步到 Gitee
 date: 2023-06-12
-lastmod: 2023-08-18
-tags: 
-    - CI/CD
-    - 持续集成
-category: 
-   - Github
-   - Gitee
-expirationReminder:
-  enable: true
 ---
 
 

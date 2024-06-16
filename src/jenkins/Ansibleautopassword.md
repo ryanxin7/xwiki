@@ -2,13 +2,6 @@
 author: Ryan
 title: Ansible批量生成并服务器密码
 date: 2023-10-17
-lastmod: 2023-10-17
-tags:
-  - 自动化和配置工具
-categories:
-  - Ansible
-expirationReminder:
-  enable: false
 ---
 
 

@@ -2,16 +2,6 @@
 author: Ryan
 title: Jenkins实践-自动构建并发布前端项目
 date: 2023-06-12
-lastmod: 2023-08-18
-tags: 
-    - CI/CD
-    - 持续集成
-category: 
-   - Jenkins
-   - Git
-   - Vue
-expirationReminder:
-  enable: false
 ---
 
 

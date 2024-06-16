@@ -90,7 +90,7 @@ relicaof 192.168.10.110 6379
 
 ![主节点](https://xin997.oss-cn-beijing.aliyuncs.com/xinblogs/webimg-Linux/elks/image-20211203155905298.png)
 
-<img src="https://xin997.oss-cn-beijing.aliyuncs.com/xinblogs/webimg-Linux/elks/image-20211203155930783.png" alt="备节点1" style="zoom:100%;" />
+<img src="https://xin997.oss-cn-beijing.aliyuncs.com/xinblogs/webimg-Linux/elks/image-20211203155930783.png" alt="备节点1"  />
 
 ![备节点2](https://xin997.oss-cn-beijing.aliyuncs.com/xinblogs/webimg-Linux/elks/image-20211203160132325.png)
 
@@ -273,7 +273,7 @@ redis-server /data/server/redis/etc/redis.conf
 
 #### 测试主从效果
 
-```
+```bash
 
 从节点
 root@redis-slave2:/data/server/redis/etc# redis-cli -h 192.168.10.114 -p 6379
@@ -281,8 +281,11 @@ root@redis-slave2:/data/server/redis/etc# redis-cli -h 192.168.10.114 -p 6379
 (error) READONLY You can't write against a read only replica.
 
 从节点仍然不能写操作
+```
+
 
 主节点
+```bash
 root@redis01:/data/server/redis/etc# redis-cli -h 192.168.10.110 -p 6379
 192.168.10.110:6379>
 192.168.10.110:6379>
@@ -303,11 +306,13 @@ OK
  8) "text"
  9) "a"
 10) "sa3123ssd"
+```
 
 切换过来的主节点可以进行写操作
 
 从节点2
 
+```bash
 root@redis01:~# redis-cli -h 192.168.10.113 -p 6379
 192.168.10.113:6379> KEYS *
  1) "a"

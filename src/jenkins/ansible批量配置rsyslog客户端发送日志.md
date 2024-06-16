@@ -2,15 +2,6 @@
 author: Ryan
 title: Ansible批量配置rsyslog客户端
 date: 2023-10-20
-lastmod: 2023-10-20
-tags: 
-    - 日志收集
-    - rsyslog
-categories:
-   - ElasticStack
-   - Ansible
-expirationReminder:
-  enable: true
 ---
 
 由于等保要求，需要收集所有服务器的日志，但是服务器这么多每个都配置工作量太大了，所以使用ansible 批量管理工具，配置并启用各个节点服务器的rsyslog客户端，然后将日志发送到一个集中的日志服务端，达到日志收集的目的。

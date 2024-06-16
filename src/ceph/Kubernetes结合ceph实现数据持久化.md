@@ -1,15 +1,8 @@
 ---
-
+id: ceph-with-kubernetes
 author: Ryan
 title: Kubernetes结合ceph实现数据持久化
 date: 2023-11-02
-lastmod: 2023-11-02
-tags: 
-    - 分布式存储
-categories:
-   - Ceph
-expirationReminder:
-  enable: true
 ---
 
 # Ceph K8s环境RBD,CephFS的使用
@@ -17,6 +10,8 @@ expirationReminder:
 让Kubernetes中的Pod能够访问Ceph中的RBD（块设备镜像）作为存储设备，需要在ceph创建rbd并且让k8s node 节点能够通过ceph认证。
 
 > 在使用Ceph作为动态存储卷的时候，确实需要确保Kubernetes集群中的各个组件，包括kube-controller-manager，能够访问Ceph存储集群。为了实现这一点，通常需要在每个Kubernetes节点上同步Ceph的认证文件。
+
+
 
 可以根据需求在Kubernetes中选择使用RBD存储或CephFS存储。
 
@@ -46,8 +41,9 @@ ceph health detail | awk '{print $2}' | sed -n '/^2\.*/p' | sed -n '1,50p'
 for i in $(ceph health detail | awk '{print $2}' | sed -n '/^2\.*/p' | sed -n '1,50p'); do
     ceph pg deep-scrub $i
 done
-
 ```
+
+
 
 ```bash
 root@ceph-mon1[10:16:36]~ #:sh deep-scrub.sh
@@ -260,7 +256,7 @@ ceph-common | 12.2.4-0ubuntu1 | http://mirrors.aliyun.com/ubuntu bionic/main amd
 
 **遇到依赖问题**
 
-解决方法：[依赖问题解决](ceph-common-依赖问题)
+解决方法：见 ceph-common-依赖问题
 
 ```bash
  $ dpkg -i ceph-common_16.2.10-1bionic_amd64.deb

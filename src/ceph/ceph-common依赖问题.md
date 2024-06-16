@@ -1,6 +1,7 @@
 ---
+id: ceph-common-dependencies
 author: Ryan
-title: ceph-common 指定版本安装依赖问题
+title: ceph-common指定版本安装依赖问题
 date: 2023-11-01
 lastmod: 2023-11-01
 tags: 
