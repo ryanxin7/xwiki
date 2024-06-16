@@ -51,7 +51,7 @@ CNI 是由 CoreOS 和 Google 联合制定的规范，旨在定义容器运行时
 
 
 
-​       Kubernetes中的Pod是调度的最小单位，可包含一个或多个容器。Pod内的多个容器共享相同的网络和存储空间，它们通过本地主机上的localhost接口直接进行本地通信，类似于同一主机上的多个进程间的通信。这种通信方式是通过一个名为pause的基础架构容器来实现的，pause容器管理Pod的网络命名空间，使得容器能够共享网络栈，从而实现高效的本地通信。
+​   Kubernetes中的Pod是调度的最小单位，可包含一个或多个容器。Pod内的多个容器共享相同的网络和存储空间，它们通过本地主机上的localhost接口直接进行本地通信，类似于同一主机上的多个进程间的通信。这种通信方式是通过一个名为pause的基础架构容器来实现的，pause容器管理Pod的网络命名空间，使得容器能够共享网络栈，从而实现高效的本地通信。
 
 
 
@@ -67,7 +67,7 @@ CNI 是由 CoreOS 和 Google 联合制定的规范，旨在定义容器运行时
 
 
 
-<img src="https://cdn1.ryanxin.live/1_B0AmH3WpQ0GYSRPw0NMK-g.webp" style="zoom:50%;" />
+<img src="https://cdn1.ryanxin.live/1_B0AmH3WpQ0GYSRPw0NMK-g.webp" />
 
 ​      Service与Pod之间的通信发生在称为集群网络的专用网络中。启动kube-apiserver时，需使用`--service-cluster-ip-range`选项指定该网络范围，例如默认值为10.96.0.0/12。在该网络中，每个Service对象都有一个称为Cluster-IP的固定地址。
 
@@ -79,7 +79,7 @@ CNI 是由 CoreOS 和 Google 联合制定的规范，旨在定义容器运行时
 
 
 
-<img src="C:\Users\xx9z\Pictures\1_kQEAKUXMcCy5DtysZkiM0A.webp" style="zoom:50%;" />
+<img src="C:\Users\xx9z\Pictures\1_kQEAKUXMcCy5DtysZkiM0A.webp"  />
 
 外部到 Pod（客户端请求）:
 

@@ -23,11 +23,71 @@
   "/docs/tutorial-extras/translate-your-site": {
     "words": 199
   },
+  "/ceph/1.Ceph理论详解": {
+    "words": 6436
+  },
+  "/ceph/10. ceph-dashboard及监控": {
+    "words": 1586
+  },
+  "/ceph/2.ceph集群部署": {
+    "words": 10165
+  },
+  "/ceph/3.Ceph-FS文件存储": {
+    "words": 1386
+  },
+  "/ceph/4.Ceph集群维护": {
+    "words": 6952
+  },
+  "/ceph/5. CephX认证机制": {
+    "words": 3304
+  },
+  "/ceph/6. Ceph-RBD使用": {
+    "words": 2806
+  },
+  "/ceph/7. Ceph-FS使用": {
+    "words": 2355
+  },
+  "/ceph/8. 对象存储网关RGW": {
+    "words": 3472
+  },
+  "/ceph/9. ceph-crush进阶": {
+    "words": 3027
+  },
+  "/ceph/ceph-common 依赖问题": {
+    "words": 1519
+  },
+  "/ceph": {
+    "words": 755
+  },
+  "/ceph/Kubernetes结合ceph实现数据持久化": {
+    "words": 7144
+  },
+  "/docker/DockerCE-Package-install": {
+    "words": 153
+  },
+  "/docker/docker二进制包方式安装": {
+    "words": 1034
+  },
+  "/docker/docker批量删除Exited状态的容器": {
+    "words": 175
+  },
+  "/docker": {
+    "words": 619
+  },
+  "/docker/tomcat基础镜像": {
+    "words": 120
+  },
+  "/docker/构建JDK17镜像": {
+    "words": 300
+  },
   "/elk/elasticsearch-8.10.4": {
     "words": 5780
   },
   "/elk/elasticsearch-kibana-https": {
     "words": 2712
+  },
+  "/elk/elk-Elasticsearch": {
+    "words": 3579
   },
   "/elk/install/elk-Elasticsearch": {
     "words": 3579
@@ -65,6 +125,21 @@
   "/haproxy/Haproxy-4": {
     "words": 490
   },
+  "/jenkins/Ansibleautopassword": {
+    "words": 4879
+  },
+  "/jenkins/ansible批量配置rsyslog客户端发送日志": {
+    "words": 1983
+  },
+  "/jenkins/Github-SyncToGitee": {
+    "words": 642
+  },
+  "/jenkins/Jenkins-autodeploy": {
+    "words": 528
+  },
+  "/jenkins/Jenkins-install": {
+    "words": 248
+  },
   "/k8s/base/kubernetes-1": {
     "words": 8884
   },
@@ -99,7 +174,7 @@
     "words": 1699
   },
   "/k8s/k8s-documented/Kubernetes-Network": {
-    "words": 9412
+    "words": 9410
   },
   "/k8s/k8s-documented/kubernetes配置imagePullSecrets秘钥来拉取镜像": {
     "words": 300
@@ -158,7 +233,88 @@
   "/k8s/Training3/intro": {
     "words": 56
   },
+  "/linux/Linux-basics": {
+    "words": 688
+  },
+  "/linux/linux-network": {
+    "words": 201
+  },
+  "/linux/linux-technology-stack": {
+    "words": 1575
+  },
+  "/linux/linux1": {
+    "words": 1094
+  },
+  "/linux/linux2": {
+    "words": 2296
+  },
+  "/linux/linux3": {
+    "words": 1633
+  },
+  "/linux/lnmp": {
+    "words": 1759
+  },
+  "/linux/nfs": {
+    "words": 2860
+  },
+  "/linux/网络安全等级保护测评-服务器整改": {
+    "words": 1433
+  },
   "/pages/markdown-page": {
     "words": 19
+  },
+  "/Prometheus": {
+    "words": 660
+  },
+  "/Prometheus/Prometheus-简介与安装": {
+    "words": 4114
+  },
+  "/Prometheus/PromQL语句": {
+    "words": 1116
+  },
+  "/Prometheus/安装Grafana": {
+    "words": 908
+  },
+  "/Redis/redis-1": {
+    "words": 1915
+  },
+  "/Redis/redis-2": {
+    "words": 2132
+  },
+  "/Redis/redis-3": {
+    "words": 3393
+  },
+  "/Redis/redis-4": {
+    "words": 1440
+  },
+  "/Redis/redis-5": {
+    "words": 1154
+  },
+  "/Redis/redis-6": {
+    "words": 937
+  },
+  "/Redis/redis-7": {
+    "words": 1611
+  },
+  "/zookeeper": {
+    "words": 763
+  },
+  "/zookeeper/kafka01": {
+    "words": 5448
+  },
+  "/zookeeper/zookeeper-01": {
+    "words": 9344
+  },
+  "/zookeeper/zookeeper-02": {
+    "words": 3350
+  },
+  "/zookeeper/zookeeper-03": {
+    "words": 539
+  },
+  "/zookeeper/zookeeper-04": {
+    "words": 651
+  },
+  "/zookeeper/zookeeper-05": {
+    "words": 194
   }
 }

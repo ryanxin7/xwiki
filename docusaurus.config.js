@@ -92,6 +92,76 @@ const config = {
         editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docker',
+        path: 'src/docker',
+        routeBasePath: 'docker',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'Redis',
+        path: 'src/Redis',
+        routeBasePath: 'Redis',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'Prometheus',
+        path: 'src/Prometheus',
+        routeBasePath: 'Prometheus',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'zookeeper',
+        path: 'src/zookeeper',
+        routeBasePath: 'zookeeper',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'linux',
+        path: 'src/linux',
+        routeBasePath: 'linux',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'jenkins',
+        path: 'src/jenkins',
+        routeBasePath: 'jenkins',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ceph',
+        path: 'src/ceph',
+        routeBasePath: 'ceph',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
     require.resolve('./plugins/word-count-plugin.js'),
     require.resolve('./plugins/docusaurus-plugin-recent-updates'),
   ],
@@ -122,18 +192,66 @@ const config = {
             position: 'left',
           },
           {
-            to: 'haproxy/haproxy-1',
-            activeBasePath: 'haproxy',
-            label: 'haproxy',
+            to: 'elk/elk-Elasticsearch',
+            activeBasePath: 'elk',
+            label: '日志',
             position: 'left',
           },
           {
-            to: 'elk/elk-Elasticsearch',
-            activeBasePath: 'elk',
-            label: 'ELK',
+            to: 'docker/',
+            activeBasePath: 'docker',
+            label: 'Docker',
             position: 'left',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'dropdown',
+            label: '中间件',
+            position: 'left',
+            items: [
+              {
+                label: 'HAProxy',
+                to: 'haproxy/haproxy-1', // 链接到 HAProxy 的路径
+              },
+              {
+                label: 'ELK',
+                to: 'elk/elk-Elasticsearch',
+              },
+              {
+                label: 'Zookeeper',
+                to: 'zookeeper/zookeeper-01', 
+              },
+              {
+                label: 'Redis',
+                to: 'redis/redis-1',
+              },
+              {
+                label: 'Jenkins',
+                to: 'jenkins/jenkins-install',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: '监控',
+            position: 'left',
+            items: [
+              {
+                label: 'Prometheus',
+                to: 'Prometheus/',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: '存储',
+            position: 'left',
+            items: [
+              {
+                label: 'Ceph',
+                to: 'ceph/',
+              },
+            ],
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             /*label: 'GitHub',*/
