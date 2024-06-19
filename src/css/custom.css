@@ -67,3 +67,26 @@ html[data-theme='dark'] .header-github-link:before {
   width: 90%;       /* 使用百分比定义中间区域的宽度 */
   max-width: 1300px; /* 设置一个最大宽度，以防在大屏幕上过宽 */
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 93%;      /* 手机端宽度设置为100% */
+    padding: 0 15px;  /* 为手机端添加适当的内边距 */
+  }
+  .menu__link {
+    font-size: 12px;  /* 调整菜单链接的字体大小 */
+  }
+  .menu__list-item-collapsible {
+    font-size: 12px;  /* 调整可折叠菜单项的字体大小 */
+  }
+  .header-github-link:before {
+    height: 20px;    /* 调整GitHub链接图标的高度 */
+    width: 20px;     /* 调整GitHub链接图标的宽度 */
+  }
+  .hero__title {
+    font-size: 1.2rem; /* 手机端下将.hero__title的字体大小改为1rem */
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+}
+}

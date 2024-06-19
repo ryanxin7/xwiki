@@ -148,3 +148,51 @@
 [data-theme='dark'] .cardBody p {
   color: #cccccc;
 }
+
+/* 增加识别手机端的代码 */
+@media (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr; /* 手机端一行显示一个卡片 */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+
+  /* 标题文字样式 */
+  .sectionTitle h2 {
+    font-size: 1.2rem; /* 手机端标题字体大小调整 */
+  }
+
+  /* 标题部分样式 */
+ .sectionTitle {
+  text-align: left;
+  margin-bottom: 0.5rem;
+ }
+ 
+  .card {
+    width: 95%; /* 手机端卡片宽度设为100% */
+    height: auto; /* 手机端卡片高度自适应 */
+   /* width: 250px; /* 固定卡片宽度 */
+    /*height: 10px; /* 固定卡片高度 */
+  }
+
+
+
+
+  .cardImage {
+    flex: 0 0 120px; /* 手机端图像部分高度调整 */
+  }
+
+  .cardImage img {
+    width: 100%;
+    height: 120px; /* 手机端图像高度调整 */
+  }
+
+  .cardBody h3 {
+    font-size: 0.9rem; /* 手机端卡片标题字体大小调整 */
+  }
+
+  .cardBody p {
+    font-size: 0.8rem; /* 手机端卡片描述字体大小调整 */
+  }
+}

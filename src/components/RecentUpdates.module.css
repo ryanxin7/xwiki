@@ -185,3 +185,43 @@
 [data-theme='dark'] .noMoreUpdates {
   color: #aaaaaa;
 }
+
+/* 增加识别手机端的代码 */
+@media (max-width: 768px) {
+  .recentUpdatesSection {
+    padding: 0 1rem; /* 调整手机端的内边距 */
+  }
+
+  .recentUpdatesSection h2 {
+    font-size: 1.5rem; /* 调整手机端标题字体大小 */
+  }
+
+  .updateItem {
+    flex-direction: column; /* 手机端将每个更新条目显示为列 */
+    padding-left: 0; /* 移除左侧填充 */
+  }
+
+  .updateContent {
+    margin-left: 0;
+    border-left: none;
+    padding-left: 0; /* 移除左侧填充 */
+    width: 100%; /* 确保内容部分宽度100% */
+  }
+
+  .updateText {
+    padding-right: 0; /* 移除右侧填充 */
+    margin-bottom: 1rem; /* 增加底部间距 */
+  }
+
+  .updateImageContainer {
+    width: 100%;
+    height: auto; /* 图片容器高度自适应 */
+    margin-top: 1rem; /* 图片与文字之间增加间距 */
+  }
+
+  .updateImage {
+    width: 100%;
+    height: auto; /* 图片宽度和高度自适应 */
+  }
+}
+
