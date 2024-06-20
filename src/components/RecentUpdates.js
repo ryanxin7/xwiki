@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import styles from './RecentUpdates.module.css';
 
@@ -20,12 +20,14 @@ const cleanText = (text) => {
 
 const RecentUpdates = () => {
   const { recentUpdates } = usePluginData('docusaurus-plugin-recent-updates') || [];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
 
   // Limit the number of recent updates to a maximum of 15
   const limitedRecentUpdates = recentUpdates.slice(0, 15);
-
-  // Check if the screen width is less than 768px
-  const isMobile = window.innerWidth <= 768;
 
   return (
     <div className={styles.recentUpdatesSection}>
