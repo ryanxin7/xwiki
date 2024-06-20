@@ -9,9 +9,10 @@ import WordCount from '@site/src/components/WordCount';
 
 <WordCount />
 
+使用 kubeadm 和外部 etcd 部署 Kubernetes 集群，确保有至少三台服务器，一台用于 Kubernetes 控制平面（Master），另外两台用于 etcd 集群（建议三台以保证高可用性）。
+
 <a name="HQDo8"></a>
 ## 一、架构图
-![Docusaurus Logo](https://docusaurus.io/img/docusaurus.png)
 ![222](https://cdn.nlark.com/yuque/0/2024/png/33538388/1710222413861-72067b8a-cb16-49f2-ad0d-a27c2108339b.png#averageHue=%23dcb14e&clientId=u3e7b0f16-9251-4&from=paste&id=uf741a1e0&originHeight=448&originWidth=1088&originalType=url&ratio=1.100000023841858&rotation=0&showTitle=false&status=done&style=none&taskId=u2406c8e6-038f-4024-b1c8-640a0200596&title=)
 <a name="rWJIc"></a>
 ## 二、环境信息

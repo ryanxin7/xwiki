@@ -224,16 +224,16 @@
   "/k8s/practical-case/kubernetes-9": {
     "words": 678
   },
-  "/k8s/Training3/environment/kubeadm-cluster-deployment-etcd": {
-    "words": 5820
+  "/k8s/training3/environment/kubeadm-cluster-deployment-etcd": {
+    "words": 5870
   },
-  "/k8s/Training3/environment/kubeadm-cluster-deployment": {
+  "/k8s/training3/environment/kubeadm-cluster-deployment": {
     "words": 7236
   },
-  "/k8s/Training3/environment/external-cluster-controlpanel": {
+  "/k8s/training3/environment/external-cluster-controlpanel": {
     "words": 544
   },
-  "/k8s/Training3/intro": {
+  "/k8s/training3/intro": {
     "words": 56
   },
   "/linux/Linux-basics": {

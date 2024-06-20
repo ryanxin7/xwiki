@@ -206,6 +206,8 @@
     border-left: none;
     padding-left: 0; /* 移除左侧填充 */
     width: 100%; /* 确保内容部分宽度100% */
+    display: flex;
+    flex-direction: column; /* 将内容部分改为列布局 */
   }
 
   .updateText {
@@ -214,14 +216,24 @@
   }
 
   .updateImageContainer {
-    width: 100%;
+    width: 88%;
     height: auto; /* 图片容器高度自适应 */
-    margin-top: 1rem; /* 图片与文字之间增加间距 */
+    max-height: 200px; /* 设置图片最大高度 */
+    margin-top: 0.2rem; /* 图片与文字之间增加间距 */
+    margin-bottom: 0.2rem;
   }
 
   .updateImage {
     width: 100%;
     height: auto; /* 图片宽度和高度自适应 */
+    object-fit: cover; /* 保持图片比例并裁剪以填充容器 */
+  }
+
+  .noImage .updateContent {
+    flex-direction: column; /* 没有图片的项目内容改为列布局 */
+  }
+
+  .noImage .updateImageContainer {
+    display: none; /* 没有图片的项目隐藏图片容器 */
   }
 }
-
