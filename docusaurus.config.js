@@ -46,15 +46,15 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        //blog: {
-        //  showReadingTime: true,
+        /*blog: {
+          showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-         // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          //  blogSidebarCount: 'ALL',
-          //  blogSidebarTitle: 'All posts',
-        //},
+          editUrl:
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            blogSidebarCount: 'ALL',
+            blogSidebarTitle: 'All posts',
+        },*/
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -262,14 +262,26 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        /*/style: 'dark',/*/
         links: [
           {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Kubernetes',
+                to: 'k8s/',
+              },
+              {
+                label: 'Prometheus',
+                to: 'Prometheus/',
+              },
+              {
+                label: 'Ceph',
+                to: 'ceph/',
+              },
+              {
+                label: 'ElasticStack',
+                to: 'elk/elk-Elasticsearch',
               },
             ],
           },
@@ -292,16 +304,25 @@ const config = {
           },
           {
             title: 'More',
-            //items: [
-             // {
-             //   label: 'Blog',
-             //   to: '/blog',
-             // },
-             // {
-             //   label: 'GitHub',
-            //    href: 'https://github.com/facebook/docusaurus',
-            //  },
-            //],
+            items: [
+              /*{
+                label: 'Blog',
+                to: '/blog',
+              },*/
+              {
+                label: 'GitHub',
+                href: 'https://github.com/ryanxin7',
+              },
+              {
+                label: 'Yuque',
+                href: 'https://www.yuque.com/ryanxx',
+              },
+              {
+                label: 'tinify',
+                href: 'https://tinify.cn/',
+              },
+              
+            ],
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Ryan's Wiki, Inc. Built with Docusaurus.`,

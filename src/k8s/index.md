@@ -3,8 +3,7 @@ id: index
 title: Kubernetes 简介
 sidebar_position: 1
 tags: [kubernetes]
-date: 2024-06-11T21:33:32
-image: /img/algolia.1026fe5.640.png
+date: 2023-06-11T21:33:32
 
 ---
 import WordCount from '@site/src/components/WordCount';

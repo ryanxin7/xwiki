@@ -20,7 +20,7 @@ function HeroBanner() {
               这里是一个装满乱七八糟知识的仓库，希望这些内容对你有所帮助，也能为你带来一些乐趣和启发。
             </p>
             <div className={styles.buttons}>
-              <Link className="button button--secondary button--lg" to="/docs/intro">
+              <Link className="button button--secondary button--lg" to="/k8s">
                 马上开始
               </Link>
             </div>
@@ -29,7 +29,7 @@ function HeroBanner() {
             {colorMode === 'dark' ? (
               <img src="/img/creativity.png" alt="Creativity Illustration" className={styles.heroImg} />
             ) : (
-              <object type="image/svg+xml" data="/img/saas-3.svg" aria-label="SaaS Illustration"className={styles.heroSvg}></object>
+              <object type="image/svg+xml" data="https://cdn1.ryanxin.live/xwiki/saas-3.svg" aria-label="SaaS Illustration"className={styles.heroSvg}></object>
             )}
           </div>
         </div>

@@ -159,13 +159,22 @@
     "words": 1424
   },
   "/k8s": {
-    "words": 1184
+    "words": 1182
   },
   "/k8s/k8s-documented/1.利用 kubeadm部署kubernetes集群": {
     "words": 7494
   },
+  "/k8s/k8s-documented/ceamg-wiki": {
+    "words": 76
+  },
   "/k8s/k8s-documented/Cert-manager + ZeroSSL 的一些配置的研究": {
     "words": 407
+  },
+  "/k8s/k8s-documented/confluence": {
+    "words": 2356
+  },
+  "/k8s/k8s-documented/Harbor 故障解决记录": {
+    "words": 2680
   },
   "/k8s/k8s-documented/K8S-常规运维示例-14": {
     "words": 2320
