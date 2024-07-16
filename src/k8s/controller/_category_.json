@@ -1,0 +1,8 @@
+{
+  "label": "控制器",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Kubernetes 控制器"
+  }
+}
