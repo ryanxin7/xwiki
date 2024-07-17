@@ -1,6 +1,6 @@
 ---
 id: index
-title: Kubernetes 简介
+title: 核心概念
 sidebar_position: 1
 tags: [kubernetes]
 date: 2023-06-11T21:33:32
@@ -10,9 +10,7 @@ import WordCount from '@site/src/components/WordCount';
 
 <WordCount />
 
-# Kubernetes 简介
 
-Kubernetes 是一个开源的容器编排平台，主要用于自动化应用程序的部署、扩展和管理。它由 Google 设计并捐赠给云原生计算基金会（CNCF）。以下是 Kubernetes 的详细介绍，包括其核心概念、主要功能和一些实际操作示例。
 
 ## 核心概念
 

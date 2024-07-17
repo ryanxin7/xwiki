@@ -158,8 +158,23 @@
   "/k8s/base/kubernetes-5": {
     "words": 1424
   },
+  "/k8s/basic/overview": {
+    "words": 3625
+  },
+  "/k8s/config/ConfigMap": {
+    "words": 2322
+  },
+  "/k8s/controller/ReplicaSet": {
+    "words": 2508
+  },
+  "/k8s/controller/Deployment": {
+    "words": 3724
+  },
+  "/k8s/helm/55-Helm包管理": {
+    "words": 3051
+  },
   "/k8s": {
-    "words": 1182
+    "words": 1101
   },
   "/k8s/k8s-documented/1.利用 kubeadm部署kubernetes集群": {
     "words": 7494
@@ -197,6 +212,12 @@
   "/k8s/k8s-documented/用label控制Pod的位置": {
     "words": 507
   },
+  "/k8s/monitor/61-Prometheus 基础": {
+    "words": 3134
+  },
+  "/k8s/network/Service": {
+    "words": 4439
+  },
   "/k8s/practical-case/kubernetes-10": {
     "words": 15002
   },
@@ -233,16 +254,25 @@
   "/k8s/practical-case/kubernetes-9": {
     "words": 678
   },
-  "/k8s/Training3/environment/kubeadm-cluster-deployment-etcd": {
+  "/k8s/runtime/Runtime": {
+    "words": 2602
+  },
+  "/k8s/scheduler/kube-scheduler": {
+    "words": 7352
+  },
+  "/k8s/storage/Local": {
+    "words": 5162
+  },
+  "/k8s/training3/environment/kubeadm-cluster-deployment-etcd": {
     "words": 5870
   },
-  "/k8s/Training3/environment/kubeadm-cluster-deployment": {
+  "/k8s/training3/environment/kubeadm-cluster-deployment": {
     "words": 7236
   },
-  "/k8s/Training3/environment/external-cluster-controlpanel": {
+  "/k8s/training3/environment/external-cluster-controlpanel": {
     "words": 544
   },
-  "/k8s/Training3/intro": {
+  "/k8s/training3/intro": {
     "words": 56
   },
   "/linux/Linux-basics": {

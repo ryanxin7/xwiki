@@ -1,4 +1,13 @@
-![ConfigMap.png](http://cdn1.ryanxin.live/xxlog/1713777805959-16f5d32e-b69d-409c-83cf-cf447aa94914.png)<br />[ConfigMap.xmind](https://www.yuque.com/attachments/yuque/0/2024/xmind/33538388/1713777825098-254aa94b-0498-4355-9f97-70fc0f2f3cba.xmind?_lake_card=%7B%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2024%2Fxmind%2F33538388%2F1713777825098-254aa94b-0498-4355-9f97-70fc0f2f3cba.xmind%22%2C%22name%22%3A%22ConfigMap.xmind%22%2C%22size%22%3A284184%2C%22ext%22%3A%22xmind%22%2C%22source%22%3A%22%22%2C%22status%22%3A%22done%22%2C%22download%22%3Atrue%2C%22taskId%22%3A%22u5188aced-fad8-4fba-8a69-87819874fb0%22%2C%22taskType%22%3A%22upload%22%2C%22type%22%3A%22%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22u03af8683%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22card%22%3A%22file%22%7D)<br />前面我们学习了一些常用的资源对象的使用，但是单纯依靠这些资源对象，还不足以满足我们的日常需求，一个重要的需求就是应用的配置管理、敏感信息的存储和使用（如：密码、Token 等)、容器运行资源的配置、安全管控、身份认证等等。<br />对于应用的可变配置在 Kubernetes 中是通过一个 ConfigMap 资源对象来实现的，我们知道许多应用经常会有从配置文件、命令行参数或者环境变量中读取一些配置信息的需求，这些配置信息我们肯定不会直接写死到应用程序中去的，比如你一个应用连接一个 redis 服务，下一次想更换一个了的，还得重新去修改代码，重新制作一个镜像，这肯定是不可取的，而 **ConfigMap 就给我们提供了向容器中注入配置信息的能力**，不仅可以用来保存单个属性，还可以用来保存整个配置文件，比如我们可以用来配置一个 redis 服务的访问地址，也可以用来保存整个 redis 的配置文件。
+---
+id: ConfigMap
+author: Ryan
+title: ConfigMap
+date: 2024-04-22T17:23:32
+---
+
+前面我们学习了一些常用的资源对象的使用，但是单纯依靠这些资源对象，还不足以满足我们的日常需求，一个重要的需求就是应用的配置管理、敏感信息的存储和使用（如：密码、Token 等)、容器运行资源的配置、安全管控、身份认证等等。<br />对于应用的可变配置在 Kubernetes 中是通过一个 ConfigMap 资源对象来实现的，我们知道许多应用经常会有从配置文件、命令行参数或者环境变量中读取一些配置信息的需求，这些配置信息我们肯定不会直接写死到应用程序中去的，比如你一个应用连接一个 redis 服务，下一次想更换一个了的，还得重新去修改代码，重新制作一个镜像，这肯定是不可取的，而 **ConfigMap 就给我们提供了向容器中注入配置信息的能力**，不仅可以用来保存单个属性，还可以用来保存整个配置文件，比如我们可以用来配置一个 redis 服务的访问地址，也可以用来保存整个 redis 的配置文件。
+
+![ConfigMap.png](http://cdn1.ryanxin.live/xxlog/1713777805959-16f5d32e-b69d-409c-83cf-cf447aa94914.png)<br />
 
 接下来我们就来了解下 ConfigMap 这种资源对象的使用方法。
 ## 创建 ConfigMap

@@ -1,3 +1,9 @@
+---
+id: ReplicaSet
+author: Ryan
+title: ReplicaSet 控制器
+date: 2024-04-16T16:01:32
+---
 
 前面我们一起学习了 Pod 的原理和一些基本使用，但是在实际使用的时候并不会直接使用 Pod，而是会使用各种控制器来满足我们的需求，**Kubernetes 中运行了一系列控制器来确保集群的当前状态与期望状态保持一致**，它们就是 Kubernetes 的大脑。
 

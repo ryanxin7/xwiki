@@ -1,6 +1,6 @@
 {
   "label": "实验环境",
-  "position": 1,
+  "position": 19,
   "link": {
     "type": "generated-index",
     "description": "Kubernetes环境搭建"

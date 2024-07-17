@@ -71,7 +71,7 @@ module.exports = function(context, options) {
       // 按日期排序
       articles.sort((a, b) => b.date - a.date);
 
-      console.log("Loaded articles:", articles); // Debug: 输出加载的文章信息
+      //console.log("Loaded articles:", articles); // Debug: 输出加载的文章信息
 
       return articles;
     },
