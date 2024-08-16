@@ -190,18 +190,40 @@ const config = {
             activeBasePath: 'k8s',
             label: 'Kubernetes',
             position: 'left',
+            items: [
+              {
+                label: 'OpenKruise',
+                to: 'OpenKruise/',
+              },
+              {
+                label: 'Containerd',
+                to: 'Containerd/',
+              },
+              {
+                label: 'Docker',
+                to: 'docker/',
+              },
+            ],
           },
           {
             to: 'elk/elk-Elasticsearch',
             activeBasePath: 'elk',
             label: '日志',
             position: 'left',
-          },
-          {
-            to: 'docker/',
-            activeBasePath: 'docker',
-            label: 'Docker',
-            position: 'left',
+            items: [
+              {
+                label: 'ELK',
+                to: 'elk/elk-Elasticsearch',
+              },
+              {
+                label: 'Loki',
+                to: 'Loki/Loki',
+              },
+              {
+                label: 'Fluentd',
+                to: 'Loki/Fluentd',
+              },
+            ],
           },
           {
             type: 'dropdown',
@@ -239,8 +261,51 @@ const config = {
                 label: 'Prometheus',
                 to: 'Prometheus/',
               },
+              {
+                label: 'VictoriaMetrics',
+                to: 'VictoriaMetrics/',
+              },
+              {
+                label: 'Grafana',
+                to: 'Grafana/',
+              },
+              {
+                label: 'AlertManager',
+                to: 'AlertManager/',
+              },
+              {
+                label: 'Prometheus Operator',
+                to: 'PrometheusOperator/',
+              },
             ],
           },
+          {
+            type: 'dropdown',
+            label: 'DevOps',
+            position: 'left',
+            items: [
+              {
+                label: 'Jenkins',
+                to: 'jenkins/',
+              },
+              {
+                label: 'GitLab',
+                to: 'GitLab/',
+              },
+              {
+                label: 'Harbor',
+                to: 'Harbor/',
+              },
+              {
+                label: 'Zadig',
+                to: 'Harbor/',
+              },
+              {
+                label: 'Tekton',
+                to: 'Tekton/',
+              },
+            ],
+          },          
           {
             type: 'dropdown',
             label: '存储',
@@ -249,6 +314,14 @@ const config = {
               {
                 label: 'Ceph',
                 to: 'ceph/',
+              },
+              {
+                label: 'Longhorn',
+                to: 'Longhorn/',
+              },
+              {
+                label: 'NFS',
+                to: 'nfs/',
               },
             ],
           },

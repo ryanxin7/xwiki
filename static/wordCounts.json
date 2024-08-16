@@ -161,6 +161,9 @@
   "/k8s/basic/overview": {
     "words": 3625
   },
+  "/k8s/basic/Kubernetes 集群部署": {
+    "words": 7153
+  },
   "/k8s/config/ConfigMap": {
     "words": 2322
   },
@@ -257,22 +260,31 @@
   "/k8s/runtime/Runtime": {
     "words": 2602
   },
+  "/k8s/runtime/Containerd": {
+    "words": 4513
+  },
+  "/k8s/runtime/3-Containerd 高级命令行工具": {
+    "words": 2451
+  },
+  "/k8s/runtime/4-CGroups与Namespaces": {
+    "words": 4226
+  },
   "/k8s/scheduler/kube-scheduler": {
     "words": 7352
   },
   "/k8s/storage/Local": {
     "words": 5162
   },
-  "/k8s/training3/environment/kubeadm-cluster-deployment-etcd": {
+  "/k8s/Training3/environment/kubeadm-cluster-deployment-etcd": {
     "words": 5870
   },
-  "/k8s/training3/environment/kubeadm-cluster-deployment": {
+  "/k8s/Training3/environment/kubeadm-cluster-deployment": {
     "words": 7236
   },
-  "/k8s/training3/environment/external-cluster-controlpanel": {
+  "/k8s/Training3/environment/external-cluster-controlpanel": {
     "words": 544
   },
-  "/k8s/training3/intro": {
+  "/k8s/Training3/intro": {
     "words": 56
   },
   "/linux/Linux-basics": {
