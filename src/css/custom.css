@@ -68,8 +68,8 @@ html[data-theme='dark'] .header-github-link:before {
 
 
 .container {
-  width: 90%;       /* 使用百分比定义中间区域的宽度 */
-  max-width: 1300px; /* 设置一个最大宽度，以防在大屏幕上过宽 */
+  width: 85%;       /* 使用百分比定义中间区域的宽度 */
+  max-width: 1440px; /* 设置一个最大宽度，以防在大屏幕上过宽 */
 }
 
 @media (max-width: 768px) {
