@@ -1,0 +1,8 @@
+{
+  "label": "prometheus",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Prometheus 是一个开源的系统监控和报警工具包"
+  }
+}

@@ -11,7 +11,7 @@ const projects = [
     title: 'Prometheus',
     imageUrl: 'https://cdn1.ryanxin.live/xwiki/prometheus.jpg',
     description: '服务监控、告警、数据大屏展示👾',
-    link: '/Prometheus/',
+    link: '/k8s/monitor/prometheus/',
   },
   {
     id: 3,

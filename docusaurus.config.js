@@ -14,7 +14,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'http://wiki.xinn.cc',
+  url: 'http://xinn.cc',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -112,16 +112,16 @@ const config = {
         editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
       },
     ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'Prometheus',
-        path: 'src/Prometheus',
-        routeBasePath: 'Prometheus',
-        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
-        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-      },
-    ],
+    //[
+    //  '@docusaurus/plugin-content-docs',
+    //  {
+    //    id: 'Monitor',
+    //    path: 'src/monitor',
+    //    routeBasePath: 'monitor',
+    //    sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+    //    editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+    //  },
+    //],
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -213,7 +213,7 @@ const config = {
             items: [
               {
                 label: 'ELK',
-                to: 'elk/elk-Elasticsearch',
+                to: 'elk/install/elk-Elasticsearch',
               },
               {
                 label: 'Loki',
@@ -259,23 +259,23 @@ const config = {
             items: [
               {
                 label: 'Prometheus',
-                to: 'Prometheus/',
+                to: '/k8s/monitor/prometheus/',
               },
               {
                 label: 'VictoriaMetrics',
-                to: 'VictoriaMetrics/',
+                to: '/k8s/monitor/victoriaMetrics/VictoriaMetrics-单节点',
               },
               {
                 label: 'Grafana',
-                to: 'Grafana/',
+                to: '/k8s/monitor/prometheus/Grafana_数据可视化',
               },
               {
                 label: 'AlertManager',
-                to: 'AlertManager/',
+                to: '/k8s/monitor/prometheus/AlertManager',
               },
               {
                 label: 'Prometheus Operator',
-                to: 'PrometheusOperator/',
+                to: '/k8s/monitor/prometheus/Prometheus_Operator_安装',
               },
             ],
           },

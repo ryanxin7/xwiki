@@ -1,0 +1,8 @@
+{
+  "label": "victoriametrics",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "VictoriaMetrics(VM)是一个支持高可用，经济高效且可扩展的监控解决方案和时间序列数据库，可用于Prometheus监控数据做长期远程存储"
+  }
+}

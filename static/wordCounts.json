@@ -215,8 +215,65 @@
   "/k8s/k8s-documented/用label控制Pod的位置": {
     "words": 507
   },
-  "/k8s/monitor/61-Prometheus 基础": {
-    "words": 3134
+  "/k8s/monitor/prometheus/1.Prometheus-基础": {
+    "words": 3061
+  },
+  "/k8s/monitor/prometheus/10.Prometheus_Operator_自定义监控报警": {
+    "words": 3940
+  },
+  "/k8s/monitor/prometheus/11.Prometheus_Operator_高级配置": {
+    "words": 3479
+  },
+  "/k8s/monitor/prometheus/2.Prometheus_应用监控": {
+    "words": 4884
+  },
+  "/k8s/monitor/prometheus/3.基于Kubernetes服务发现": {
+    "words": 2145
+  },
+  "/k8s/monitor/prometheus/4.监控Kubernetes Pods": {
+    "words": 2661
+  },
+  "/k8s/monitor/prometheus/5.PromQL": {
+    "words": 4683
+  },
+  "/k8s/monitor/prometheus/6.Grafana_数据可视化": {
+    "words": 2210
+  },
+  "/k8s/monitor/prometheus/7.AlertManager": {
+    "words": 2677
+  },
+  "/k8s/monitor/prometheus/8.AlertManager_高级警报管理": {
+    "words": 4839
+  },
+  "/k8s/monitor/prometheus/9. Prometheus_Operator_安装": {
+    "words": 4206
+  },
+  "/k8s/monitor/prometheus": {
+    "words": 660
+  },
+  "/k8s/monitor/prometheus/Prometheus-简介与安装": {
+    "words": 4114
+  },
+  "/k8s/monitor/prometheus/PromQL语句": {
+    "words": 1116
+  },
+  "/k8s/monitor/prometheus/安装Grafana": {
+    "words": 908
+  },
+  "/k8s/monitor/victoriametrics/1.VictoriaMetrics-单节点": {
+    "words": 4012
+  },
+  "/k8s/monitor/victoriametrics/2.VictoriaMetrics-集群": {
+    "words": 5356
+  },
+  "/k8s/monitor/victoriametrics/3.Vmagent": {
+    "words": 3565
+  },
+  "/k8s/monitor/victoriametrics/4.Vmalert": {
+    "words": 1429
+  },
+  "/k8s/monitor/victoriametrics/5.VM-Operator": {
+    "words": 3605
   },
   "/k8s/network/Service": {
     "words": 4439
@@ -316,18 +373,6 @@
   },
   "/pages/markdown-page": {
     "words": 19
-  },
-  "/Prometheus": {
-    "words": 660
-  },
-  "/Prometheus/Prometheus-简介与安装": {
-    "words": 4114
-  },
-  "/Prometheus/PromQL语句": {
-    "words": 1116
-  },
-  "/Prometheus/安装Grafana": {
-    "words": 908
   },
   "/Redis": {
     "words": 1690
