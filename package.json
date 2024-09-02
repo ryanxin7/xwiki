@@ -1,5 +1,5 @@
 {
-  "name": "xlog",
+  "name": "yes",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -28,8 +28,11 @@
     "puppeteer": "^22.10.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-medium-image-zoom": "^5.2.9",
     "react-svg": "^16.1.34",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "remark-images": "^4.0.0",
+    "remark-unwrap-images": "^4.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.4.0",

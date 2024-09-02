@@ -215,6 +215,27 @@
   "/k8s/k8s-documented/用label控制Pod的位置": {
     "words": 507
   },
+  "/k8s/logging/1.K8s日志收集架构": {
+    "words": 2330
+  },
+  "/k8s/logging/2.在K8S中搭建EFK日志系统": {
+    "words": 6023
+  },
+  "/k8s/logging/3.使用Kafka优化EFK": {
+    "words": 2827
+  },
+  "/k8s/logging/4.Fluentd": {
+    "words": 5073
+  },
+  "/k8s/logging/loki/1.Loki": {
+    "words": 6461
+  },
+  "/k8s/logging/loki/2.Promtail": {
+    "words": 12870
+  },
+  "/k8s/logging/loki/Loki知识点回顾": {
+    "words": 5456
+  },
   "/k8s/monitor/prometheus/1.Prometheus-基础": {
     "words": 3061
   },
@@ -260,10 +281,10 @@
   "/k8s/monitor/prometheus/安装Grafana": {
     "words": 908
   },
-  "/k8s/monitor/victoriametrics/1.VictoriaMetrics-单节点": {
+  "/k8s/monitor/victoriametrics/1.VictoriaMetrics-single": {
     "words": 4012
   },
-  "/k8s/monitor/victoriametrics/2.VictoriaMetrics-集群": {
+  "/k8s/monitor/victoriametrics/2.VictoriaMetrics-cluser": {
     "words": 5356
   },
   "/k8s/monitor/victoriametrics/3.Vmagent": {
@@ -277,6 +298,24 @@
   },
   "/k8s/network/Service": {
     "words": 4439
+  },
+  "/k8s/network/Traefik/Traefik-base": {
+    "words": 9559
+  },
+  "/k8s/network/Traefik/2.Traefik-acme": {
+    "words": 2033
+  },
+  "/k8s/network/Traefik/3.Traefik-中间件": {
+    "words": 2252
+  },
+  "/k8s/network/Traefik/4.Traefik-插件管理": {
+    "words": 2359
+  },
+  "/k8s/network/Traefik/5.Traefik-灰度发布": {
+    "words": 3384
+  },
+  "/k8s/network/Traefik/6.Traefik-流量管理": {
+    "words": 2661
   },
   "/k8s/practical-case/kubernetes-10": {
     "words": 15002

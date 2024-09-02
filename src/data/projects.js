@@ -11,7 +11,7 @@ const projects = [
     title: 'Prometheus',
     imageUrl: 'https://cdn1.ryanxin.live/xwiki/prometheus.jpg',
     description: '服务监控、告警、数据大屏展示👾',
-    link: '/k8s/monitor/prometheus/',
+    link: '/k8s/monitor/prometheus',
   },
   {
     id: 3,
@@ -32,28 +32,28 @@ const projects = [
     title: 'Loki',
     imageUrl: 'https://cdn1.ryanxin.live/loki1.png',
     description: '由 Grafana Labs 开发的日志聚合系统',
-    link: '/Loki/elk-Elasticsearch',
+    link: '/k8s/logging/loki/Loki',
   },
   {
     id: 6,
     title: 'Tekton',
     imageUrl: 'https://cdn1.ryanxin.live/tekton.png',
     description: '基于CRD的CI/CD系统',
-    link: '/Loki/elk-Elasticsearch',
+    link: '/k8s/',
   },
   {
     id: 7,
     title: 'Traefik',
     imageUrl: 'https://cdn1.ryanxin.live/treafik.png',
     description: '云原生反向代理和负载均衡器',
-    link: '/Loki/elk-Elasticsearch',
+    link: '/k8s/network/Traefik/Traefik-base',
   },
   {
     id: 8,
     title: 'OpenKruise',
     imageUrl: 'https://cdn1.ryanxin.live/Kruise.png',
     description: '扩展和增强 Kubernetes 应用管理能力',
-    link: '/Loki/elk-Elasticsearch',
+    link: '/k8s/',
   },
 
 

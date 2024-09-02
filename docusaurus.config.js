@@ -31,7 +31,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh',
-    locales: ['zh', 'en'],
+    locales: ['zh'],
   },
 
   presets: [
@@ -46,6 +46,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+
         /*blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -193,11 +194,11 @@ const config = {
             items: [
               {
                 label: 'OpenKruise',
-                to: 'OpenKruise/',
+                to: 'docker/',
               },
               {
                 label: 'Containerd',
-                to: 'Containerd/',
+                to: 'k8s/runtime/Containerd',
               },
               {
                 label: 'Docker',
@@ -217,11 +218,11 @@ const config = {
               },
               {
                 label: 'Loki',
-                to: 'Loki/Loki',
+                to: 'k8s/logging/loki/Loki',
               },
               {
                 label: 'Fluentd',
-                to: 'Loki/Fluentd',
+                to: 'k8s/logging/Fluentd',
               },
             ],
           },
@@ -236,7 +237,7 @@ const config = {
               },
               {
                 label: 'ELK',
-                to: 'elk/elk-Elasticsearch',
+                to: 'elk/install/elk-Elasticsearch',
               },
               {
                 label: 'Zookeeper',
@@ -263,7 +264,7 @@ const config = {
               },
               {
                 label: 'VictoriaMetrics',
-                to: '/k8s/monitor/victoriaMetrics/VictoriaMetrics-单节点',
+                to: '/k8s/monitor/victoriametrics/VictoriaMetrics-single',
               },
               {
                 label: 'Grafana',
@@ -286,23 +287,23 @@ const config = {
             items: [
               {
                 label: 'Jenkins',
-                to: 'jenkins/',
+                to: 'ceph/',
               },
               {
                 label: 'GitLab',
-                to: 'GitLab/',
+                to: 'ceph/',
               },
               {
                 label: 'Harbor',
-                to: 'Harbor/',
+                to: 'ceph/',
               },
               {
                 label: 'Zadig',
-                to: 'Harbor/',
+                to: 'ceph/',
               },
               {
                 label: 'Tekton',
-                to: 'Tekton/',
+                to: 'ceph/',
               },
             ],
           },          
@@ -317,11 +318,11 @@ const config = {
               },
               {
                 label: 'Longhorn',
-                to: 'Longhorn/',
+                to: 'elk/install/elk-Elasticsearch',
               },
               {
                 label: 'NFS',
-                to: 'nfs/',
+                to: 'elk/install/elk-Elasticsearch',
               },
             ],
           },
@@ -346,7 +347,7 @@ const config = {
               },
               {
                 label: 'Prometheus',
-                to: 'Prometheus/',
+                to: '/k8s/monitor/prometheus/',
               },
               {
                 label: 'Ceph',

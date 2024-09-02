@@ -1,0 +1,8 @@
+{
+  "label": "loki",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "日志"
+  }
+}
