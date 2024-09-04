@@ -233,6 +233,18 @@
   "/k8s/logging/loki/2.Promtail": {
     "words": 12870
   },
+  "/k8s/logging/loki/3.Loki读写分离": {
+    "words": 3060
+  },
+  "/k8s/logging/loki/4.Loki微服务模式": {
+    "words": 14667
+  },
+  "/k8s/logging/loki/5.Loki配置文件详解": {
+    "words": 5783
+  },
+  "/k8s/logging/loki/6.LogQL查询语句": {
+    "words": 5687
+  },
   "/k8s/logging/loki/Loki知识点回顾": {
     "words": 5456
   },
