@@ -1,7 +1,8 @@
 ---
+id: JenkinsSlave 
 author: Ryan
 title: 基于K8S的动态JenkinsSlave 
-date: 2024-04-16T16:01:32
+date: 2024-09-16T16:01:32
 ---
 
 # Jenkins

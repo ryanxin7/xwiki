@@ -287,24 +287,20 @@ const config = {
             items: [
               {
                 label: 'Jenkins',
-                to: 'ceph/',
+                to: '/k8s/devops/Jenkins/JenkinsSlave',
               },
               {
                 label: 'GitLab',
-                to: 'ceph/',
+                to: 'k8s/devops/Gitlab/Gitlab/',
               },
               {
                 label: 'Harbor',
                 to: 'ceph/',
               },
               {
-                label: 'Zadig',
-                to: 'ceph/',
-              },
-              {
                 label: 'Tekton',
-                to: 'ceph/',
-              },
+                to: '/k8s/devops/Tekton/Tekton-pipeline/',
+              }
             ],
           },          
           {

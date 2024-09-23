@@ -1,7 +1,7 @@
 ---
 id: Gitlab
 author: Ryan
-title: Gitlab
+title: Gitlab在K8S中安装配置
 date: 2024-04-16T16:01:32
 ---
 # Gitlab

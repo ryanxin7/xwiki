@@ -39,7 +39,7 @@ const projects = [
     title: 'Tekton',
     imageUrl: 'http://img.xinn.cc/tekton.png',
     description: '基于CRD的CI/CD系统',
-    link: '/k8s/',
+    link: '/k8s/devops/Tekton/Tekton-pipeline',
   },
   {
     id: 7,
@@ -51,9 +51,9 @@ const projects = [
   {
     id: 8,
     title: 'ArgoCD',
-    imageUrl: 'http://img.xinn.cc/Kruise.png',
+    imageUrl: 'http://img.xinn.cc/argocd.png',
     description: '扩展和增强 Kubernetes 应用管理能力',
-    link: '/k8s/',
+    link: '/k8s/devops/Tekton/Tekton-pipeline',
   },
 
 

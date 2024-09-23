@@ -1,7 +1,8 @@
 ---
+id: harbor-install
 author: Ryan
 title: Harbor的安装配置
-date: 2024-04-16T16:01:32
+date: 2024-09-16T16:01:32
 ---
 # Harbor
 Harbor 是一个 CNCF 基金会托管的开源的可信的云原生 docker registry 项目，可以用于存储、签名、扫描镜像内容，Harbor 通过添加一些常用的功能如安全性、身份权限管理等来扩展 docker registry 项目，此外还支持在 registry 之间复制镜像，还提供更加高级的安全功能，如用户管理、访问控制和活动审计等，在新版本中还添加了 Helm 仓库托管的支持。
