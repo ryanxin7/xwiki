@@ -43,7 +43,7 @@ CNI 是由 CoreOS 和 Google 联合制定的规范，旨在定义容器运行时
 
 ### 2.1 同一个 Pod 内的不同容器的通信
 
-![](https://cdn1.ryanxin.live/1_-ze224LkGbwRbgIC-7w5dg.webp)
+![](http://img.xinn.cc/1_-ze224LkGbwRbgIC-7w5dg.webp)
 
 
 
@@ -67,7 +67,7 @@ CNI 是由 CoreOS 和 Google 联合制定的规范，旨在定义容器运行时
 
 
 
-<img src="https://cdn1.ryanxin.live/1_B0AmH3WpQ0GYSRPw0NMK-g.webp" />
+<img src="http://img.xinn.cc/1_B0AmH3WpQ0GYSRPw0NMK-g.webp" />
 
 ​      Service与Pod之间的通信发生在称为集群网络的专用网络中。启动kube-apiserver时，需使用`--service-cluster-ip-range`选项指定该网络范围，例如默认值为10.96.0.0/12。在该网络中，每个Service对象都有一个称为Cluster-IP的固定地址。
 
@@ -95,14 +95,14 @@ Pod 到外部（响应报文）:
 
 ## 3.CNI插件三种常见实现方式
 
-![image.png](https://cdn1.ryanxin.live/202304071680855692400423.png)
+![image.png](http://img.xinn.cc/202304071680855692400423.png)
 
 ### 2.1 Overlay 覆盖模式
 
 跨网段的容器通信通过 Overlay 网络进行，这种方式通过在不同节点之间建立隧道，将容器的通信流量封装在数据包中传输。
 这种模式不依赖于底层网络，可以在不同的底层网络架构上工作，但因为数据包的封装和解封装过程，可能会带来性能损耗。
 
-![img](https://cdn1.ryanxin.live/245df37eefe424dfb8c17330bf523424.jpg)
+![img](http://img.xinn.cc/245df37eefe424dfb8c17330bf523424.jpg)
 
 #### 2.1.1 Overlay 网络模型
 
@@ -112,7 +112,7 @@ Pod 到外部（响应报文）:
 
 
 
-![image-20240110160658360](https://cdn1.ryanxin.live/image-20240110160658360.png)
+![image-20240110160658360](http://img.xinn.cc/image-20240110160658360.png)
 
 
 
@@ -124,7 +124,7 @@ Pod 到外部（响应报文）:
 
 
 
-![img](https://cdn1.ryanxin.live/kube-network-model-vxlan.png)
+![img](http://img.xinn.cc/kube-network-model-vxlan.png)
 
 
 
@@ -136,7 +136,7 @@ Pod 到外部（响应报文）:
 
 #### 2.1.2 VXLAN通信过程 
 
-![image-20240110160949702](https://cdn1.ryanxin.live/image-20240110160949702.png)
+![image-20240110160949702](http://img.xinn.cc/image-20240110160949702.png)
 
 VXLAN（Virtual Extensible LAN）是一种网络虚拟化技术，用于扩展虚拟局域网（VLAN）的数量。它主要用于在数据中心网络中创建虚拟网络以实现跨子网的通信。以下是 VXLAN 通信过程的简要描述：
 
@@ -174,7 +174,7 @@ https://www.bilibili.com/video/BV1py4y1a7iE
 
 ​    在典型的直接路由解决方案中，每个主机上的各个容器在二层网络中通过网桥进行通信，网关指向当前主机上的网桥接口地址。对于跨主机的容器间通信，需要依据主机上的路由表指示来完成报文的路由。因此，每个主机的物理接口地址都有可能成为另一个主机路由报文中的“下一跳”，这就要求各个主机的物理接口必须位于同一个二层网络中。这种模型的优势在于其能够更好地整合到现有网络基础设施中，提供更灵活、更可控的通信方式，并且更适用于需要精细控制报文流向和过滤的场景。以下是直接路由解决方案的示意图
 
-![img](https://cdn1.ryanxin.live/2719436-20220221111838595-1369378462.png)
+![img](http://img.xinn.cc/2719436-20220221111838595-1369378462.png)
 
 
 
@@ -191,7 +191,7 @@ https://www.bilibili.com/video/BV1py4y1a7iE
 
 ### 2.3 Underlay网络模型
 
-![img](https://cdn1.ryanxin.live/2719436-20220221111633223-1852355686.png)
+![img](http://img.xinn.cc/2719436-20220221111633223-1852355686.png)
 
 Underlay网络是指底层的物理网络基础设施，包括传统的企业IT网络，由交换机、路由器等物理设备组成，通过以太网、路由协议、VLAN 等技术驱动的网络。它是 Overlay 网络的底层基础，为 Overlay 网络提供基本的数据传输服务。
 
@@ -575,7 +575,7 @@ FLANNEL_IPMASQ=true
 
 这些路由条目恰恰反映了同节点Pod间通信时经由cni0虚拟网桥转发，而跨节点Pod间通信时，报文将经由当前节点（k8s-node01）的flannel.1隧道入口（VTEP设备）外发，隧道出口由“下一跳”信息指定，例如到达172.20.5.0/24网络的报文隧道出口是172.20.5.0指向的接口，它配置在k8s-node03的flannel.1接口之上，该接口正是k8s-node03上的隧道出入口（VTEP设备）。
 
-![img](https://cdn1.ryanxin.live/2719436-20220221214951157-1309738775.png)
+![img](http://img.xinn.cc/2719436-20220221214951157-1309738775.png)
 
 VXLAN网络将各VTEP设备作为同一个二层网络上的接口，这些接口设备组成一个虚拟的二层网络。
 
@@ -593,7 +593,7 @@ root@k8s-node1:~# ip neigh show | awk '$3 == "flannel.1"{print $0}'
 
 VXLAN协议使用UDP报文封装隧道内层数据帧，Pod发出的报文经隧道入口flannel.1封装成数据帧，再由flanneld进程（客户端）封装成UDP报文，之后发往目标Pod对象所在节点的flanneld进程（服务端）。该UDP报文就是所谓的VXLAN隧道，它会在已经生成的帧报文之外再封装一组协议头部，如图10-15所示为VXLAN头部、外层UDP头部、外层IP头部和外层帧头部。
 
-![img](https://cdn1.ryanxin.live/2719436-20220221215632736-823011711.png)
+![img](http://img.xinn.cc/2719436-20220221215632736-823011711.png)
 
 
 
@@ -727,7 +727,7 @@ Flannel的host-gw后端通过添加必要的路由信息，并使用节点的二
 
 **直接路由仅node节点在同一网段，不能跨网段。**
 
-![img](https://cdn1.ryanxin.live/2719436-20220221225638132-1663668842.png)
+![img](http://img.xinn.cc/2719436-20220221225638132-1663668842.png)
 
 
 

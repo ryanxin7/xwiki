@@ -310,10 +310,10 @@ Backend is using a static LB algorithm and only accepts weights '0%' and '100%'.
 
 hash对象
 
- Hash对象到后端服务器的映射关系：   ![](https://cdn1.ryanxin.live/1676269845062-cd498fcb-971f-4446-b3a5-524a0ab84182.png)
+ Hash对象到后端服务器的映射关系：   ![](http://img.xinn.cc/1676269845062-cd498fcb-971f-4446-b3a5-524a0ab84182.png)
 
 
-一致性hash示意图 后端服务器在线与离线的调度方式 ![](https://cdn1.ryanxin.live/1676269866029-afd24654-75c6-4b26-9d9d-5e7a37d18737.png)
+一致性hash示意图 后端服务器在线与离线的调度方式 ![](http://img.xinn.cc/1676269866029-afd24654-75c6-4b26-9d9d-5e7a37d18737.png)
 
 
 一致性hash配置示例

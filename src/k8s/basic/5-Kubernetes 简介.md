@@ -5,15 +5,15 @@ title: Kubernetes 简介
 date: 2024-04-22T17:23:32
 ---
 
-[Kubernetes（简称 K8S）](https://kubernetes.io/) 的出现是容器化技术发展的必然结果，**容器化**是应用程序级别的虚拟化，运行单个内核上有多个独立的用户空间实例，这些实例就是容器；<br />**容器**提供了将应用程序的代码、运行时、系统工具、系统库和配置打包到一个实例中的标准方法，而且容器是共享一个内核的；由于容器技术的兴起，导致大量的容器应用出现，所以就出现了一些用来支持应用程序容器化部署和组织的**容器编排**技术，一些流行的开源容器编排工具有 Docker Swarm、Kubernetes 等，但是在发展过程中 Kubernetes 现在已经成为了容器编排领域事实上的一个标准了。<br />![](https://cdn1.ryanxin.live/1713145359956-c68ef6a1-1240-49be-bfa8-5a02ba6fa43f.png)<br />[Kubernetes](https://kubernetes.io/) 是 Google 团队发起的一个开源项目，它的目标是管理跨多个主机的容器，用于自动部署、扩展和管理容器化的应用程序，主要实现语言为 Go 语言，他的理论基础来源与 Google 内部的 Borg 项目，所以 Kubernetes 项目的理论基础就比其他开源项目要“先进”很多，因为 Borg 系统一直依赖就被称为 Google 公司内部最强大的“私密武器”。
+[Kubernetes（简称 K8S）](https://kubernetes.io/) 的出现是容器化技术发展的必然结果，**容器化**是应用程序级别的虚拟化，运行单个内核上有多个独立的用户空间实例，这些实例就是容器；<br />**容器**提供了将应用程序的代码、运行时、系统工具、系统库和配置打包到一个实例中的标准方法，而且容器是共享一个内核的；由于容器技术的兴起，导致大量的容器应用出现，所以就出现了一些用来支持应用程序容器化部署和组织的**容器编排**技术，一些流行的开源容器编排工具有 Docker Swarm、Kubernetes 等，但是在发展过程中 Kubernetes 现在已经成为了容器编排领域事实上的一个标准了。<br />![](http://img.xinn.cc/1713145359956-c68ef6a1-1240-49be-bfa8-5a02ba6fa43f.png)<br />[Kubernetes](https://kubernetes.io/) 是 Google 团队发起的一个开源项目，它的目标是管理跨多个主机的容器，用于自动部署、扩展和管理容器化的应用程序，主要实现语言为 Go 语言，他的理论基础来源与 Google 内部的 Borg 项目，所以 Kubernetes 项目的理论基础就比其他开源项目要“先进”很多，因为 Borg 系统一直依赖就被称为 Google 公司内部最强大的“私密武器”。
 
 ## 架构
-Kubernetes 项目依托着 Borg 项目的理论优势，确定了一个如下图所示的全局架构图：<br />![](https://cdn1.ryanxin.live/1713145360372-6b1f1bfc-3496-460f-a395-7fa271910611.png)<br />从上面我们可以看出 Kubernetes 由 Master 和 Node 两种节点组成，这两种角色分别对应着控制节点和工作节点（可以理解为老板和员工）。<br />**其中 Master 节点由三个独立的组件组成，它们分别是负责整个集群通信的 API 服务的 kube-apiserver、负责容器调度的 kube-scheduler 以及负责维护集群状态的 kube-controller-manager 组件。**<br />整个集群的数据都是通过 kube-apiserver 保存到 etcd 数据库中的，而其他所有组件的通信也都是通过 kube-apiserver 和 etcd 数据库进行通信的，都不会直接和 etcd 进行通信。<br />**工作节点上最核心的组件就是 kubelet**，当然还有底层的容器运行时，比如 Docker，**其中 kubelet 就是主要来实现和底层的容器运行时进行通信的，这个通信的过程也被 Kubernetes 抽象成了一个 CRI（Container Runtime Interface)的远程调用接口，这个接口里面定义了容器运行时的所有标准操作，比如创建容器、删除容器等等。**
+Kubernetes 项目依托着 Borg 项目的理论优势，确定了一个如下图所示的全局架构图：<br />![](http://img.xinn.cc/1713145360372-6b1f1bfc-3496-460f-a395-7fa271910611.png)<br />从上面我们可以看出 Kubernetes 由 Master 和 Node 两种节点组成，这两种角色分别对应着控制节点和工作节点（可以理解为老板和员工）。<br />**其中 Master 节点由三个独立的组件组成，它们分别是负责整个集群通信的 API 服务的 kube-apiserver、负责容器调度的 kube-scheduler 以及负责维护集群状态的 kube-controller-manager 组件。**<br />整个集群的数据都是通过 kube-apiserver 保存到 etcd 数据库中的，而其他所有组件的通信也都是通过 kube-apiserver 和 etcd 数据库进行通信的，都不会直接和 etcd 进行通信。<br />**工作节点上最核心的组件就是 kubelet**，当然还有底层的容器运行时，比如 Docker，**其中 kubelet 就是主要来实现和底层的容器运行时进行通信的，这个通信的过程也被 Kubernetes 抽象成了一个 CRI（Container Runtime Interface)的远程调用接口，这个接口里面定义了容器运行时的所有标准操作，比如创建容器、删除容器等等。**
 
 所以对于 Kubernetes 来说他根本不关心你部署的到底是什么容器运行时，只要你这个容器运行时可以实现 CRI 接口就可以被 Kubernetes 来管理。<br />kubelet 的另外一个重要功能就是调用网络插件（CNI）和存储插件（CSI）为容器配置网络和存储功能，同样的 kubelet 也是把这两个重要功能通过接口暴露给外部了，所以如果我们想要实现自己的网络插件，只需要使用 CNI 就可以很方便的对接到 Kubernetes 集群当中去。
 
 
-可能下面的架构图看上去更清晰一些：<br />![](https://cdn1.ryanxin.live/1713145361253-81460624-4d21-4aa9-99f9-e9e12fc7acfe.png)
+可能下面的架构图看上去更清晰一些：<br />![](http://img.xinn.cc/1713145361253-81460624-4d21-4aa9-99f9-e9e12fc7acfe.png)
 ## 组件
 上面我介绍了 Kubernetes 集群的整体架构，下面我们再来更加详细的了解下这些组件的功能。
 ### kube-apiserver
@@ -22,7 +22,7 @@ Kubernetes 项目依托着 Borg 项目的理论优势，确定了一个如下图
 - 保证了集群状态访问的安全
 - API Server 隔离了集群状态访问和后端存储实现，这样 API Server 状态访问的方式不会因为后端存储技术 Etcd 的改变而改变，让后端存储方式选择更加灵活，方便了整个架构的扩展
 ### kube-controller-manager
-![](https://cdn1.ryanxin.live/1713145359483-e95585d3-d477-4e29-a2ea-acde0e9b7ac7.png)<br />**Controller Manager 用于实现 Kubernetes 集群故障检测和恢复的自动化工作。**<br />**主要负责执行各种控制器**：
+![](http://img.xinn.cc/1713145359483-e95585d3-d477-4e29-a2ea-acde0e9b7ac7.png)<br />**Controller Manager 用于实现 Kubernetes 集群故障检测和恢复的自动化工作。**<br />**主要负责执行各种控制器**：
 
 - **Replication Controller**：主要是定期关联 Replication Controller (RC) 和 Pod，以保证集群中一个 RC (一种资源对象) 所关联的 Pod 副本数始终保持为与预设值一致。
 - **Node Controller**：Kubelet 在启动时会通过 API Server 注册自身的节点信息，并定时向 API Server 汇报状态信息。API Server 在接收到信息后将信息更新到 Etcd 中。Node Controller 通过 API Server 实时获取 Node 的相关信息，实现管理和监控集群中的各个 Node 节点的相关控制功能。
@@ -57,7 +57,7 @@ Scheduler 是负责整个集群的资源调度的，主要的职责如下所示�
 ## 核心资源对象
 上面我们都是在架构层面了解 Kubernetes，但是似乎没有发现关于容器的说明，Kubernetes 作为容器编排引擎，那么他是怎么去对容器进行编排的呢？<br />在 Kubernetes 集群中抽象了很多集群内部的资源对象，我们可以通过这些资源对象去操作容器的编排工作。
 ### Pod
-Pod 是一组紧密关联的容器集合，它们共享 PID、IPC、Network 和 UTS namespace，是 Kubernetes 调度的基本单位。<br />Pod 的设计理念是支持多个容器在一个 Pod 中共享网络和文件系统，可以通过进程间通信和文件共享这种简单高效的方式组合完成服务。<br />**我们知道容器本质上就是进程，那么 Pod 实际上就是进程组了，只是这一组进程是作为一个整体来进行调度的。**<br />![](https://cdn1.ryanxin.live/1713145360139-3aa9010b-dd0c-4174-8126-77adf9c29aac.png)<br />在 Kubernetes 中，所有资源对象都使用资源清单（yaml 或 json）来定义，比如我们可以定义一个简单的 nginx 服务，它包含一个镜像为 nginx 的容器：`(nginx-pod.yaml`)
+Pod 是一组紧密关联的容器集合，它们共享 PID、IPC、Network 和 UTS namespace，是 Kubernetes 调度的基本单位。<br />Pod 的设计理念是支持多个容器在一个 Pod 中共享网络和文件系统，可以通过进程间通信和文件共享这种简单高效的方式组合完成服务。<br />**我们知道容器本质上就是进程，那么 Pod 实际上就是进程组了，只是这一组进程是作为一个整体来进行调度的。**<br />![](http://img.xinn.cc/1713145360139-3aa9010b-dd0c-4174-8126-77adf9c29aac.png)<br />在 Kubernetes 中，所有资源对象都使用资源清单（yaml 或 json）来定义，比如我们可以定义一个简单的 nginx 服务，它包含一个镜像为 nginx 的容器：`(nginx-pod.yaml`)
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -77,7 +77,7 @@ spec:
 kubectl apply -f nginx-pod.yaml
 ```
 
-**Pod 在 Kubernetes 集群中被创建的基本流程如下所示：**<br />![](https://cdn1.ryanxin.live/1713145360567-41f2df61-bd6d-4da6-a3ff-298d59f2ed72.png)
+**Pod 在 Kubernetes 集群中被创建的基本流程如下所示：**<br />![](http://img.xinn.cc/1713145360567-41f2df61-bd6d-4da6-a3ff-298d59f2ed72.png)
 
 - 用户通过 REST API 创建一个 Pod
 - apiserver 将其写入 etcd
@@ -103,4 +103,4 @@ Label 标签在 Kubernetes 资源对象中使用很多，也是非常重要的�
 现在已经创建了 Pod 的一些副本，那么这些副本上如何进行负载呢？如何把这些 Pod 暴露出去呢？这个时候我们就需要用到 Service 这种资源对象了。
 
 ### Service
-**Service 是应用服务的抽象，通过 Labels 为应用提供负载均衡和服务发现。**<br />匹配 Labels 的 Pod IP 和端口列表组成 Endpoints，**由 kube-proxy 负责将服务 IP 负载均衡到这些 Endpoints 上。**<br />**每个 Service 都会自动分配一个 cluster IP（仅在集群内部可访问的虚拟地址）和 DNS 名**，其他容器可以通过该地址或 DNS 来访问服务，而不需要了解后端容器的运行。<br />![](https://cdn1.ryanxin.live/1713145361614-d2bc42fc-de09-4032-ba2d-fc7ca46a5e74.png)<br />了解了上面的几个基本概念后，我们就完全可以把我们的容器服务迁移到 Kubernetes 集群上了。<br />当然我们还得先搭建好我们的 Kubernetes 集群环境。
+**Service 是应用服务的抽象，通过 Labels 为应用提供负载均衡和服务发现。**<br />匹配 Labels 的 Pod IP 和端口列表组成 Endpoints，**由 kube-proxy 负责将服务 IP 负载均衡到这些 Endpoints 上。**<br />**每个 Service 都会自动分配一个 cluster IP（仅在集群内部可访问的虚拟地址）和 DNS 名**，其他容器可以通过该地址或 DNS 来访问服务，而不需要了解后端容器的运行。<br />![](http://img.xinn.cc/1713145361614-d2bc42fc-de09-4032-ba2d-fc7ca46a5e74.png)<br />了解了上面的几个基本概念后，我们就完全可以把我们的容器服务迁移到 Kubernetes 集群上了。<br />当然我们还得先搭建好我们的 Kubernetes 集群环境。

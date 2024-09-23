@@ -779,7 +779,7 @@ Events:
 
 
 
-![image-20231107103955428](https://cdn1.ryanxin.live/image-20231107103955428.png)
+![image-20231107103955428](http://img.xinn.cc/image-20231107103955428.png)
 
 
 
@@ -811,7 +811,7 @@ id  pool            namespace  image          snap  device
 
 此时在ceph下数据也已经可以看到
 
-![image-20231107104237009](https://cdn1.ryanxin.live/image-20231107104237009.png)
+![image-20231107104237009](http://img.xinn.cc/image-20231107104237009.png)
 
 
 
@@ -1845,11 +1845,11 @@ echo xxxxxxxxxxxfs > index.html
 
 依次访问查看
 
-![image-20231110111453319](https://cdn1.ryanxin.live/image-20231110111453319.png)
+![image-20231110111453319](http://img.xinn.cc/image-20231110111453319.png)
 
-![image-20231110111555350](https://cdn1.ryanxin.live/image-20231110111555350.png)
+![image-20231110111555350](http://img.xinn.cc/image-20231110111555350.png)
 
-![image-20231110111627656](https://cdn1.ryanxin.live/image-20231110111627656.png)
+![image-20231110111627656](http://img.xinn.cc/image-20231110111627656.png)
 
 
 

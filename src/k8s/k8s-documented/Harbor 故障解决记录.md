@@ -2,7 +2,7 @@
 author: Ryan
 title: Harbor 镜像仓库迁移
 date: 2024-07-08
-image: https://cdn1.ryanxin.live/xwiki/harbor.png
+image: http://img.xinn.cc/xwiki/harbor.png
 ---
 
 ## 原因
@@ -14,13 +14,13 @@ image: https://cdn1.ryanxin.live/xwiki/harbor.png
 更改Harbor Chart文件，连接外部PostgreSQL，重新安装Chart 包并同步镜像数据。
 
 
-![b4b81008401e37c7558dfd24cf8472f.png](https://cdn1.ryanxin.live/1720599901704-1969fff5-0717-40f0-90a9-81413f56a3c9.png)
+![b4b81008401e37c7558dfd24cf8472f.png](http://img.xinn.cc/1720599901704-1969fff5-0717-40f0-90a9-81413f56a3c9.png)
 
 
 
 ## 问题
 
-harbor-databases 数据库起不来<br />![5d2d12650156cdaf19b89d2d77e53b9.png](https://cdn1.ryanxin.live/1720599579694-590546b4-faa7-465b-b8fb-e05bb9ee3953.png)
+harbor-databases 数据库起不来<br />![5d2d12650156cdaf19b89d2d77e53b9.png](http://img.xinn.cc/1720599579694-590546b4-faa7-465b-b8fb-e05bb9ee3953.png)
 
 
 ## 解决
@@ -299,7 +299,7 @@ $ rsync -avP --partial --append-verify /k8sdata/k8s-data/rmxc-base-harbor-jobser
         Connection matched pg_hba.conf line 99: "host all all all md5"
 
 ```
-![图片.png](https://cdn1.ryanxin.live/1720621398728-6fa1c670-be18-4def-bea7-9b23b23e81a8.png)
+![图片.png](http://img.xinn.cc/1720621398728-6fa1c670-be18-4def-bea7-9b23b23e81a8.png)
 
 这个问题主要是出现在 habor-core 组件连接 datebases 时的密码不对，需要修改 Harbor-Chart 中的 Value 文件配置。
 ### 修改 Harbor Chart 内容

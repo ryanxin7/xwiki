@@ -211,7 +211,7 @@ pod/busybox created
 
 ```
 
-![验证挂载](https://cdn1.ryanxin.live/1674889936820-b1e98d87-5f4b-4363-870d-770e69014658.png)
+![验证挂载](http://img.xinn.cc/1674889936820-b1e98d87-5f4b-4363-870d-770e69014658.png)
 
 
 
@@ -295,7 +295,7 @@ spec:
 查看pod挂载情况
 
 
-![查看pod挂载情况](https://cdn1.ryanxin.live/xxlog/1674891101243-0f2488ce-778a-4dda-87b4-90b3c1b1cf9a.png)
+![查看pod挂载情况](http://img.xinn.cc/xxlog/1674891101243-0f2488ce-778a-4dda-87b4-90b3c1b1cf9a.png)
 
 
 
@@ -305,7 +305,7 @@ spec:
 
 **admin secret** 用于k8s master 节点 连接到ceph 自动创建pv ，并关联pvc提供给pod 使用。uer  secret 用于pod挂载。
 
-![后端存储流程图](https://cdn1.ryanxin.live/1674891447209-73e1dade-be4a-4a07-bbfe-f4c1ecb67858.png)
+![后端存储流程图](http://img.xinn.cc/1674891447209-73e1dade-be4a-4a07-bbfe-f4c1ecb67858.png)
 ```yaml
 apiVersion: v1
 kind: Secret

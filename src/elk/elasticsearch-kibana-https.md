@@ -633,7 +633,7 @@ Oct 27 04:06:27 localhost fwlog: 日志类型:服务控制或应用控制, 策�
 
 
 
-![image-20231027175623276](https://cdn1.ryanxin.live/image-20231027175623276.png)
+![image-20231027175623276](http://img.xinn.cc/image-20231027175623276.png)
 
 
 

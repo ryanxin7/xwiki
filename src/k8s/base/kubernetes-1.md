@@ -1468,7 +1468,7 @@ options ndots:5
 
 
 ### 10.6 测试 prometheus 监控项
-[http://10.1.0.31:30009/metrics](http://10.1.0.31:30009/metrics)<br />![prometheus监控项接口访问](https://cdn1.ryanxin.live/1672815227326-157edf5d-ca34-48af-be12-9e8c529e0271.png)
+[http://10.1.0.31:30009/metrics](http://10.1.0.31:30009/metrics)<br />![prometheus监控项接口访问](http://img.xinn.cc/1672815227326-157edf5d-ca34-48af-be12-9e8c529e0271.png)
 
 
 
@@ -1488,7 +1488,7 @@ options ndots:5
 - ? Due to breaking changes between Kubernetes API versions, some features might not work correctly in the Dashboard.
 
 
-![2.6.1版本](https://cdn1.ryanxin.live/1672820696762-d1dfdf70-772d-43c6-9047-43d17459f886.png)
+![2.6.1版本](http://img.xinn.cc/1672820696762-d1dfdf70-772d-43c6-9047-43d17459f886.png)
 
 ```yaml
 # Copyright 2017 The Kubernetes Authors.
@@ -1971,9 +1971,9 @@ ca.crt:     1302 bytes
 
 ### 11.8 登录测试
 
-![输入token](https://cdn1.ryanxin.live/1672820370137-de794fe7-65da-418b-85a4-b92f3b8b3e42.png)
+![输入token](http://img.xinn.cc/1672820370137-de794fe7-65da-418b-85a4-b92f3b8b3e42.png)
 
-![界面展示](https://cdn1.ryanxin.live/1672820388726-cab07cf9-cbb9-4db3-bb1d-ef6ecfab21ff.png)
+![界面展示](http://img.xinn.cc/1672820388726-cab07cf9-cbb9-4db3-bb1d-ef6ecfab21ff.png)
 
 
 
@@ -2062,7 +2062,7 @@ No IPv6 peers found.
 
 先升级master 保证集群中至少有一个master节点可用 ，在node节点nginx反向代理中注释掉要升级的master节点。
 
-![1672892592550-0602394c-6d2e-4912-b773-459e3460253a](https://cdn1.ryanxin.live/1672892592550-0602394c-6d2e-4912-b773-459e3460253a.jpg)
+![1672892592550-0602394c-6d2e-4912-b773-459e3460253a](http://img.xinn.cc/1672892592550-0602394c-6d2e-4912-b773-459e3460253a.jpg)
 
 
 

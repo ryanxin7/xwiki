@@ -13,11 +13,11 @@ date: 2024-06-07T12:33
 <a name="b62d7d45"></a>
 ### 3.1 源码包安装
 
-官方提供了Ubuntu和Debian的包，没有Centos的包<br />![](https://cdn1.ryanxin.live/1675997727329-efbe55ed-cb1e-4446-b7d2-40fd13d1031b.png#alt=)
+官方提供了Ubuntu和Debian的包，没有Centos的包<br />![](http://img.xinn.cc/1675997727329-efbe55ed-cb1e-4446-b7d2-40fd13d1031b.png#alt=)
 
 ---
 
-![](https://cdn1.ryanxin.live/xxlog/1675997822880-a7a98a7a-9d66-4040-902e-4575f17bcaf5.png#alt=image.png)
+![](http://img.xinn.cc/xxlog/1675997822880-a7a98a7a-9d66-4040-902e-4575f17bcaf5.png#alt=image.png)
 
 <a name="0aa51ed0"></a>
 #### ubuntu 安装
@@ -543,11 +543,11 @@ LISTEN      0      128                         *:9999                 *:*
 <a name="af73fc56"></a>
 #### 3.3.2 查看haproxy的状态页面
 
-浏览器访问：[http://haproxy-server:9999/haproxy-status](http://www.yunweipai.com/go?_=84a56fb1feaHR0cDovL2hhcHJveHktc2VydmVyOjk5OTkvaGFwcm94eS1zdGF0dXM%3D)<br />![](https://cdn1.ryanxin.live/1676021477593-8a91dd15-dde3-4cc1-a009-f117f39f08f9.png#alt=)
+浏览器访问：[http://haproxy-server:9999/haproxy-status](http://www.yunweipai.com/go?_=84a56fb1feaHR0cDovL2hhcHJveHktc2VydmVyOjk5OTkvaGFwcm94eS1zdGF0dXM%3D)<br />![](http://img.xinn.cc/1676021477593-8a91dd15-dde3-4cc1-a009-f117f39f08f9.png#alt=)
 
 <a name="fa61ee46"></a>
 #### 3.3.3 测试转发
 
 10.1.0.6:30013 转发到 10.1.0.31:30013 ✅
 
-![](https://cdn1.ryanxin.live/1676254179452-d15ddfd6-e6e2-4d2c-8d3a-691d48309fcf.png#alt=)
+![](http://img.xinn.cc/1676254179452-d15ddfd6-e6e2-4d2c-8d3a-691d48309fcf.png#alt=)

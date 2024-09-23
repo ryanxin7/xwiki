@@ -35,7 +35,7 @@ breadcrumb: false
 
 如下图所示：  
 
-![](https://cdn1.ryanxin.live/1675821066302-e7f2e7a2-7032-4d52-b186-470babac7d1b.png)
+![](http://img.xinn.cc/1675821066302-e7f2e7a2-7032-4d52-b186-470babac7d1b.png)
 
 
 Ingress官方文档：[https://kubernetes.io/zh-cn/docs/concepts/services-networking/ingress/](https://kubernetes.io/zh-cn/docs/concepts/services-networking/ingress/)Ingress控制器官方文档：[https://kubernetes.io/zh-cn/docs/concepts/services-networking/ingress-controllers/](https://kubernetes.io/zh-cn/docs/concepts/services-networking/ingress-controllers/)
@@ -69,7 +69,7 @@ nginx Ingress控制器github地址：[https://github.com/kubernetes/ingress-ngin
 通过NodePort或LoadBalancer类型的Service或者通过拥有外部IP地址（externalIP）的Service对象为其接入集群外部的客户端请求流量。这意味着，在生产环境以这种方式部署一个Ingress控制器时，必须在其前端定义一个负载均衡器，这个负载均衡器可以是LoadBalancer类型的Service，也可以是用户自行管理的负载均衡器。
 
 
-![](https://cdn1.ryanxin.live/1675822367503-e4adce9e-bfca-4bb3-9b2f-549eac4f60ed.png)
+![](http://img.xinn.cc/1675822367503-e4adce9e-bfca-4bb3-9b2f-549eac4f60ed.png)
 
 
 
@@ -80,7 +80,7 @@ nginx Ingress控制器github地址：[https://github.com/kubernetes/ingress-ngin
 ### 2.以DaemonSet方式部署Ingress控制器
 Pod资源Ingress控制器的各Pod分别以单一实例的方式运行在集群的所有节点或部分专用节点之上，并配置这些Pod对象以hostPort或hostNetwork的方式在当前节点接入外部流量。在这种方式下，前端还是需要一个负载均衡器，作为客户端流量的统一入口，然后转发给Ingress控制器Pod
 
-![](https://cdn1.ryanxin.live/1675822438502-f95a9c45-e281-47e8-b65f-fce5abecd40a.png)
+![](http://img.xinn.cc/1675822438502-f95a9c45-e281-47e8-b65f-fce5abecd40a.png)
 
 
 
@@ -91,7 +91,7 @@ Pod资源Ingress控制器的各Pod分别以单一实例的方式运行在集群�
 
  选定好版本，下载对应的部署文件 
 
-![](https://cdn1.ryanxin.live/1675833096495-64fbd3a8-e6ab-4eeb-9c19-063d0909ac07.png)
+![](http://img.xinn.cc/1675833096495-64fbd3a8-e6ab-4eeb-9c19-063d0909ac07.png)
 
 
 
@@ -231,7 +231,7 @@ listen ingress-nginx-controller-443
        server ingress-controller-server2 10.1.0.32:30021 check inter 2000 fall 3 rise 5
 ```
 
-![](https://cdn1.ryanxin.live/1676361150547-2ea0c07b-1974-4351-9488-f601238b0a2c.png)
+![](http://img.xinn.cc/1676361150547-2ea0c07b-1974-4351-9488-f601238b0a2c.png)
 
 
 
@@ -603,7 +603,7 @@ listen k8s-xin-ingress-443
 
 
 
-![](https://cdn1.ryanxin.live/1676441359881-2d49ba70-9af5-4d2a-b4c4-e5bba389aa3c.png)![](https://cdn1.ryanxin.live/1676441343917-040c8c97-7dc3-4f51-ac74-3671a2f8651d.png)
+![](http://img.xinn.cc/1676441359881-2d49ba70-9af5-4d2a-b4c4-e5bba389aa3c.png)![](http://img.xinn.cc/1676441343917-040c8c97-7dc3-4f51-ac74-3671a2f8651d.png)
 
 
 
@@ -707,7 +707,7 @@ echo "www.myapp1.com/tls2/index.html" > /data/tomcat/webapps/tls2/index.html
 
 
 #### 3.3.4 访问测试
-![](https://cdn1.ryanxin.live/1676444292477-d1741e62-31dd-4c06-8e05-ff85d8fb18e2.png)![](https://cdn1.ryanxin.live/1676444442373-03d6e130-fea0-4e91-8f83-7121b860019d.png)
+![](http://img.xinn.cc/1676444292477-d1741e62-31dd-4c06-8e05-ff85d8fb18e2.png)![](http://img.xinn.cc/1676444442373-03d6e130-fea0-4e91-8f83-7121b860019d.png)
 
 
 ### 3.4 证书更新
@@ -737,6 +737,6 @@ root@master-01:~/resources/ingress-cert# base64 www.myapp1.com-new.crt -w 0
 LS0tLS1CRUdJTiBDRVJ..............FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
 root@master-01:~# kubectl edit secret/cert-www.myapp1.com
 ```
-![](https://cdn1.ryanxin.live/1676445008460-e809acd8-60e2-4ef6-ac23-1faa36ddf2cc.png)
+![](http://img.xinn.cc/1676445008460-e809acd8-60e2-4ef6-ac23-1faa36ddf2cc.png)
 
  和之前的访问结果进行对比，可以看到证书已经被更新  

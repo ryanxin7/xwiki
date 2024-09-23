@@ -42,7 +42,7 @@ AccessModes（访问模式）：用来对 PV 进行访问模式的设置，用�
    - `ReadWriteMany`（RWX）：读写权限，可以被多个节点挂载
 - 注意
 
-一些 PV 可能支持多种访问模式，但是在挂载的时候只能使用一种访问模式，多种访问模式是不会生效的。<br />下图是一些常用的 Volume 插件支持的访问模式： ![](https://cdn1.ryanxin.live/1719541574602-03887b5d-3920-4ff2-9339-9d824c573651.jpeg)<br />直接创建上面的资源对象：
+一些 PV 可能支持多种访问模式，但是在挂载的时候只能使用一种访问模式，多种访问模式是不会生效的。<br />下图是一些常用的 Volume 插件支持的访问模式： ![](http://img.xinn.cc/1719541574602-03887b5d-3920-4ff2-9339-9d824c573651.jpeg)<br />直接创建上面的资源对象：
 ```shell
 $ kubectl apply -f pv-hostpath.yaml
 persistentvolume/pv-hostpath created

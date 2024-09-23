@@ -264,9 +264,9 @@ jenkins-319-service   NodePort   10.10.24.94   <none>        80:38080/TCP   41s
 ```
 
 
-![](https://cdn1.ryanxin.live/1675140260595-e7f2ee78-f004-4dfd-afb3-ab7473eb824b.png)
+![](http://img.xinn.cc/1675140260595-e7f2ee78-f004-4dfd-afb3-ab7473eb824b.png)
 
 获取密码
-![获取密码](https://cdn1.ryanxin.live/1675140354511-98828f8d-9a2c-4692-a714-a750401805d7.png)
+![获取密码](http://img.xinn.cc/1675140354511-98828f8d-9a2c-4692-a714-a750401805d7.png)
 
-![](https://cdn1.ryanxin.live/1675150017505-dc2f9866-e03f-47ce-9c94-89f18fc539fb.png)
+![](http://img.xinn.cc/1675150017505-dc2f9866-e03f-47ce-9c94-89f18fc539fb.png)

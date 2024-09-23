@@ -32,9 +32,9 @@ node_memory_MemFree_bytes{instance="10.1.0.35:9100"} #查询指定节点的可�
 
 
 
-![image-20240126100923091](https://cdn1.ryanxin.live/image-20240126100923091.png)
+![image-20240126100923091](http://img.xinn.cc/image-20240126100923091.png)
 
-![image-20240126101128703](https://cdn1.ryanxin.live/image-20240126101128703.png)
+![image-20240126101128703](http://img.xinn.cc/image-20240126101128703.png)
 
 将 `node_memory_MemFree_bytes` 查询结果从字节（bytes）转换为更大的单位，比如千兆字节（Gigabytes，GB）
 
@@ -42,7 +42,7 @@ node_memory_MemFree_bytes{instance="10.1.0.35:9100"} #查询指定节点的可�
 node_memory_MemFree_bytes{instance="10.1.0.35:9100"} / (1024 * 1024 * 1024)
 ```
 
-![image-20240126101445113](https://cdn1.ryanxin.live/image-20240126101445113.png)
+![image-20240126101445113](http://img.xinn.cc/image-20240126101445113.png)
 
 
 
@@ -182,7 +182,7 @@ node_memory_MemTotal_bytes{}[5m]# 区间向量表达式，选择以当前时间�
 node_memory_MemTotal_bytes{instance="10.1.0.35:9100"}[5m]
 ```
 
-![image-20240126153306695](https://cdn1.ryanxin.live/image-20240126153306695.png)
+![image-20240126153306695](http://img.xinn.cc/image-20240126153306695.png)
 
 
 
@@ -203,7 +203,7 @@ node_memory_MemTotal_bytes{instance="10.1.0.35:9100"}[5m]
 node_memory_MemFree_bytes/1024/1024 #将内存进行单位转换
 ```
 
-![image-20240126153654045](https://cdn1.ryanxin.live/image-20240126153654045.png)
+![image-20240126153654045](http://img.xinn.cc/image-20240126153654045.png)
 
 
 
@@ -211,7 +211,7 @@ node_memory_MemFree_bytes/1024/1024 #将内存进行单位转换
 node_disk_read_bytes_total{device="vda"}+ node_disk_written_bytes_total{device="vda"}
 ```
 
-![image-20240126154447530](https://cdn1.ryanxin.live/image-20240126154447530.png)
+![image-20240126154447530](http://img.xinn.cc/image-20240126154447530.png)
 
 
 
@@ -222,7 +222,7 @@ irate(node_disk_read_bytes_total{device="vda", instance="10.1.0.34:9100", job="p
 
 
 
-![image-20240126160440798](https://cdn1.ryanxin.live/image-20240126160440798.png)
+![image-20240126160440798](http://img.xinn.cc/image-20240126160440798.png)
 
 
 
@@ -246,4 +246,4 @@ max(node_memory_MemFree_bytes)#某个指标数据的最大值
 sum(http_requests_total) #计算 http requests total 最近的请求总量
 ```
 
-![image-20240126161149728](https://cdn1.ryanxin.live/image-20240126161149728.png)
+![image-20240126161149728](http://img.xinn.cc/image-20240126161149728.png)

@@ -2,7 +2,7 @@
 author: Ryan
 title: Confluence 部署
 date: 2024-06-25
-image: https://cdn1.ryanxin.live/xwiki/confluence-5.png
+image: http://img.xinn.cc/xwiki/confluence-5.png
 ---
 
 # 1.Confluence镜像构建

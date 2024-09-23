@@ -8,7 +8,7 @@ date: 2023-01-16
 
 ## 自定义镜像-运行nginx与tomcat实现动静分离
 
-![构建流程图](https://cdn1.ryanxin.live/1673526070905-fa3a6810-3329-4dbd-9896-e1da10114b61.png)
+![构建流程图](http://img.xinn.cc/1673526070905-fa3a6810-3329-4dbd-9896-e1da10114b61.png)
 
 
 ### 1. 系统基础镜像
@@ -444,7 +444,7 @@ docker run -it --rm -p 9900:8080 harbor.ceamg.com/xinweb11/tomcat-app1:1.9
 ```
 
 
-![访问测试](https://cdn1.ryanxin.live/1673854826003-6af01184-b520-4ed6-b187-ecaf9c803a00.png)
+![访问测试](http://img.xinn.cc/1673854826003-6af01184-b520-4ed6-b187-ecaf9c803a00.png)
 
 
 
@@ -534,7 +534,7 @@ spec:
 ```bash
 ping xin-tomcat-app1-service.xin-web.svc.ceamg.local
 ```
-![检测后端TomcatSVC连通性](https://cdn1.ryanxin.live/1673869796202-9de30c77-d621-466e-ab4c-e8a5060d9ed9.png)
+![检测后端TomcatSVC连通性](http://img.xinn.cc/1673869796202-9de30c77-d621-466e-ab4c-e8a5060d9ed9.png)
 
 启动nginx pod 
 
@@ -663,7 +663,7 @@ upstream  tomcat_webserver {
 ```
 
 
-![访问测试](https://cdn1.ryanxin.live/1673872226767-dd34b982-4e75-4aa6-b700-eb761d4f4dfd.png)<br />![访问测试](https://cdn1.ryanxin.live/1673872214571-9e2fc591-cfbb-4368-8d65-1072d5a9b297.png)
+![访问测试](http://img.xinn.cc/1673872226767-dd34b982-4e75-4aa6-b700-eb761d4f4dfd.png)<br />![访问测试](http://img.xinn.cc/1673872214571-9e2fc591-cfbb-4368-8d65-1072d5a9b297.png)
 
 
 

@@ -2903,16 +2903,16 @@ chown -R 2023.2023 /data/k8s/wordpress
 #修改目录所属者为Pod的容器里的nginx用户，否则可能会出现权限不足无法读写的问题
 ```
 
-![](https://cdn1.ryanxin.live/1675306401503-693d21f8-8ebe-4869-9783-073eb5e9693f.png)
+![](http://img.xinn.cc/1675306401503-693d21f8-8ebe-4869-9783-073eb5e9693f.png)
 
 
-![](https://cdn1.ryanxin.live/1675313682044-a7289353-554f-444f-90a6-dcd96649781d.png)
+![](http://img.xinn.cc/1675313682044-a7289353-554f-444f-90a6-dcd96649781d.png)
 
 
 
 ### 初始化数据库
 
-![](https://cdn1.ryanxin.live/1675320414058-e6a2f9bc-87d1-4a0c-a0eb-c6bfa6ba4dfd.png)
+![](http://img.xinn.cc/1675320414058-e6a2f9bc-87d1-4a0c-a0eb-c6bfa6ba4dfd.png)
 
 ```sql
 mysql> create database wordpress;
@@ -2925,7 +2925,7 @@ Query OK, 0 rows affected (0.03 sec)
 mysql-sts
 ```
 
-![](https://cdn1.ryanxin.live/1675321030190-9a01f092-6ed1-4756-9815-3924a3a7efc0.png)
+![](http://img.xinn.cc/1675321030190-9a01f092-6ed1-4756-9815-3924a3a7efc0.png)
 
 
 wordpress 数据库填为主库`mysql.mysql-sts.svc.ceamg.local`
@@ -2933,17 +2933,17 @@ wordpress 数据库填为主库`mysql.mysql-sts.svc.ceamg.local`
 mysql.mysql-sts.svc.ceamg.local
 ```
 
-![](https://cdn1.ryanxin.live/1675321235287-df1c21c2-c188-42ae-b107-6a6e1ae59ede.png)
+![](http://img.xinn.cc/1675321235287-df1c21c2-c188-42ae-b107-6a6e1ae59ede.png)
 
 
-![](https://cdn1.ryanxin.live/1675321258457-801ba4b1-8e81-407f-bc0d-c67b1b28f7ff.png)
+![](http://img.xinn.cc/1675321258457-801ba4b1-8e81-407f-bc0d-c67b1b28f7ff.png)
 
 
-![](https://cdn1.ryanxin.live/1675321343851-d9406dc5-561d-476e-a1ec-66d6e5e598f4.png)
+![](http://img.xinn.cc/1675321343851-d9406dc5-561d-476e-a1ec-66d6e5e598f4.png)
 
-![](https://cdn1.ryanxin.live/1675321376969-12df2786-7951-4147-bbf2-44faa61357c0.png)
+![](http://img.xinn.cc/1675321376969-12df2786-7951-4147-bbf2-44faa61357c0.png)
 
 
 ### 测试上传图片
-![](https://cdn1.ryanxin.live/1675321605147-1ff82115-8cf0-489f-956a-203cf92212da.png)
+![](http://img.xinn.cc/1675321605147-1ff82115-8cf0-489f-956a-203cf92212da.png)
 

@@ -173,6 +173,30 @@
   "/k8s/controller/Deployment": {
     "words": 3724
   },
+  "/k8s/devops/Gitlab/Gitlab": {
+    "words": 3014
+  },
+  "/k8s/devops/GitOps/1.Argocd实现GitOps": {
+    "words": 4456
+  },
+  "/k8s/devops/GitOps/2.Tekton结合ArgoCD实现GitOps": {
+    "words": 12707
+  },
+  "/k8s/devops/Harbor/Harbor的安装配置": {
+    "words": 3968
+  },
+  "/k8s/devops/Jenkins/基于K8S的动态JenkinsSlave": {
+    "words": 4303
+  },
+  "/k8s/devops/Tekton/1.Tekton流水线": {
+    "words": 6165
+  },
+  "/k8s/devops/Tekton/2.Tekton触发器和事件监听器": {
+    "words": 3873
+  },
+  "/k8s/devops/Tekton/3.Tekton项目实战": {
+    "words": 4566
+  },
   "/k8s/helm/55-Helm包管理": {
     "words": 3051
   },

@@ -221,7 +221,7 @@ libcrc32c              16384  6 nf_conntrack,nf_nat,openvswitch,btrfs,raid456,ip
 ## 二、安装Containerd 
 三个版本区别
 
-![image.png](https://cdn1.ryanxin.live/1709261598317-433ae6be-a533-436d-b265-1fe2daa05e55.png)
+![image.png](http://img.xinn.cc/1709261598317-433ae6be-a533-436d-b265-1fe2daa05e55.png)
 
 ### 1、apt 安装
 #### 1.1、查看 containerd 仓库版本
@@ -314,7 +314,7 @@ root@containerd-server:~# systemctl restart containerd.service
 #### 2.1、下载 containerd ⼆进制文件
 containerd v1.6.24 下载地址：https://github.com/containerd/containerd/releases/tag/v1.6.24
 
-![image.png](https://cdn1.ryanxin.live/1709261325943-924c5791-f482-4726-bf1b-310bfbd06e01.png)<br />![image.png](https://cdn1.ryanxin.live/1709261416899-c1aec674-1776-4f86-b4e0-a3e121769d1f.png)
+![image.png](http://img.xinn.cc/1709261325943-924c5791-f482-4726-bf1b-310bfbd06e01.png)<br />![image.png](http://img.xinn.cc/1709261416899-c1aec674-1776-4f86-b4e0-a3e121769d1f.png)
 
 [https://www.cnblogs.com/tingfengdengyu/articles/17336942.html](https://www.cnblogs.com/tingfengdengyu/articles/17336942.html)
 
@@ -1725,7 +1725,7 @@ kubernetes-dashboard        NodePort    10.98.30.97     <none>        443:30036/
 
 ```
 
-然后可以通过上面的 30036 端口去访问 Dashboard，要记住使用 https<br />![image.png](https://cdn1.ryanxin.live/1709558342318-2b4a27ab-07e3-4c6e-bb1c-453aa8b4e85a.png)
+然后可以通过上面的 30036 端口去访问 Dashboard，要记住使用 https<br />![image.png](http://img.xinn.cc/1709558342318-2b4a27ab-07e3-4c6e-bb1c-453aa8b4e85a.png)
 
 然后创建一个具有全局所有权限的用户来登录 Dashboard：(admin.yaml)
 ```yaml
@@ -1766,7 +1766,7 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IkJUN1ZoRDFvdlZaSG1EOGViM0N3eGtoaU9od2ttSjJvcE9WQV80
 
 然后用上面的 base64 解码后的字符串作为 token 登录 Dashboard 即可，新版本还新增了一个暗黑模式：
 
-![image.png](https://cdn1.ryanxin.live/1709558599777-aae14830-3115-4a45-8da5-cb46638bc98d.png)
+![image.png](http://img.xinn.cc/1709558599777-aae14830-3115-4a45-8da5-cb46638bc98d.png)
 
 
 

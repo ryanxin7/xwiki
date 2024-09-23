@@ -10,7 +10,7 @@ date: 2024-01-04
 
 
 
-![](https://cdn1.ryanxin.live/image.png)
+![](http://img.xinn.cc/image.png)
 
 `rbac.authorization.k8s.io`  API组是Kubernetes中用于管理RBAC策略的一部分。
 
@@ -361,9 +361,9 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6Il82SWdMUWRGbnlHeGEtQnpReDVvUE9PWW9yWXY4cmg0NWdsT2Zi
 
 **Kubernetes Dashboard 登录测试** 
 
-![image-20240104155842003](https://cdn1.ryanxin.live/image-20240104155842003.png)
+![image-20240104155842003](http://img.xinn.cc/image-20240104155842003.png)
 
-![](https://cdn1.ryanxin.live/image-20240104160312671.png)
+![](http://img.xinn.cc/image-20240104160312671.png)
 
 
 
@@ -616,7 +616,7 @@ xinn-web1-deployment-6b696577df-whmq8   1/1     Running   0          31d
 
 **dashboard 登录测试**
 
-![image-20240105102007044](https://cdn1.ryanxin.live/image-20240105102007044.png)
+![image-20240105102007044](http://img.xinn.cc/image-20240105102007044.png)
 
 
 

@@ -33,7 +33,7 @@ HPA需要通过Metrics Server来获取Pod的资源利用率，所以需要先部
 
 Metrics Server是Kubernetes 集群核心监控数据的聚合器，它负责从kubelet收集资源指标，然后对这些指标监控数据进行聚合，并通过**Metrics API**将它们暴露在Kubernetes apiserver中，供水平Pod Autoscaler和垂直Pod Autoscaler使用。也可以通过kubectl top node/pod查看指标数据。
 
-![](https://cdn1.ryanxin.live/1676516280565-5ee4d1cd-bc2d-4c5e-8973-b0fd7a8a7e98.png)
+![](http://img.xinn.cc/1676516280565-5ee4d1cd-bc2d-4c5e-8973-b0fd7a8a7e98.png)
 
 
 
@@ -298,7 +298,7 @@ NAME        CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
 10.1.0.33   331m         4%     5453Mi          75% 
 ```
 
-![](https://cdn1.ryanxin.live/1676526546778-814391aa-f544-40cb-b538-c2996ac10d20.png)
+![](http://img.xinn.cc/1676526546778-814391aa-f544-40cb-b538-c2996ac10d20.png)
 
 
  可以获取node和pod的资源指标就表示metrics-server可以正常工作  
@@ -407,11 +407,11 @@ NAME                  REFERENCE                 TARGETS   MINPODS   MAXPODS   RE
 pod-autoscaler-demo   Deployment/nginx-deploy   0%/80%    3         10        5          21s
 ```
 
- 因为之前创建的nginx pod访问量较低，cpul利用率肯定不超过80%，所以等待一段时间就会触发缩容  ![](https://cdn1.ryanxin.live/1676532911192-26193a95-e0a2-4179-bf88-8e266f44b84a.png)
+ 因为之前创建的nginx pod访问量较低，cpul利用率肯定不超过80%，所以等待一段时间就会触发缩容  ![](http://img.xinn.cc/1676532911192-26193a95-e0a2-4179-bf88-8e266f44b84a.png)
 
  因为在hpa中定义的最小副本数为3，所以缩容到3个Pod就不会缩容了  
 
-![](https://cdn1.ryanxin.live/1676532937099-f0a2d6da-da9e-4509-a36d-da0886cc412d.png)
+![](http://img.xinn.cc/1676532937099-f0a2d6da-da9e-4509-a36d-da0886cc412d.png)
 
 
 
@@ -477,7 +477,7 @@ spec:
   targetCPUUtilizationPercentage: 80
 ```
 
- 查看hpa资源：  ![](https://cdn1.ryanxin.live/1676536647445-101ff26a-c0fe-4bb2-94d9-3107defa651d.png)![](https://cdn1.ryanxin.live/1676536873005-3161c453-e717-4da2-a40f-3fb3ef15d72a.png) stress-ng会将Pod的cpu利用率打满，所以等待一段时间hpa就会逐步提高pod的副本数，如下图所示，但是在hpa中定义的最大副本数为10，所以最多扩容到10个Pod就不会扩容了  ![](https://cdn1.ryanxin.live/1676536708283-cc4704cc-5098-49bf-bac3-3cdcebdf987b.png)
+ 查看hpa资源：  ![](http://img.xinn.cc/1676536647445-101ff26a-c0fe-4bb2-94d9-3107defa651d.png)![](http://img.xinn.cc/1676536873005-3161c453-e717-4da2-a40f-3fb3ef15d72a.png) stress-ng会将Pod的cpu利用率打满，所以等待一段时间hpa就会逐步提高pod的副本数，如下图所示，但是在hpa中定义的最大副本数为10，所以最多扩容到10个Pod就不会扩容了  ![](http://img.xinn.cc/1676536708283-cc4704cc-5098-49bf-bac3-3cdcebdf987b.png)
 
 
 

@@ -161,7 +161,7 @@ vim /etc/exports
 /nfs-server  *(rw,sync,no_subtree_check,insecure,no_root_squash)
 ```
 
-配置文件中的权限解释：![eba3c43b08c94377b44465059a0a7bb3.png](https://cdn1.ryanxin.live/1687918792849-fd5dd6db-e1b3-4ed8-b7dc-573208f425a0.png)
+配置文件中的权限解释：![eba3c43b08c94377b44465059a0a7bb3.png](http://img.xinn.cc/1687918792849-fd5dd6db-e1b3-4ed8-b7dc-573208f425a0.png)
 
  使用下面命令将共享文件夹启用并生效：  
 ```bash
@@ -534,9 +534,9 @@ ceamg                           https://harbor.ceamg.com/chartrepo/chart
 helm package nfs-subdir-external-provisioner 
 ```
 
-![image.png](https://cdn1.ryanxin.live/1688092478072-a7c0bbd7-dd48-4fd2-8142-74e73673355d.png)
+![image.png](http://img.xinn.cc/1688092478072-a7c0bbd7-dd48-4fd2-8142-74e73673355d.png)
 
-查看文件![image.png](https://cdn1.ryanxin.live/1688092422149-fee14d56-c703-4523-8aaf-aa6b6a1b4867.png)
+查看文件![image.png](http://img.xinn.cc/1688092422149-fee14d56-c703-4523-8aaf-aa6b6a1b4867.png)
 
 ```bash
 
@@ -772,7 +772,7 @@ drwxrwxrwx 3 root   root    4096 Jun 30 11:28 wordpress-wordpress-pvc-6ac1671f-0
 
 浏览器访问测试wordpress应用 
 
-![image.png](https://cdn1.ryanxin.live/1688098249213-b50f2628-671a-472d-a21e-135acbf18f09.png)
+![image.png](http://img.xinn.cc/1688098249213-b50f2628-671a-472d-a21e-135acbf18f09.png)
 
 
 ---

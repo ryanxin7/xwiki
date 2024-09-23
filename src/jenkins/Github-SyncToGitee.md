@@ -73,19 +73,19 @@ jobs:
 
 
 
-![](https://cdn1.ryanxin.live/image-20230518172856867.png)
+![](http://img.xinn.cc/image-20230518172856867.png)
 
 
 
 输入Name为**GITEE_PRIVATE_KEY**, Value为复制`id_ed25519`的私钥内容
 
-![](https://cdn1.ryanxin.live/image-20230518173101453.png)
+![](http://img.xinn.cc/image-20230518173101453.png)
 
 
 
 ### 2.2 配置Gitee 公钥
 
-![](https://cdn1.ryanxin.live/image-20230518173908815.png)
+![](http://img.xinn.cc/image-20230518173908815.png)
 
 
 
@@ -101,7 +101,7 @@ jobs:
 
 需要添加以下权限：
 
-![](https://cdn1.ryanxin.live/image-20230518174125709.png)
+![](http://img.xinn.cc/image-20230518174125709.png)
 
 
 
@@ -109,19 +109,19 @@ jobs:
 
 
 
-![](https://cdn1.ryanxin.live/image-20230518174340775.png)
+![](http://img.xinn.cc/image-20230518174340775.png)
 
 
 
 配置到Github的secret界面
 
-![](https://cdn1.ryanxin.live/image-20230518174429321.png)
+![](http://img.xinn.cc/image-20230518174429321.png)
 
 
 
 最终Github这里配置的Actions secrets如下：
 
-![](https://cdn1.ryanxin.live/image-20230518174527545.png)
+![](http://img.xinn.cc/image-20230518174527545.png)
 
 
 
@@ -129,4 +129,4 @@ jobs:
 
 成功同步
 
-![](https://cdn1.ryanxin.live/image-20230518174631708.png)
+![](http://img.xinn.cc/image-20230518174631708.png)

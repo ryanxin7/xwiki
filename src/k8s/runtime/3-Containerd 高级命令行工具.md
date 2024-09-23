@@ -336,7 +336,7 @@ Aug 19 16:03:10 ydzsio buildkitd[5779]: time="2021-08-19T16:03:10+08:00" level=w
 Aug 19 16:03:10 ydzsio buildkitd[5779]: time="2021-08-19T16:03:10+08:00" level=info msg="running server on /run/buildkit/buildkitd.sock"
 ~
 ```
-现在我们再来重新构建镜像：<br />![](https://cdn1.ryanxin.live/1712803242889-9f9a259f-0cd4-4f81-96a5-e1a4a26eeeac.png)<br />构建完成后查看镜像是否构建成功：
+现在我们再来重新构建镜像：<br />![](http://img.xinn.cc/1712803242889-9f9a259f-0cd4-4f81-96a5-e1a4a26eeeac.png)<br />构建完成后查看镜像是否构建成功：
 
 ```bash
 $  nerdctl images

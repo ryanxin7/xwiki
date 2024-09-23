@@ -17,7 +17,7 @@ expirationReminder:
 
 ## 1.下载JDK17程序包
 
-![image-20231129103240413](https://cdn1.ryanxin.live/image-20231129103240413.png)
+![image-20231129103240413](http://img.xinn.cc/image-20231129103240413.png)
 
 
 

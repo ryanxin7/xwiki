@@ -41,7 +41,7 @@ grafana是一个可视化组件，用于接收客户端浏览器的请求并连�
 插件：[Grafana Plugins - extend and customize your Grafana | Grafana Labs](https://grafana.com/grafana/plugins/)
 
 
-![](https://cdn1.ryanxin.live/1695797621991)
+![](http://img.xinn.cc/1695797621991)
 
 ### 1.1 安装 grafana server
 
@@ -51,7 +51,7 @@ grafana是一个可视化组件，用于接收客户端浏览器的请求并连�
 
 部署环境：可以和 Prometheus Server 安装在一起，也可以分开安装（网络互通即可）。
 
-![image-20240125104222583](https://cdn1.ryanxin.live/image-20240125104222583.png)
+![image-20240125104222583](http://img.xinn.cc/image-20240125104222583.png)
 
 
 ```bash
@@ -92,17 +92,17 @@ LISTEN    0         4096                     *:3000                   *:*       
 
 默认账户密码：admin/admin
 
-![image-20240125110130210](https://cdn1.ryanxin.live/image-20240125110130210.png)
+![image-20240125110130210](http://img.xinn.cc/image-20240125110130210.png)
 
 ### 1.5 添加 Prometheus 数据源
 
 进入主界面后，点击左下角的设置，选择 “ Data sources”，再选择 Prometheus。
 
-![image-20240125110238982](https://cdn1.ryanxin.live/image-20240125110238982.png)
+![image-20240125110238982](http://img.xinn.cc/image-20240125110238982.png)
 
-![image-20240125110448889](https://cdn1.ryanxin.live/image-20240125110448889.png)
+![image-20240125110448889](http://img.xinn.cc/image-20240125110448889.png)
 
-![image-20240125110516029](https://cdn1.ryanxin.live/image-20240125110516029.png)
+![image-20240125110516029](http://img.xinn.cc/image-20240125110516029.png)
 
 检查与Prometheus能否连通
 
@@ -118,25 +118,25 @@ LISTEN    0         4096                     *:3000                   *:*       
 
 推荐使用：[1 Node Exporter for Prometheus Dashboard EN 20201010 | Grafana Labs](https://grafana.com/grafana/dashboards/11074-node-exporter-for-prometheus-dashboard-en-v20201010/)
 
-![image-20240125110610473](https://cdn1.ryanxin.live/image-20240125110610473.png)
+![image-20240125110610473](http://img.xinn.cc/image-20240125110610473.png)
 
 
 
 点击 Import
 
-![image-20240125110646728](https://cdn1.ryanxin.live/image-20240125110646728.png)
+![image-20240125110646728](http://img.xinn.cc/image-20240125110646728.png)
 
 输入模板ID
 
-![image-20240125110720638](https://cdn1.ryanxin.live/image-20240125110720638.png)
+![image-20240125110720638](http://img.xinn.cc/image-20240125110720638.png)
 
 选择数据源
 
-![image-20240125110811133](https://cdn1.ryanxin.live/image-20240125110811133.png)
+![image-20240125110811133](http://img.xinn.cc/image-20240125110811133.png)
 
 验证模板图形信息
 
-![image-20240125110902165](https://cdn1.ryanxin.live/image-20240125110902165.png)
+![image-20240125110902165](http://img.xinn.cc/image-20240125110902165.png)
 
 
 
@@ -146,13 +146,13 @@ LISTEN    0         4096                     *:3000                   *:*       
 
 模板-9719
 
-![image-20240126161618929](https://cdn1.ryanxin.live/image-20240126161618929.png)
+![image-20240126161618929](http://img.xinn.cc/image-20240126161618929.png)
 
-![image-20240126161710803](https://cdn1.ryanxin.live/image-20240126161710803.png)
+![image-20240126161710803](http://img.xinn.cc/image-20240126161710803.png)
 
 
 
-![image-20240126161755092](https://cdn1.ryanxin.live/image-20240126161755092.png)
+![image-20240126161755092](http://img.xinn.cc/image-20240126161755092.png)
 
 
 
@@ -188,7 +188,7 @@ git clone https://github.com/grafana/piechart-panel.git --branch release-1.6.2
 sudo service grafana-server restart
 ```
 
-![image-20230303143432271](https://cdn1.ryanxin.live/6996b9be22c66525cd2f1f47cf5db669.png)
+![image-20230303143432271](http://img.xinn.cc/6996b9be22c66525cd2f1f47cf5db669.png)
 
 
 

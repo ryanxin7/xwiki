@@ -67,7 +67,7 @@ Future versions of Elasticsearch will require Java 11; your Java version from [/
 
 OpenJDK下载地址：https://jdk.java.net/archive/
 
-![image-20231024144224335](https://cdn1.ryanxin.live/image-20231024144224335.png)
+![image-20231024144224335](http://img.xinn.cc/image-20231024144224335.png)
 
 
 
@@ -153,7 +153,7 @@ vim /etc/hosts
 
 Releases: https://www.elastic.co/cn/downloads/past-releases#elasticsearch
 
-<img src="https://cdn1.ryanxin.live/image-20231020133656380.png" alt="image-20231020133656380" />
+<img src="http://img.xinn.cc/image-20231020133656380.png" alt="image-20231020133656380" />
 
 
 
@@ -895,7 +895,7 @@ Password for the [elastic] user successfully reset.
 >
 > 账号密码为上面创建的：elastic / elastic的密码
 
-![image-20231024173138345](https://cdn1.ryanxin.live/image-20231024173138345.png)
+![image-20231024173138345](http://img.xinn.cc/image-20231024173138345.png)
 
 
 

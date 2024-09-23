@@ -2,7 +2,7 @@
 author: Ryan
 title: Confluence ceamg
 date: 2024-06-26
-image: https://cdn1.ryanxin.live/xwiki/confluence-2.png
+image: http://img.xinn.cc/xwiki/confluence-2.png
 ---
 ## 创建命名空间
 

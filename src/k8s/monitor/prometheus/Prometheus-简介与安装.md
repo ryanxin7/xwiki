@@ -86,7 +86,7 @@ Data Visualization and Export
 
 
 
-![img](https://cdn1.ryanxin.live/1200756-20220929093158606-1647337583.png)
+![img](http://img.xinn.cc/1200756-20220929093158606-1647337583.png)
 
 
 
@@ -105,7 +105,7 @@ Data Visualization and Export
 
 https://github.com/mohamadhoseinmoradi/Docker-Compose-Prometheus-and-Grafana
 
-![image-20240122101201441](https://cdn1.ryanxin.live/image-20240122101201441.png)
+![image-20240122101201441](http://img.xinn.cc/image-20240122101201441.png)
 
 
 
@@ -137,13 +137,13 @@ root@prometheus-server:/apps/docker-compose/Docker-Compose-Prometheus-and-Grafan
  ✔ Container caddy         Started          
 ```
 
-![](https://cdn1.ryanxin.live/image-20240122143521141.png)
+![](http://img.xinn.cc/image-20240122143521141.png)
 
 
 
 grafana 账户密码默认是admin/admin
 
-![image-20240122143620417](https://cdn1.ryanxin.live/image-20240122143620417.png)
+![image-20240122143620417](http://img.xinn.cc/image-20240122143620417.png)
 
 
 
@@ -155,7 +155,7 @@ Operator部署器是基于已经编写好的yaml文件，可以将prometheus ser
 
 
 
-![image-20240122143823108](https://cdn1.ryanxin.live/image-20240122143823108.png)
+![image-20240122143823108](http://img.xinn.cc/image-20240122143823108.png)
 
 
 
@@ -244,7 +244,7 @@ kubectl apply -f manifests/
 
 #### 2.2.2 验证 Pod 状态
 
-![image-20240123153007196](https://cdn1.ryanxin.live/image-20240123153007196.png)
+![image-20240123153007196](http://img.xinn.cc/image-20240123153007196.png)
 
 ```bash
 root@k8s-made-01-32:~# kubectl get pod -n monitoring
@@ -277,7 +277,7 @@ prometheus-k8s      2/2     30s
 
 后期运维主要是维护 Prometheus 和 grafana 的配置文件它们通过 configmap 形式挂载到 kubernetes 里，所以要修改配置就是编辑 configmap
 
-![image-20240123165304463](https://cdn1.ryanxin.live/image-20240123165304463.png)
+![image-20240123165304463](http://img.xinn.cc/image-20240123165304463.png)
 
 
 
@@ -287,13 +287,13 @@ prometheus-k8s      2/2     30s
 
 没有暴露端口，所以无法从外部访门 Prometheus
 
-![image-20240123165423326](https://cdn1.ryanxin.live/image-20240123165423326.png)
+![image-20240123165423326](http://img.xinn.cc/image-20240123165423326.png)
 
 
 
 编辑配置：`/root/kube-prometheus/manifests/prometheus-service.yaml`
 
-![image-20240123170319474](https://cdn1.ryanxin.live/image-20240123170319474.png)
+![image-20240123170319474](http://img.xinn.cc/image-20240123170319474.png)
 
 ```yaml
 spec:
@@ -307,7 +307,7 @@ spec:
 
 同理，想要从外部访问 grafana ，也要将端口暴露出来，修改这个文件：`/root/kube-prometheus/manifests/grafana-service.yaml`
 
-![image-20240123165947468](https://cdn1.ryanxin.live/image-20240123165947468.png)
+![image-20240123165947468](http://img.xinn.cc/image-20240123165947468.png)
 
 
 
@@ -315,19 +315,19 @@ spec:
 
 上文将端口暴露出来后依然无法从外部访问，那是因为加了 NetworkPolicy ，我们将关于 Prometheus 和 grafana 的 networkpolicy 删除：
 
-![image-20240123170047904](https://cdn1.ryanxin.live/image-20240123170047904.png)
+![image-20240123170047904](http://img.xinn.cc/image-20240123170047904.png)
 
-![image-20240123170146894](https://cdn1.ryanxin.live/image-20240123170146894.png)
+![image-20240123170146894](http://img.xinn.cc/image-20240123170146894.png)
 
-![image-20240123170402356](https://cdn1.ryanxin.live/image-20240123170402356.png)
+![image-20240123170402356](http://img.xinn.cc/image-20240123170402356.png)
 
 之后就能从外部访问了：
 
-![image-20240123170905441](https://cdn1.ryanxin.live/image-20240123170905441.png)
+![image-20240123170905441](http://img.xinn.cc/image-20240123170905441.png)
 
 
 
-![image-20240123171046830](https://cdn1.ryanxin.live/image-20240123171046830.png)
+![image-20240123171046830](http://img.xinn.cc/image-20240123171046830.png)
 
 
 
@@ -335,7 +335,7 @@ spec:
 
 
 
-![preview](https://cdn1.ryanxin.live/view)
+![preview](http://img.xinn.cc/view)
 
 二进制从官网下载：[Download | Prometheus](https://prometheus.io/download/#prometheus)
 
@@ -416,7 +416,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/prometheus.service �
 
 #### 2.3.5 验证web界面
 
-![image-20240124173131467](https://cdn1.ryanxin.live/image-20240124173131467.png)
+![image-20240124173131467](http://img.xinn.cc/image-20240124173131467.png)
 
 #### 2.3.6 动态（热）加载配置
 
@@ -439,7 +439,7 @@ k8s各node节点使用二进制或者daemonset方式安装node_ exporter，用�
 
 
 
-![img](https://cdn1.ryanxin.live/1394626-20230608155048421-817186731.png)
+![img](http://img.xinn.cc/1394626-20230608155048421-817186731.png)
 
 
 
@@ -514,7 +514,7 @@ Jan 25 10:11:35 k8s-made-01-32 node_exporter[495132]: ts=2024-01-25T02:11:35.06>
 
 #### 2.4.4 验证web页面
 
-![image-20240125101239529](https://cdn1.ryanxin.live/image-20240125101239529.png)
+![image-20240125101239529](http://img.xinn.cc/image-20240125101239529.png)
 
 
 
@@ -547,7 +547,7 @@ process_ *: node exporter 自身进程相关运行指标
 
 部署好prometheus server后，它只收集了自身的指标数据，那么怎么让它也收集node-exporter指标数据？
 
-![image-20240125102939550](https://cdn1.ryanxin.live/image-20240125102939550.png)
+![image-20240125102939550](http://img.xinn.cc/image-20240125102939550.png)
 
 #### 2.5.1 prometheus 默认配置文件
 
@@ -603,7 +603,7 @@ root@promethues-server:~# curl -X POST http://192.168.29.71:9090/-/reload
 
 
 
-![image-20240125103817173](https://cdn1.ryanxin.live/image-20240125103817173.png)
+![image-20240125103817173](http://img.xinn.cc/image-20240125103817173.png)
 
 已经接收到数据了
 
@@ -691,7 +691,7 @@ Jan 25 16:23:55 promethues-server blackbox_exporter[55495]: level=info ts=2024-0
 
 验证 web 界面
 
-![image-20240125162525774](https://cdn1.ryanxin.live/image-20240125162525774.png)
+![image-20240125162525774](http://img.xinn.cc/image-20240125162525774.png)
 
 ### 2.7 blackbox exporter 实现URL监控
 
@@ -755,7 +755,7 @@ root@promethues-server:/apps# curl -X POST http://192.168.29.71:9090/-/reload
 
 #### 2.7.2 prometheus 验证数据
 
-![image-20240125170258048](https://cdn1.ryanxin.live/image-20240125170258048.png)
+![image-20240125170258048](http://img.xinn.cc/image-20240125170258048.png)
 
 
 
@@ -763,7 +763,7 @@ root@promethues-server:/apps# curl -X POST http://192.168.29.71:9090/-/reload
 
 #### 2.7.3 blackbox exporter 界面验证数据
 
-![image-20240125171155160](https://cdn1.ryanxin.live/image-20240125171155160.png)
+![image-20240125171155160](http://img.xinn.cc/image-20240125171155160.png)
 
 
 
@@ -815,13 +815,13 @@ Checking /apps/prometheus/prometheus.yml
 
 
 
-![image-20240125170258048](https://cdn1.ryanxin.live/image-20240125170258048.png)
+![image-20240125170258048](http://img.xinn.cc/image-20240125170258048.png)
 
 
 
 #### 2.8.2 blackbox exporter 界面验证数据
 
-![image-20240125171155160](https://cdn1.ryanxin.live/image-20240125171155160.png)
+![image-20240125171155160](http://img.xinn.cc/image-20240125171155160.png)
 
 
 
@@ -873,7 +873,7 @@ Checking /apps/prometheus/prometheus.yml
 
 #### 2.9.1 验证数据
 
-![image-20240125170258048](https://cdn1.ryanxin.live/image-20240125170258048.png)
+![image-20240125170258048](http://img.xinn.cc/image-20240125170258048.png)
 
 
 
@@ -881,5 +881,5 @@ Checking /apps/prometheus/prometheus.yml
 
 
 
-![image-20240125171155160](https://cdn1.ryanxin.live/image-20240125171155160.png)
+![image-20240125171155160](http://img.xinn.cc/image-20240125171155160.png)
 

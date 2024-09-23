@@ -10,7 +10,7 @@ date: 2023-01-17
 
 ## 一、Pod的状态
 
-![Pod状态](https://cdn1.ryanxin.live/1674895053415-2477036f-d642-41c9-90c7-942d1a238360.png)
+![Pod状态](http://img.xinn.cc/1674895053415-2477036f-d642-41c9-90c7-942d1a238360.png)
 
 
 > **第一阶段**
@@ -32,7 +32,7 @@ date: 2023-01-17
 
 
 
-![](https://cdn1.ryanxin.live/1674895376985-f56a789b-45f8-418b-836c-22314b8775f4.png)
+![](http://img.xinn.cc/1674895376985-f56a789b-45f8-418b-836c-22314b8775f4.png)
 
 ```bash
 Error: #pod 启动过程中发生错误
@@ -284,7 +284,7 @@ spec:
 
 验证http探针： 
 
-![image-20231116172455588](https://cdn1.ryanxin.live/image-20231116172455588.png)
+![image-20231116172455588](http://img.xinn.cc/image-20231116172455588.png)
 
 
 
@@ -392,7 +392,7 @@ spec:
     app: redis-deploy-6379
 ```
 
-如果端⼝检测连续超过指定的三次都没有通过，则Pod状态如下：  ![](https://cdn1.ryanxin.live/1674961899934-85e91869-b0af-44bb-ad5b-21f9466b891b.png)
+如果端⼝检测连续超过指定的三次都没有通过，则Pod状态如下：  ![](http://img.xinn.cc/1674961899934-85e91869-b0af-44bb-ad5b-21f9466b891b.png)
 
 
 

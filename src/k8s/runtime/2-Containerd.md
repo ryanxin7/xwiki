@@ -13,14 +13,14 @@ date: 2024-04-12T10:46:32
 - 调用 runc 运行容器（与 runc 等容器运行时交互）
 - 管理容器网络接口及网络
 ## Containerd 架构
-Containerd 可用作 Linux 和 Windows 的守护程序，它管理其主机系统完整的容器生命周期，从镜像传输和存储到容器执行和监测，再到底层存储到网络附件等等。<br />![](https://cdn1.ryanxin.live/1712803158930-a5356e40-c78d-4cbe-b6ee-3dcd0b8ef418.png)<br />上图是 containerd 官方提供的架构图，可以看出 containerd 采用的也是 C/S 架构，服务端通过 unix domain socket 暴露低层的 gRPC API 接口出去，客户端通过这些 API 管理节点上的容器，每个 containerd 只负责一台机器，Pull 镜像，对容器的操作（启动、停止等)，网络，存储都是由 containerd 完成。<br />具体运行容器由 runc 负责，实际上只要是符合 OCI 规范的容器都可以支持。
+Containerd 可用作 Linux 和 Windows 的守护程序，它管理其主机系统完整的容器生命周期，从镜像传输和存储到容器执行和监测，再到底层存储到网络附件等等。<br />![](http://img.xinn.cc/1712803158930-a5356e40-c78d-4cbe-b6ee-3dcd0b8ef418.png)<br />上图是 containerd 官方提供的架构图，可以看出 containerd 采用的也是 C/S 架构，服务端通过 unix domain socket 暴露低层的 gRPC API 接口出去，客户端通过这些 API 管理节点上的容器，每个 containerd 只负责一台机器，Pull 镜像，对容器的操作（启动、停止等)，网络，存储都是由 containerd 完成。<br />具体运行容器由 runc 负责，实际上只要是符合 OCI 规范的容器都可以支持。
 
 为了解耦，containerd 将系统划分成了不同的组件，每个组件都由一个或多个模块协作完成（Core 部分），每一种类型的模块都以插件的形式集成到 Containerd 中，而且插件之间是相互依赖的，例如，上图中的每一个长虚线的方框都表示一种类型的插件，包括 Service Plugin、Metadata Plugin、GC Plugin、Runtime Plugin 等，其中 Service Plugin 又会依赖 Metadata Plugin、GC Plugin 和 Runtime Plugin。<br />每一个小方框都表示一个细分的插件，例如 Metadata Plugin 依赖 Containers Plugin、Content Plugin 等。比如:
 
 - Content Plugin: 提供对镜像中可寻址内容的访问，所有不可变的内容都被存储在这里。
 - Snapshot Plugin: 用来管理容器镜像的文件系统快照，镜像中的每一层都会被解压成文件系统快照，类似于 Docker 中的 graphdriver。
 
-总体来看 containerd 可以分为三个大块：Storage、Metadata 和 Runtime。<br />![](https://cdn1.ryanxin.live/1712803158851-6549be62-4cea-427e-b430-b051ea912b85.png)
+总体来看 containerd 可以分为三个大块：Storage、Metadata 和 Runtime。<br />![](http://img.xinn.cc/1712803158851-6549be62-4cea-427e-b430-b051ea912b85.png)
 ## Containerd 安装
 这里我使用的系统是 CentOS 7.6，首先需要安装 seccomp 依赖：
 
@@ -159,7 +159,7 @@ WantedBy=multi-user.target
 ```
 $ systemctl enable containerd --now
 ```
-启动完成后就可以使用 containerd 的本地 CLI 工具 ctr 了，比如查看版本：<br />![](https://cdn1.ryanxin.live/1712803158857-e6bc9622-bfb5-4148-a976-8204afcb4992.png)
+启动完成后就可以使用 containerd 的本地 CLI 工具 ctr 了，比如查看版本：<br />![](http://img.xinn.cc/1712803158857-e6bc9622-bfb5-4148-a976-8204afcb4992.png)
 ## Containerd 配置
 我们首先来查看下上面默认生成的配置文件 `/etc/containerd/config.toml`：
 

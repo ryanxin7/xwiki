@@ -9,12 +9,12 @@ import WordCount from '@site/src/components/WordCount';
 <WordCount />
 
 
-![资源对象](https://cdn1.ryanxin.live/1673335368520-3d26b509-0ef8-42a6-8744-fcce0df96dee.png)
+![资源对象](http://img.xinn.cc/1673335368520-3d26b509-0ef8-42a6-8744-fcce0df96dee.png)
 
 
 
 ## 常用命令
-![常用命令](https://cdn1.ryanxin.live/1673335468699-d16c69d0-45ec-4c1e-8088-800238d2db49.png)
+![常用命令](http://img.xinn.cc/1673335468699-d16c69d0-45ec-4c1e-8088-800238d2db49.png)
 
 
 
@@ -44,7 +44,7 @@ import WordCount from '@site/src/components/WordCount';
 
 
 #### Pod生命周期
-初始化容器、启动前操作、就绪探针、存活探针、删除pod操作<br />![生命周期](https://cdn1.ryanxin.live/1673336189572-84786ce3-c99e-464f-aafa-b05287a15d02.png)
+初始化容器、启动前操作、就绪探针、存活探针、删除pod操作<br />![生命周期](http://img.xinn.cc/1673336189572-84786ce3-c99e-464f-aafa-b05287a15d02.png)
 
 
 #### livenessProbe和readinessProbe 探针
@@ -250,7 +250,7 @@ service 访问流程：
 
 k8s内部服务对外发布一般有两种方式，nodeport和ingress ，如果使用nodeport方式就会在每台node节点都会监听一个端口通常是30000以上，nodeport为什么不直接转发给pod ？ 因为维护nodeport和pod绑定关系比较难，通过需要service进行转发，service相当于k8s内部的负载均衡器负责转发，基于label标签匹配和筛选那些具有标签的pod。 默认使用轮询调度方式
 
-![svc访问流程](https://cdn1.ryanxin.live/1673402165869-231b571d-0e9f-46fa-bb0c-8931d2a1cc9d.png)
+![svc访问流程](http://img.xinn.cc/1673402165869-231b571d-0e9f-46fa-bb0c-8931d2a1cc9d.png)
 
 
 ### configmap
@@ -401,11 +401,11 @@ spec:
 
 在存储和k8s直接封装一层 PV/PVC 
 
-![pv](https://cdn1.ryanxin.live/1673413439244-b1ef9fc6-ac17-42c4-8bbd-92d13d4a6504.png)
+![pv](http://img.xinn.cc/1673413439244-b1ef9fc6-ac17-42c4-8bbd-92d13d4a6504.png)
 
 **PV是对底层⽹络存储的抽象，即将⽹络存储定义为⼀种存储资源**，将⼀个整体的存储资源拆分成多份后给不同的业务使用。   PV是由管理员添加的的⼀个存储的描述，是⼀个全局资源即**不⾪属于任何namespace**，包含存储的类型，存储的⼤⼩和访问模式等，它的⽣命周期独⽴于Pod，例如当使⽤它的Pod销毁时对PV没有影响。  
 
-**PersistentVolumeClaim（PVC）**是⽤户存储的请求，它类似于pod，Pod消耗节点资源，PVC消耗存储资源， 就像 pod可以请求特定级别的资源（CPU和内存），PVC是namespace中的资源，可以设置特定的空间大小和访问模式。   pod是通过PVC将数据保存⾄PV，PV在保存⾄存储。  <br /> <br />![pvc](https://cdn1.ryanxin.live/1673420707945-cbb3d3e9-e20f-4a43-9e5d-57aeef5dfc16.png)
+**PersistentVolumeClaim（PVC）**是⽤户存储的请求，它类似于pod，Pod消耗节点资源，PVC消耗存储资源， 就像 pod可以请求特定级别的资源（CPU和内存），PVC是namespace中的资源，可以设置特定的空间大小和访问模式。   pod是通过PVC将数据保存⾄PV，PV在保存⾄存储。  <br /> <br />![pvc](http://img.xinn.cc/1673420707945-cbb3d3e9-e20f-4a43-9e5d-57aeef5dfc16.png)
 
 
 
@@ -428,7 +428,7 @@ ReadWriteMany – PV可以被多个节点是读写⽅式挂载使⽤,RWX
 
 **官⽅提供的基于各后端存储创建的PV⽀持的访问模式**
 
-![⽀持的访问模式](https://cdn1.ryanxin.live/1673421868807-b85faeed-f417-408f-8c0b-92bb351f28e4.png)
+![⽀持的访问模式](http://img.xinn.cc/1673421868807-b85faeed-f417-408f-8c0b-92bb351f28e4.png)
 
 
 
@@ -462,7 +462,7 @@ kubectl explain PersistentVolume.spec.volumeMode
 
 ##### 
 
-![](https://cdn1.ryanxin.live/1673421245380-7d31902c-15fe-438e-bbb0-903154cceac9.png)
+![](http://img.xinn.cc/1673421245380-7d31902c-15fe-438e-bbb0-903154cceac9.png)
 
 
 ####  PersistentVolumeClaim 参数
@@ -505,7 +505,7 @@ docker push harbor.ceamg.com/baseimages/slim_java:8
 
 
 ##### 2.构建zookeeper 镜像
-![zookeeper镜像](https://cdn1.ryanxin.live/1673486581523-20c135bc-2fde-45aa-bc2b-c3fb840e5e15.png)
+![zookeeper镜像](http://img.xinn.cc/1673486581523-20c135bc-2fde-45aa-bc2b-c3fb840e5e15.png)
 
 ```bash
 chmod a+x *.sh
@@ -871,6 +871,6 @@ xin-zk                 zookeeper3                  1/1     1            1       
 ```
 
 
-![](https://cdn1.ryanxin.live/1673500958747-eff6d385-4fe1-40ed-b37f-7cf55130f909.png)
+![](http://img.xinn.cc/1673500958747-eff6d385-4fe1-40ed-b37f-7cf55130f909.png)
 
-![zookeeper测试](https://cdn1.ryanxin.live/1673501722922-ecbd4d14-94cb-4e72-a577-8cdb28e7450e.png)
+![zookeeper测试](http://img.xinn.cc/1673501722922-ecbd4d14-94cb-4e72-a577-8cdb28e7450e.png)
