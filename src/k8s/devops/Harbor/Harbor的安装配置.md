@@ -21,7 +21,10 @@ Harbor 最核心的功能就是给 `docker registry` 添加上一层权限保护
 7. 认证成功后，会返回一个 token 信息，client 端会拿着返回的 token 再次向 registry 服务发送请求，这次需要带上得到的 token，请求验证成功，返回状态码就是 200 了
 8. docker client 端接收到返回的 200 状态码，说明操作成功，在控制台上打印 Login Succeeded 的信息 至此，整个登录过程完成，整个过程可以用下面的流程图来说明：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1723019267517-6c12fc1b-12b6-4046-a948-d168a8eedef8.png)
+
+
+![d168a8eedef8](http://img.xinn.cc/d168a8eedef8.png)
+
 
 要完成上面的登录认证过程有两个关键点需要注意：怎样让 registry 服务知道服务认证地址？我们自己提供的认证服务生成的 token 为什么 registry 就能够识别？
 
@@ -52,7 +55,9 @@ auth:
 
  我们可以很容易的看到 Harbor 中关于上面我们讲解的认证服务部分的实现方法。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1723019268712-1b97ce33-3775-427a-9473-a015bbd50f3f.png)
+
+
+![a015bbd50f3f](http://img.xinn.cc/a015bbd50f3f.png)
 
 ## 安装
 Harbor 涉及的组件比较多，我们可以使用 Helm 来安装一个高可用版本的 Harbor，也符合生产环境的部署方式。
@@ -68,9 +73,9 @@ Harbor 涉及的组件比较多，我们可以使用 Helm 来安装一个高可�
 
 Harbor 的大部分组件都是无状态的，所以我们可以简单增加 Pod 的副本，保证组件尽量分布到多个节点上即可，在存储层，需要我们自行提供高可用的 PostgreSQL、Redis 集群来存储应用数据，以及存储镜像和 Helm Chart 的 PVC 或对象存储。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1723019267664-a342abc7-d8a7-45a5-ac92-c77f5a6134fa.png)
 
 
+![c77f5a6134fa](http://img.xinn.cc/c77f5a6134fa.png)
 
 
 
@@ -406,15 +411,15 @@ status:
 
 用户名使用默认的 admin，密码则是上面配置的默认 `Harbor12345`，需要注意的是要使用 https 进行访问（默认也会跳转到 https），否则登录可能提示用户名或密码错误：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725857137496-d1c7781b-189a-4fe2-ae85-7fe928236428.png)
 
 
+![7fe928236428](http://img.xinn.cc/7fe928236428.png)
 
 登录过后即可进入 Harbor 的 Dashboard 页面：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725857148409-0c349a07-1a9b-4728-bc4d-77cb4125ebe6.png)
 
 
+![77cb4125ebe6](http://img.xinn.cc/77cb4125ebe6.png)
 
 我们可以看到有很多功能，默认情况下会有一个名叫 `library` 的项目，该项目默认是公开访问权限的，进入项目可以看到里面还有 `Helm Chart` 包的管理，可以手动在这里上传，也可以对该项目里面的镜像进行一些其他配置。
 
@@ -519,7 +524,10 @@ elapsed: 4.2 s                                                                  
 
 推送完成后，我们就可以在 Portal 页面上看到这个镜像的信息了：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725864818575-2b3bbcbb-dee0-46e2-ab34-92edb1d5ff4f.png)
+
+
+![92edb1d5ff4f](http://img.xinn.cc/92edb1d5ff4f.png)
+
 
 镜像 push 成功，同样可以测试下 pull：
 

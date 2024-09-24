@@ -277,7 +277,10 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 
 然后我们可以通过 IngressRoute 中定义的域名 `jenkins.k8s.local`(需要做 DNS 解析或者在本地 `/etc/hosts` 中添加映射)来访问 jenkins 服务：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725607954445-556bd771-72ad-4350-8168-fb08bd669db6.png)
+
+
+
+![fb08bd669db6](http://img.xinn.cc/fb08bd669db6.png)
 
 然后可以执行下面的命令获取解锁的管理员密码：
 
@@ -288,30 +291,38 @@ $ kubectl exec -it jenkins-74d6f4c6f-2mgsm -n kube-ops -- cat /var/jenkins_home/
 
 然后跳过插件安装，选择默认安装插件过程会非常慢（也可以选择安装推荐的插件），点击右上角关闭选择插件，等配置好插件中心国内镜像源后再选择安装一些插件。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725608178262-77c04be5-0d58-4edc-a7f9-60a43c5d5597.png)
 
-  
+
+60a43c5d5597![60a43c5d5597](http://img.xinn.cc/60a43c5d5597.png)
 
 
 跳过后会直接进入 Jenkins 就绪页面，直接点击开始使用即可：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725608192537-71292686-4f0a-4361-ae5f-08b47d7a4568.png)
 
 
+![08b47d7a4568](http://img.xinn.cc/08b47d7a4568.png)
 
 进入主页后，首先安装中文插件，搜索 `Localization: Chinese`：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611423249-65b9be91-0824-440c-be5c-51d002cbfb23.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611457872-e077c69f-8b27-419c-a41b-c401bba2847a.png)
+
+![51d002cbfb23](http://img.xinn.cc/51d002cbfb23.png)
+
+
+
+![c401bba2847a](http://img.xinn.cc/c401bba2847a.png)
+
 
 重启一下
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611503943-fe8ff80c-b5c4-419f-bdb8-b4f9392d4d27.png)
-
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611626481-4a2a7744-ff55-4157-b842-dbd85b6f52e7.png)
 
 
+![b4f9392d4d27](http://img.xinn.cc/b4f9392d4d27.png)
+
+
+
+
+![dbd85b6f52e7](http://img.xinn.cc/dbd85b6f52e7.png)
 
 
 
@@ -333,10 +344,13 @@ $ kubectl exec -it jenkins-74d6f4c6f-2mgsm -n kube-ops -- cat /var/jenkins_home/
 地址: https://mirrors.ustc.edu.cn/jenkins/
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611910611-8be7a94b-e134-413e-83dc-30bc014554d6.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611823727-5f7b845c-621c-4d22-a40e-2ef502a979f0.png)
 
+![30bc014554d6](http://img.xinn.cc/30bc014554d6.png)
+
+
+
+![2ef502a979f0](http://img.xinn.cc/2ef502a979f0.png)
 
 
 在页面中点击下方的 `设置更新中心地址` 链接：
@@ -349,9 +363,12 @@ $ kubectl exec -it jenkins-74d6f4c6f-2mgsm -n kube-ops -- cat /var/jenkins_home/
 
 比如我们可以搜索安装 `Pipeline` 插件，配置完成后正常下载插件就应该更快了。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725611960009-aca7226c-08bc-4413-b7bb-66b93a7935b3.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612137622-1878e934-1600-42c9-8e82-acf1f6fcd8c4.png)
+
+![6a76b93935b3](http://img.xinn.cc/6a76b93935b3.png)
+
+![acf1f6fcd8c4](http://img.xinn.cc/acf1f6fcd8c4.png)
+
 
 ## 架构
 Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了解下在 Kubernetes 环境下面使用 Jenkins 有什么好处。
@@ -365,7 +382,10 @@ Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了
 
 正因为上面的这些种种痛点，我们渴望一种更高效更可靠的方式来完成这个 CI/CD 流程，而 Docker 虚拟化容器技术能很好的解决这个痛点，又特别是在 Kubernetes 集群环境下面能够更好来解决上面的问题，下图是基于 Kubernetes 搭建 Jenkins 集群的简单示意图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725431759374-5606d7dd-8866-4f86-b2e0-e63d61929c7b.png)
+
+
+![e63d61929c7b](http://img.xinn.cc/e63d61929c7b.png)
+
 
 从图上可以看到 `Jenkins Master` 和 `Jenkins Slave` 以 Pod 形式运行在 Kubernetes 集群的 Node 上，Master 运行在其中一个节点，并且将其配置数据存储到一个 Volume 上去，Slave 运行在各个节点上，并且它不是一直处于运行状态，它会按照需求动态的创建并自动删除。
 
@@ -385,9 +405,9 @@ Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了
 ### 安装 [kubernetes 插件](https://github.com/jenkinsci/kubernetes-plugin)
 第 1 步. 我们需要安装 [kubernetes 插件](https://github.com/jenkinsci/kubernetes-plugin)， 点击 Manage Jenkins -> Manage Plugins -> Available -> Kubernetes 勾选安装即可。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612187382-7b964117-21a8-4236-8699-9d7b8e6189ef.png)
 
 
+![9d7b8e6189ef](http://img.xinn.cc/9d7b8e6189ef.png)
 
 ### 添加集群
 第 2 步. 安装完毕后，进入 `http://jenkins.k8s.local/configureClouds/` 页面：
@@ -396,11 +416,17 @@ Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了
 
 在该页面我们可以点击 `Add a new cloud` -> 选择 `Kubernetes`，首先点击 `Kubernetes Cloud details...` 按钮进行配置：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612357982-02beb038-6373-41f6-b0ce-936e445e516d.png)
+
+
+
+![936e445e516d](http://img.xinn.cc/936e445e516d.png)
 
 首先配置连接 Kubernetes APIServer 的地址，由于我们的 Jenkins 运行在 Kubernetes 集群中，所以可以使用 Service 的 DNS 形式进行连接 `https://kubernetes.default.svc.cluster.local`：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612497328-2b279f71-aaf3-4887-b742-d6eabbcce7ac.png)
+
+
+![d6eabbcce7ac](http://img.xinn.cc/d6eabbcce7ac.png)
+
 
 注意 namespace，我们这里填 kube-ops，然后点击 `Test Connection`，如果出现 `Connected to Kubernetes...` 的提示信息证明 Jenkins 已经可以和 Kubernetes 系统正常通信了。
 
@@ -410,7 +436,10 @@ Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了
 
 然后下方的 Jenkins URL 地址：`http://jenkins.kube-ops.svc.cluster.local:8080`，这里的格式为：`服务名.namespace.svc.cluster.local:8080`，根据上面创建的 jenkins 的服务名填写，包括下面的 Jenkins 通道，默认是 50000 端口（要注意是 TCP，所以不要填写 http）：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612556103-7ae10c92-5a2d-422e-b3a1-841237dbe634.png)
+
+
+
+![841237dbe634](http://img.xinn.cc/841237dbe634.png)
 
 
 
@@ -421,15 +450,20 @@ Jenkins 安装完成了，接下来我们不用急着就去使用，我们要了
 ### Pod Templates
 第 3 步. 点击 `Pod Templates` 按钮用于配置 Jenkins Slave 运行的 Pod 模板，命名空间我们同样是用 kube-ops，Labels 这里也非常重要，对于后面执行 Job 的时候需要用到该值。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612615652-7a8ca099-f290-474a-b19b-d675b9f5c907.png)
 
 
+![b19b-d675b9f5c907](http://img.xinn.cc/b19b-d675b9f5c907.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725612699697-d029db0b-450d-4fe0-a5d3-2c867d921568.png)
+
+![2c867d921568](http://img.xinn.cc/2c867d921568.png)
+
 
 然后配置下面的容器模板，我们这里使用的是 ` registry.cn-beijing.aliyuncs.com/xxk8s/jenkins:jnlp6` 这个镜像，这个镜像是在官方的 jnlp 镜像基础上定制的，加入了 docker、kubectl 等一些实用的工具。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725637042453-f1a27cc3-a5c5-43f3-abbe-135857b0d5ae.png)
+
+
+![135857b0d5ae](http://img.xinn.cc/135857b0d5ae.png)
+
 
 > 注意 
 >
@@ -676,15 +710,21 @@ docker-dind   ClusterIP   10.99.154.168   <none>        2375/TCP   67s
 
 然后我们可以通过设置环境变量 `DOCKER_HOST: tcp://docker-dind:2375` 去连接 docker dind 服务。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725613159910-a8c548ee-40aa-4778-b6c4-b0a251ef3736.png)
+
+
+![b6c4-b0a251ef3736](http://img.xinn.cc/b6c4-b0a251ef3736.png)
 
 另外需要将目录 `/root/.kube` 挂载到容器的 `/root/.kube` 目录下面，这是为了让我们能够在 Pod 的容器中能够使用 `kubectl` 工具来访问我们的 Kubernetes 集群，方便我们后面在 `Slave Pod` 部署 Kubernetes 应用。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725613207189-e743693a-935f-49c6-94bd-446d861d30ec.png)
+
+![446d861d30ec](http://img.xinn.cc/446d861d30ec.png)
+
 
 另外如果在配置了后运行 Slave Pod 的时候出现了权限问题，这是因为 Jenkins Slave Pod 中没有配置权限，所以需要配置上 ServiceAccount，在 Slave Pod 配置的地方点击下面的高级，添加上对应的 ServiceAccount 即可：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725613245774-226f4d6e-1453-4158-9d69-2a1a4c838942.png)
+
+![2a1a4c838942](http://img.xinn.cc/2a1a4c838942.png)
+
 
 到这里我们的 Kubernetes 插件就算配置完成了，记得保存。
 
@@ -693,13 +733,20 @@ Kubernetes 插件的配置工作完成了，接下来我们就来添加一个 Jo
 
 在 Jenkins 首页点击 `新建任务`，创建一个测试的任务，输入任务名称，然后我们选择 `构建一个自由风格的软件项目` 类型的任务，注意在下面的 `Label Expression` 这里要填入 `ydzs-jnlp`，就是前面我们配置的 Slave Pod 中的 Label，这两个地方必须保持一致：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725613304969-fc31db66-187c-4eb8-bbae-ce887a3fa76a.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725614357312-f2310649-9e8e-4348-b484-551d4ebf1ff0.png)
+
+![ce887a3fa76a](http://img.xinn.cc/ce887a3fa76a.png)
+
+
+![551d4ebf1ff0](http://img.xinn.cc/551d4ebf1ff0.png)
+
 
 然后往下拉，在 `构建` 区域选择 `执行 shell`：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725431776369-f2a7b150-49f6-4fb6-9c32-fd917cae3ae6.png)
+
+
+
+![fd917cae3ae6](http://img.xinn.cc/fd917cae3ae6.png)
 
 然后输入我们测试命令
 
@@ -714,7 +761,10 @@ kubectl get pods
 
 最后点击保存。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725613386782-40cc7b60-756c-4cee-b3e5-df3bb4fc8740.png)
+
+
+![df3bb4fc8740](http://img.xinn.cc/df3bb4fc8740.png)
+
 
 现在我们直接在页面点击左侧的 `立即构建` 触发构建即可，然后观察 Kubernetes 集群中 Pod 的变化：
 
@@ -735,9 +785,9 @@ jnlp-txhq6                     1/1     Running   0             9s
 
 我们可以看到在我们点击立刻构建的时候可以看到一个新的 Pod：`jenkins-agent-vm2th` 被创建了，这就是我们的 Jenkins Slave。任务执行完成后我们可以看到任务信息:
 
-![](https://cdn.nlark.com/yuque/0/2024/png/33538388/1725638181144-8c0f49ed-8440-4bbc-bb92-dd433cb2320e.png)
 
 
+![dd433cb2320e](http://img.xinn.cc/dd433cb2320e.png)
 
 到这里证明我们的任务已经构建完成，然后这个时候我们再去集群查看我们的 Pod 列表，发现 kube-ops 这个 namespace 下面已经没有之前的 Slave 这个 Pod 了。
 
