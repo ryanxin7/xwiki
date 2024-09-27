@@ -113,6 +113,15 @@
   "/elk/install/h3c-mirroring-port": {
     "words": 1652
   },
+  "/go/go_environment_setup": {
+    "words": 2316
+  },
+  "/go/basic_syntax_of_go": {
+    "words": 2493
+  },
+  "/go/built-in-types": {
+    "words": 2343
+  },
   "/haproxy/haproxy-1": {
     "words": 2446
   },
@@ -180,7 +189,7 @@
     "words": 4456
   },
   "/k8s/devops/GitOps/2.Tekton结合ArgoCD实现GitOps": {
-    "words": 12707
+    "words": 9330
   },
   "/k8s/devops/Harbor/harbor-install": {
     "words": 3970

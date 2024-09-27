@@ -86,6 +86,16 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'Go',
+        path: 'src/go',
+        routeBasePath: 'go',
+        sidebarPath: require.resolve('./sidebars.js'), // 这里需要单独的侧边栏文件
+        editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'ELK',
         path: 'src/elk',
         routeBasePath: 'elk',
@@ -319,6 +329,17 @@ const config = {
               {
                 label: 'NFS',
                 to: 'elk/install/elk-Elasticsearch',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: '后端',
+            position: 'left',
+            items: [
+              {
+                label: 'Go',
+                to: 'go/basic_syntax_of_go',
               },
             ],
           },

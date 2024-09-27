@@ -55,7 +55,13 @@ const projects = [
     description: '扩展和增强 Kubernetes 应用管理能力',
     link: '/k8s/devops/Tekton/Tekton-pipeline',
   },
-
+  {
+    id: 9,
+    title: 'Golang',
+    imageUrl: 'http://img.xinn.cc/go.png',
+    description: '由Google开发的一种开源、编译型、静态类型的编程语言',
+    link: '/go/built-in-types',
+  },
 
   // 继续添加更多项目
 ];
