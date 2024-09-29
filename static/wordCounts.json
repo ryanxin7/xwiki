@@ -122,6 +122,12 @@
   "/go/built-in-types": {
     "words": 2343
   },
+  "/go/number_types": {
+    "words": 949
+  },
+  "/go/string-types": {
+    "words": 4576
+  },
   "/haproxy/haproxy-1": {
     "words": 2446
   },
