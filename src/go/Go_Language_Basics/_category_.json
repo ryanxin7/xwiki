@@ -1,0 +1,8 @@
+{
+  "label": "Go 快速入门",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": " Go 是由 Google 开发的一种静态类型、编译型的编程语言。它以简洁、并发支持和高效著称，非常适合服务器开发、微服务、云原生应用等场景。"
+  }
+}

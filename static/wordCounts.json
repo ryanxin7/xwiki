@@ -113,31 +113,31 @@
   "/elk/install/h3c-mirroring-port": {
     "words": 1652
   },
-  "/go/go_environment_setup": {
+  "/go/Go_Language_Basics/go_environment_setup": {
     "words": 2316
   },
-  "/go/Pointer": {
+  "/go/Go_Language_Basics/Pointer": {
     "words": 2021
   },
-  "/go/basic_syntax_of_go": {
+  "/go/Go_Language_Basics/basic_syntax_of_go": {
     "words": 2493
   },
-  "/go/built-in-types": {
+  "/go/Go_Language_Basics/built-in-types": {
     "words": 2343
   },
-  "/go/number_types": {
+  "/go/Go_Language_Basics/number_types": {
     "words": 949
   },
-  "/go/string-types": {
+  "/go/Go_Language_Basics/string-types": {
     "words": 4576
   },
-  "/go/Array": {
+  "/go/Go_Language_Basics/Array": {
     "words": 630
   },
-  "/go/Slice": {
+  "/go/Go_Language_Basics/Slice": {
     "words": 3309
   },
-  "/go/Map": {
+  "/go/Go_Language_Basics/Map": {
     "words": 616
   },
   "/haproxy/haproxy-1": {

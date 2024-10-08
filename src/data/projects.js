@@ -60,7 +60,7 @@ const projects = [
     title: 'Golang',
     imageUrl: 'http://img.xinn.cc/go.png',
     description: '由Google开发的一种开源、编译型、静态类型的编程语言',
-    link: '/go/built-in-types',
+    link: '/go/Go_Language_Basics/built-in-types',
   },
 
   // 继续添加更多项目

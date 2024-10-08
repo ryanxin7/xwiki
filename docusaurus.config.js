@@ -339,7 +339,7 @@ const config = {
             items: [
               {
                 label: 'Go',
-                to: 'go/basic_syntax_of_go',
+                to: 'go/Go_Language_Basics/basic_syntax_of_go',
               },
             ],
           },
