@@ -116,6 +116,9 @@
   "/go/go_environment_setup": {
     "words": 2316
   },
+  "/go/Pointer": {
+    "words": 2021
+  },
   "/go/basic_syntax_of_go": {
     "words": 2493
   },
@@ -133,6 +136,9 @@
   },
   "/go/Slice": {
     "words": 3309
+  },
+  "/go/Map": {
+    "words": 616
   },
   "/haproxy/haproxy-1": {
     "words": 2446
