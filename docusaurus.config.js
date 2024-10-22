@@ -192,7 +192,6 @@ const config = {
           className: 'navbar__logo', // 使用自定义的 logo 样式
         },
         items: [
-          //{ to: '/blog-by-year', label: 'Blog by Year', position: 'left' },
           /*{
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
