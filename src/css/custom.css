@@ -4,96 +4,215 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* 变量覆盖 */
 :root {
-  /*--ifm-container-width: 1540px;*/
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --banner-bg-color: white;
-  --banner-text-color: black;
-  --ifm-footer-color: var(--ifm-footer-link-color);
-  --ifm-footer-link-color: var(--ifm-color-secondary);
-  --ifm-footer-title-color: var(--ifm-color-white);
-  --ifm-footer-background-color: #2b3137;
-  --ifm-font-family-base: "Inter var", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --ifm-font-family-monospace: "Fira Code VF", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --banner-bg-color: black;
-  --banner-text-color: white;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-footer-background-color: #333333; /* 固定的背景颜色 */
+  --ifm-footer-text-color: #ffffff; /* 固定的文本颜色 */
+  --ifm-footer-link-color: #cccccc; /* 固定的链接颜色 */
+  --ifm-code-font-size: 95%;
 }
 
-.header-github-link:before {
-  background-color: var(--ifm-navbar-link-color);
-  content: "";
+/* Dark 模式的变量覆盖 */
+html[data-theme='dark'] {
+  --ifm-color-primary: #4caf50;
+  --ifm-background-color: #121212; /* 深色背景 */
+  --ifm-color-text: #e0e0e0; /* 浅色文本 */
+  --ifm-navbar-background-color: #333333; /* 深色 navbar 背景 */
+}
+
+/* Footer 样式，确保背景、文本和链接颜色不变 */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-text-color);
+}
+
+html[data-theme='dark'] .footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-text-color);
+}
+
+/* 确保 footer 链接颜色不变 */
+.footer__link-item {
+  color: var(--ifm-footer-link-color);
+}
+
+html[data-theme='dark'] .footer__link-item {
+  color: var(--ifm-footer-link-color); /* 保持 dark 模式下的链接颜色一致 */
+}
+
+/* 代码高亮样式 */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(222, 152, 152, 0.3);
+}
+
+/* 首页样式 */
+.homepage .container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.homepage .navbar {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+html[data-theme='dark'] .homepage .navbar {
+  background-color: var(--ifm-navbar-background-color);
+  color: var(--ifm-footer-text-color);
+}
+
+.homepage .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homepage .heroContainer {
   display: flex;
-  height: 24px;
-  -webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
-  width: 24px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.header-github-link:hover:before {
-  background-color: var(--ifm-navbar-link-hover-color);
-}
-html[data-theme='dark'] .header-github-link:before {
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+html[data-theme='dark'] .homepage .heroContainer {
+  background-color: #1f1f1f;
 }
 
-.menu__link {
-
-}
-.menu__caret,.menu__link,.menu__list-item-collapsible {
-  border-radius: .25rem;
-  transition: background var(--ifm-transition-fast) var(--ifm-transition-timing-default);
-  font-size: 14px;
+.homepage .heroText {
+  flex: 1;
+  padding-right: 2rem;
 }
 
-
-.container {
-  width: 85%;       /* 使用百分比定义中间区域的宽度 */
-  max-width: 1440px; /* 设置一个最大宽度，以防在大屏幕上过宽 */
+html[data-theme='dark'] .homepage .heroText {
+  color: var(--ifm-color-text);
 }
 
+.homepage .heroTitle {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+html[data-theme='dark'] .homepage .heroTitle {
+  color: var(--ifm-color-primary);
+}
+
+.homepage .heroSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+html[data-theme='dark'] .homepage .heroSubtitle {
+  color: #aaa;
+}
+
+.homepage .heroDescription {
+  margin: 1rem 0;
+  color: #888;
+}
+
+html[data-theme='dark'] .homepage .heroDescription {
+  color: #bbb;
+}
+
+.homepage .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.homepage .button--primary {
+  background-color: #6c63ff;
+  color: white;
+}
+
+html[data-theme='dark'] .homepage .button--primary {
+  background-color: #4caf50;
+}
+
+.homepage .button--secondary {
+  background-color: #2e8555;
+  color: white;
+}
+
+html[data-theme='dark'] .homepage .button--secondary {
+  background-color: #388e3c;
+}
+
+.homepage .profileImage {
+  flex: 0 0 200px;
+}
+
+.homepage .profileImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.homepage .socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.homepage .socialIcon {
+  font-size: 1.5rem;
+  color: #555;
+  transition: color 0.3s;
+}
+
+html[data-theme='dark'] .homepage .socialIcon {
+  color: #888;
+}
+
+.homepage .socialIcon:hover {
+  color: #2e8555;
+}
+
+html[data-theme='dark'] .homepage .socialIcon:hover {
+  color: #66bb6a;
+}
+
+/* 响应式布局 */
 @media (max-width: 768px) {
-  .container {
-    width: 93%;      /* 手机端宽度设置为100% */
-    padding: 0 15px;  /* 为手机端添加适当的内边距 */
+  .homepage .heroContainer {
+    flex-direction: column;
+    align-items: center;
   }
-  .menu__link {
-    font-size: 12px;  /* 调整菜单链接的字体大小 */
+  .homepage .heroText {
+    padding-right: 0;
+    text-align: center;
   }
-  .menu__list-item-collapsible {
-    font-size: 12px;  /* 调整可折叠菜单项的字体大小 */
+  .homepage .profileImage {
+    margin-top: 1rem;
   }
-  .header-github-link:before {
-    height: 20px;    /* 调整GitHub链接图标的高度 */
-    width: 20px;     /* 调整GitHub链接图标的宽度 */
+  .homepage .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  .hero__title {
-    font-size: 1.2rem; /* 手机端下将.hero__title的字体大小改为1rem */
+  .homepage .socialIcons {
+    justify-content: center;
   }
-  .hero__subtitle {
-    font-size: 1rem;
 }
 
-
-
-}
+/* FontAwesome 图标库导入 */
+@import '@fortawesome/fontawesome-free/css/all.min.css';

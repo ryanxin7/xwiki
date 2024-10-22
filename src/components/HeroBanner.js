@@ -1,36 +1,40 @@
-// src/components/HeroBanner.js
 import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import { useColorMode } from '@docusaurus/theme-common';
-import styles from '../pages/index.module.css';
+import styles from './index.module.css';
 
 function HeroBanner() {
-  const { colorMode } = useColorMode();
-
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner, {
-      [styles.heroBannerDark]: colorMode === 'dark'
-    })}>
-      <div className="container">
-        <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <h1 className="hero__title">Ryan's Wiki</h1>
-            <p className="hero__subtitle">
-            这是一个装满“比我熬夜还多”知识的仓库！，希望这些内容对你有所帮助，也能为你带来一些乐趣和启发。
-            </p>
-            <div className={styles.buttons}>
-              <Link className="button button--secondary button--lg" to="/k8s">
-                马上开始
-              </Link>
-            </div>
-          </div>
-          <div className={styles.heroImage}>
-            {colorMode === 'dark' ? (
-              <img src="/img/creativity.png" alt="Creativity Illustration" className={styles.heroImg} />
-            ) : (
-              <object type="image/svg+xml" data="http://img.xinn.cc/xwiki/saas-3.svg" aria-label="SaaS Illustration"className={styles.heroSvg}></object>
-            )}
+    <header className={clsx(styles.hero, 'homepage')}>
+      <div className={styles.heroContainer}>
+        {/* 左侧头像部分 */}
+        <div className={styles.circleBackground}>
+          <img src="/img/im-image.png" alt="Profile" className={styles.profileImg} />
+        </div>
+
+        {/* 右侧文本部分 */}
+        <div className={styles.heroText}>
+          <h1 className={styles.heroTitle}>Hey, I'm Ryan</h1>
+          <p className={styles.greeting}>一名云原生运维工程师，热衷于构建开源项目，分享云原生技术实践。</p>
+          <p className={styles.greeting}>在这里，你可以浏览我的文章与笔记，了解我的学习成长之旅。</p>
+          <p className={styles.heroDescription}>
+          
+          </p>
+
+          {/* 社交图标部分 */}
+          <div className={styles.socialIcons}>
+            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#4267B2' }}>
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#1DA1F2' }}>
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#0077B5' }}>
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#DB4437' }}>
+              <i className="fab fa-google-plus-g"></i>
+            </a>
           </div>
         </div>
       </div>

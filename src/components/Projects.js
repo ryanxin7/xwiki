@@ -4,8 +4,8 @@ import projects from '../data/projects'; // 引入项目数据
 
 function Projects() {
   return (
-    <section className={styles.projectsSection}>
-      <div className="container">
+    <section className={`${styles.projectsSection} projects-section`}>
+      <div className="container projects-container">
         <div className={styles.sectionTitle}>
           <h2>我的知识库</h2>
         </div>

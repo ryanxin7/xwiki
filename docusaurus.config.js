@@ -39,6 +39,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        //blog: false, // 禁用默认博客插件
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
@@ -47,15 +48,15 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
 
-        /*blog: {
+        blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
             blogSidebarCount: 'ALL',
-            blogSidebarTitle: 'All posts',
-        },*/
+            blogSidebarTitle: 'Blog Archive',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -188,8 +189,10 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
+          className: 'navbar__logo', // 使用自定义的 logo 样式
         },
         items: [
+          //{ to: '/blog-by-year', label: 'Blog by Year', position: 'left' },
           /*{
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',

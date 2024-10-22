@@ -1,0 +1,106 @@
+/* 整体容器的样式，限制最大宽度为1200px并居中 */
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem;
+  }
+  
+  /* Hero 部分的样式，减少高度占比 */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 头像圆形背景样式 */
+  .circleBackground {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    background: linear-gradient(145deg, #f7f7f7, #e1e1e1); /* 更柔和的渐变背景 */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.3); /* 更轻的阴影 */
+  }
+  
+  /* 头像样式，增加立体感和层次效果 */
+  .profileImg {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    box-shadow: 
+      inset 3px 3px 7px rgba(0, 0, 0, 0.2), /* 更轻的内部阴影 */
+      inset -3px -3px 7px rgba(255, 255, 255, 0.4), /* 更柔和的内部高光 */
+      0 2px 4px rgba(0, 0, 0, 0.2); /* 更轻的外部阴影 */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%); /* 高光渐变，淡化效果 */
+    transition: transform 1s linear; /* 旋转动画 */
+  }
+  
+  /* 鼠标悬停时的旋转效果 */
+  .circleBackground:hover .profileImg {
+    transform: rotate(360deg); /* 旋转一圈 */
+  }
+  
+  /* 文本部分样式 */
+  .heroText {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  /* 问候语样式 */
+  .greeting {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 标题样式 */
+  .heroTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* 描述文字样式 */
+  .heroDescription {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* 社交图标样式 */
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+/* 单个社交图标样式 */
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none; /* 移除下划线 */
+    transition: none; /* 禁用过渡效果 */
+  }
+  
+  /* 去除超链接悬停效果 */
+  .socialIcon:hover {
+    color: white; /* 保持白色图标 */
+    text-decoration: none; /* 确保没有下划线 */
+    background-color: inherit; /* 保持背景颜色不变 */
+  }
+  

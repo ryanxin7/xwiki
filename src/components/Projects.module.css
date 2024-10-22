@@ -3,22 +3,22 @@
   background-color: #FBFDFF;
   position: relative;
   padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
-/* Dark 模式项目部分的整体样式 */
 [data-theme='dark'] .projectsSection {
   background-color: #1e1e1e;
 }
 
 /* 标题部分样式 */
 .sectionTitle {
-  text-align: left;
+  text-align: left; /* 更改为左对齐 */
   margin-bottom: 1.5rem;
-}
-
-/* Dark 模式标题部分样式 */
-[data-theme='dark'] .sectionTitle h2 {
-  color: #ffffff;
+  max-width: 1200px; /* 与卡片容器宽度保持一致 */
+  margin: 0 auto 1.5rem; /* 上下居中对齐，同时使左对齐生效 */
 }
 
 /* 标题文字样式 */
@@ -28,15 +28,19 @@
   margin: 0;
 }
 
+[data-theme='dark'] .sectionTitle h2 {
+  color: #ffffff;
+}
+
 /* 卡片容器样式 */
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 一行显示四个卡片 */
   gap: 1rem; /* 卡片之间的间距 */
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
+  max-width: 1200px; /* 最大宽度 */
+  width: 100%;
+  margin: 0 auto; /* 居中对齐 */
+  padding: 1rem 0; /* 上下内边距 */
   box-sizing: border-box;
 }
 
@@ -50,8 +54,8 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  width: 300px; /* 固定卡片宽度 */
-  height: 250px; /* 固定卡片高度 */
+  width: 100%; /* 自动适应父级容器的宽度 */
+  height: 230px; /* 固定卡片高度 */
 }
 
 /* Dark 模式单个卡片样式 */
@@ -66,7 +70,6 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Dark 模式卡片悬停效果 */
 [data-theme='dark'] .card:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
@@ -77,23 +80,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* 隐藏溢出部分 */
-}
-.cardImage img {
-  width: 300px;
-  height: 160px;
-  object-fit: cover; /* 确保图像填充整个区域并保持宽高比 */
+  overflow: hidden;
 }
 
-/* Dark 模式卡片图像样式 */
-[data-theme='dark'] .cardImage img {
-  border-bottom: 1px solid #555;
+.cardImage img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 
 /* 卡片内容样式 */
 .cardBody {
   padding: 0.9rem;
-  flex: 1; /* 确保内容部分占据剩余空间 */
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,19 +101,17 @@
 /* 卡片标题样式 */
 .cardBody h3 {
   position: relative;
-  font-size: 1.00rem;
+  font-size: 1rem;
   margin-bottom: 0.45rem;
   color: #255fae;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-/* Dark 模式卡片标题样式 */
 [data-theme='dark'] .cardBody h3 {
   color: #4fa8ff;
 }
 
-/* 卡片标题下划线效果 */
 .cardBody h3::after {
   content: '';
   position: absolute;
@@ -126,12 +123,10 @@
   transition: width 0.5s;
 }
 
-/* Dark 模式卡片标题下划线效果 */
 [data-theme='dark'] .cardBody h3::after {
   background-color: #4fa8ff;
 }
 
-/* 卡片标题悬停效果 */
 .cardBody h3:hover::after {
   width: 100%;
 }
@@ -144,40 +139,28 @@
   font-weight: 500;
 }
 
-/* Dark 模式卡片描述样式 */
 [data-theme='dark'] .cardBody p {
   color: #cccccc;
 }
 
-/* 增加识别手机端的代码 */
+/* 响应式布局 */
 @media (max-width: 768px) {
   .cardContainer {
-    grid-template-columns: 1fr; /* 手机端一行显示一个卡片 */
+    grid-template-columns: 1fr; /* 一行显示一个卡片 */
     gap: 1rem;
+    max-width: 100%;
     padding: 1rem;
+    margin: 0 auto;
   }
 
-
-  /* 标题文字样式 */
   .sectionTitle h2 {
-    font-size: 1.2rem; /* 手机端标题字体大小调整 */
+    font-size: 1.5rem; /* 手机端标题字体调整 */
   }
 
-  /* 标题部分样式 */
- .sectionTitle {
-  text-align: left;
-  margin-bottom: 0.5rem;
- }
- 
   .card {
-    width: 95%; /* 手机端卡片宽度设为100% */
+    width: 95%; /* 手机端卡片宽度自适应 */
     height: auto; /* 手机端卡片高度自适应 */
-   /* width: 250px; /* 固定卡片宽度 */
-    /*height: 10px; /* 固定卡片高度 */
   }
-
-
-
 
   .cardImage {
     flex: 0 0 120px; /* 手机端图像部分高度调整 */
@@ -185,14 +168,14 @@
 
   .cardImage img {
     width: 100%;
-    height: 120px; /* 手机端图像高度调整 */
+    height: 120px;
   }
 
   .cardBody h3 {
-    font-size: 0.9rem; /* 手机端卡片标题字体大小调整 */
+    font-size: 0.9rem; /* 手机端卡片标题字体调整 */
   }
 
   .cardBody p {
-    font-size: 0.8rem; /* 手机端卡片描述字体大小调整 */
+    font-size: 0.8rem; /* 手机端卡片描述字体调整 */
   }
 }

@@ -1,0 +1,29 @@
+/* 导航栏内部内容容器 */
+.navbar__inner {
+  max-width: 1200px; /* 限制内容最大宽度 */
+  margin: 0 auto; /* 内容居中对齐 */
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: space-between;
+  padding: 0 20px; /* 减少左右内边距 */
+  height: 100%; /* 占满整个导航栏高度 */
+}
+
+/* 导航项样式 */
+.navbar__items {
+  display: flex;
+  gap: 10px; /* 减小导航项间距 */
+  align-items: center; /* 确保导航项垂直居中 */
+}
+
+/* 导航链接样式 */
+.navbar__link {
+  color: #333;
+  font-size: 1rem;
+  padding: 5px 8px; /* 缩小内边距 */
+  text-decoration: none;
+  transition: color 0.3s; /* 增加悬停动画效果 */
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  height: 100%; /* 占满父容器高度 */
+}

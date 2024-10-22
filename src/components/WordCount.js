@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useDoc } from '@docusaurus/theme-common/internal';
+import { useLocation } from '@docusaurus/router';
+import { useCurrentSidebarCategory } from '@docusaurus/theme-common';
 
 const WordCount = () => {
   const [wordCounts, setWordCounts] = useState({});
-  const { metadata } = useDoc(); // 获取当前文档的元数据
+  const location = useLocation(); // 获取当前路径
+
+  // 仅在类别页面上使用 useCurrentSidebarCategory
+  let currentCategory;
+  try {
+    currentCategory = useCurrentSidebarCategory();
+  } catch (error) {
+    console.warn('useCurrentSidebarCategory should only be used on category index pages.');
+  }
+
+  const docPath = location.pathname.replace(/\/$/, '');
 
   useEffect(() => {
     const fetchWordCounts = async () => {
@@ -22,15 +33,9 @@ const WordCount = () => {
     fetchWordCounts();
   }, []);
 
-  // 确保 wordCounts 已经被设置
   if (Object.keys(wordCounts).length === 0) {
     return <p>Loading word count...</p>;
   }
-
-  // 获取文档的路径信息
-  const docPath = metadata.permalink.replace(/\/$/, ''); // 去除末尾的斜杠
-
-  console.log('Document Path:', docPath); // 打印 docPath
 
   const wordCount = wordCounts[docPath]?.words;
 
