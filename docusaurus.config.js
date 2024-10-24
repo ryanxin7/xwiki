@@ -199,6 +199,11 @@ const config = {
             label: 'Tutorial',
           },*/
           {
+            to: '/blog', // Internal link to an about page
+            label: 'Blog',
+            position: 'left',
+          },
+          {
             to: 'k8s/',
             activeBasePath: 'k8s',
             label: 'Kubernetes',
@@ -398,10 +403,10 @@ const config = {
           {
             title: 'More',
             items: [
-              /*{
+              {
                 label: 'Blog',
                 to: '/blog',
-              },*/
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/ryanxin7',
