@@ -77,13 +77,13 @@ rules:
 
 
 
-**``apiVersion``** 指定了 RBAC API 的版本。
-**``kind``** 指定了要创建的对象类型，这里是一个 Role。
-**``metadata``** 中包含了元数据信息，其中 namespace 是该 Role 所属的命名空间，name 是该 Role 的名称。
-**`rules`** 列表定义了该 Role 的访问规则：
-**`apiGroups`** 定义了资源所属的 API 组，空字符串表示核心 API 组。
-**`resources`** 是权限所应用的资源类型，这里是 "pods"，表示 Pod 资源。
-**`verbs`** 是允许的操作，这里允许 "get"、"list" 和 "watch" 操作，允许用户读取（获取）、列出和监视 Pod 资源。
+``apiVersion`` 指定了 RBAC API 的版本。
+``kind`` 指定了要创建的对象类型，这里是一个 Role。
+``metadata`` 中包含了元数据信息，其中 namespace 是该 Role 所属的命名空间，name 是该 Role 的名称。
+`rules` 列表定义了该 Role 的访问规则：
+`apiGroups` 定义了资源所属的 API 组，空字符串表示核心 API 组。
+`resources` 是权限所应用的资源类型，这里是 "pods"，表示 Pod 资源。
+`verbs` 是允许的操作，这里允许 "get"、"list" 和 "watch" 操作，允许用户读取（获取）、列出和监视 Pod 资源。
 
 
 

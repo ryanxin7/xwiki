@@ -176,7 +176,7 @@ docker-compose up -d
 mkdir -p /etc/containerd/certs.d/harbor.ceamg.com/
 ```
 
-**创建**`**hosts.toml**`**文件**
+**创建`hosts.toml`文件**
 
 ```bash
 [host."https://harbor.ceamg.com"]

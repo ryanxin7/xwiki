@@ -186,7 +186,7 @@ bob@ubuntu-20-04:~$ sudo apt install nfs-common
 ```
 
 
-使用`**showmount -e**`**查看是否可以看到共享目录：
+使用`showmount -e`查看是否可以看到共享目录：
 ```bash
 root@k8s-w-04-35:~# showmount -e 192.168.10.26
 Export list for 192.168.10.26:

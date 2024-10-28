@@ -194,10 +194,10 @@ node_memory_MemTotal_bytes{instance="10.1.0.35:9100"}[5m]
 
 **算术运算符（Arithmetic Operators）:**
 
-- **`+`：** 加法
-- **`-`：** 减法
-- **`\*`：** 乘法
-- **`/`：** 除法
+- `+`：** 加法
+- `-`：** 减法
+- `\*`：** 乘法
+- `/`：** 除法
 
 ```bash
 node_memory_MemFree_bytes/1024/1024 #将内存进行单位转换

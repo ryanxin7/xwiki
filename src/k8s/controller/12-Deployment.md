@@ -184,10 +184,10 @@ strategy:
     maxUnavailable: 1
 ```
 
-- `**minReadySeconds**`：表示 Kubernetes 在等待设置的时间后才进行升级，如果没有设置该值，Kubernetes 会假设该容器启动起来后就提供服务了，如果没有设置该值，在某些极端情况下可能会造成服务不正常运行，默认值就是 0。
-- `**type**`=`**RollingUpdate**`：表示设置更新策略为滚动更新，可以设置为`**Recreate**`和`**RollingUpdate**`两个值，Recreate表示全部重新创建，默认值就是`**RollingUpdate**`。
-- `**maxSurge**`：表示升级过程中最多可以比原先设置多出的 Pod 数量，例如：`maxSurage=1`，`replicas=5`，就表示 Kubernetes 会先启动一个新的 Pod，然后才删掉一个旧的 Pod，整个升级过程中最多会有5+1个 Pod。
-- `**maxUnavaible**`：表示升级过程中最多有多少个 Pod 处于无法提供服务的状态，当maxSurge不为 0 时，该值也不能为 0，例如：`**maxUnavaible=1**`，则表示 Kubernetes 整个升级过程中最多会有 1 个 Pod 处于无法服务的状态。
+- `minReadySeconds`：表示 Kubernetes 在等待设置的时间后才进行升级，如果没有设置该值，Kubernetes 会假设该容器启动起来后就提供服务了，如果没有设置该值，在某些极端情况下可能会造成服务不正常运行，默认值就是 0。
+- `type`=`RollingUpdate`：表示设置更新策略为滚动更新，可以设置为`Recreate`和`RollingUpdate`两个值，Recreate表示全部重新创建，默认值就是`RollingUpdate`。
+- `maxSurge`：表示升级过程中最多可以比原先设置多出的 Pod 数量，例如：`maxSurage=1`，`replicas=5`，就表示 Kubernetes 会先启动一个新的 Pod，然后才删掉一个旧的 Pod，整个升级过程中最多会有5+1个 Pod。
+- `maxUnavaible`：表示升级过程中最多有多少个 Pod 处于无法提供服务的状态，当maxSurge不为 0 时，该值也不能为 0，例如：`maxUnavaible=1`，则表示 Kubernetes 整个升级过程中最多会有 1 个 Pod 处于无法服务的状态。
 
 现在我们来直接更新上面的 Deployment 资源对象：
 ```shell

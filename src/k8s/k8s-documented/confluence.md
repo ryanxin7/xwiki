@@ -781,7 +781,7 @@ where g.group_name = 'confluence-administrators' and d.directory_name='Confluenc
 
 
 
-如果你的密码是`**{PKCS5S2}**`前缀开头的，则用下面这个sql:
+如果你的密码是`{PKCS5S2}`前缀开头的，则用下面这个sql:
 
 ```sql
 update cwd_user set credential =  

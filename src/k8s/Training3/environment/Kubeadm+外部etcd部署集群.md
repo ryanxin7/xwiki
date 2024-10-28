@@ -309,7 +309,7 @@ mkdir -p /opt/ssl/etcd && cd /opt/ssl/etcd
 
 <a name="El3bu"></a>
 #### 4.4.2、生成 etcd CA 证书
-**1、创建**`**etcd-ca-csr.json**`**文件，这是etcd CA证书的签名请求文件**
+**1、创建`etcd-ca-csr.json`文件，这是etcd CA证书的签名请求文件**
 ```bash
 vim etcd-ca-csr.json
 {
@@ -375,7 +375,7 @@ vim etcd-server-csr.json
 
 ```
 
-**2、生成server证书并复制到etcd各个节点 和 master节点的**`**/etc/kubernetes/pki/etcd**`**目录**
+**2、生成server证书并复制到etcd各个节点 和 master节点的`/etc/kubernetes/pki/etcd`目录**
 ```bash
 export etcd_hostname_list="127.0.0.1,etcd01,etcd02,etcd03,192.168.10.96,192.168.10.97,192.168.10.98"
 cfssl gencert \
@@ -411,7 +411,7 @@ cp server.pem server-key.pem /etc/kubernetes/pki/etcd
 
 <a name="mSeHz"></a>
 #### 4.4.4、生成etcd client证书
-**1、创建**`**etcd-client-csr.json**`**文件，这是etcd client证书的签名请求文件**
+**1、创建`etcd-client-csr.json`文件，这是etcd client证书的签名请求文件**
 
 ```bash
 vim etcd-client-csr.json
@@ -436,7 +436,7 @@ vim etcd-client-csr.json
 ```
 
 
-**2、生成client证书并复制到etcd各个节点的**`**/etc/kubernetes/pki/etcd**`**目录**
+**2、生成client证书并复制到etcd各个节点的`/etc/kubernetes/pki/etcd`目录**
 
 ```bash
 cfssl gencert \
@@ -469,7 +469,7 @@ cp healthcheck-client.pem healthcheck-client-key.pem /etc/kubernetes/pki/etcd
 
 <a name="i5Ylv"></a>
 #### 4.4.5、生成etcd peer证书
-**1、创建**`**etcd-peer-csr.json**`**文件，这是etcd peer证书的签名请求文件**
+**1、创建`etcd-peer-csr.json`文件，这是etcd peer证书的签名请求文件**
 ```bash
 vim etcd-peer-csr.json 
 {
@@ -491,7 +491,7 @@ vim etcd-peer-csr.json
 ```
 
 
-**2、生成peer证书并复制到etcd各个节点的**`**/etc/kubernetes/pki/etcd**`**目录**
+**2、生成peer证书并复制到etcd各个节点的`/etc/kubernetes/pki/etcd`目录**
 
 ```bash
 export etcd_hostname_list="127.0.0.1,etcd01,etcd02,etcd03,192.168.10.96,192.168.10.97,192.168.10.98"
@@ -535,9 +535,9 @@ cp server.pem server-key.pem healthcheck-client.pem healthcheck-client-key.pem p
 #### **4.4.6、生成apiserver访问etcd client证书**
 
 
-**说明：**`**apiserver-etcd-client.pem**`**、**`**apiserver-etcd-client-key.pem**`**用于API服务器安全地连接到etcd的客户端证书。**
+**说明：`apiserver-etcd-client.pem`、`apiserver-etcd-client-key.pem`用于API服务器安全地连接到etcd的客户端证书。**
 
-**1、创建**`**apiserver-etcd-client-csr.json**`**文件，这是etcd客户端证书的签名请求文件**
+**1、创建`apiserver-etcd-client-csr.json`文件，这是etcd客户端证书的签名请求文件**
 
 ```bash
 vim apiserver-etcd-client-csr.json
@@ -561,7 +561,7 @@ vim apiserver-etcd-client-csr.json
 ```
 
 
-**2、生成apiserver-etcd-client证书并复制到master节点的**`**/etc/kubernetes/pki**`**目录**
+**2、生成apiserver-etcd-client证书并复制到master节点的`/etc/kubernetes/pki`目录**
 
 ```bash
 cfssl gencert \
@@ -828,7 +828,7 @@ ctr image pull --all-platforms registry.cn-hangzhou.aliyuncs.com/google_containe
 
 <a name="UIAiO"></a>
 ### 5.7、配置containerd配置镜像加速
-**直接在**`** /etc/containerd/config.toml **`**文件中添加配置，配置好后重启containerd服务：**
+**直接在` /etc/containerd/config.toml `文件中添加配置，配置好后重启containerd服务：**
 ```bash
       [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
         [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]

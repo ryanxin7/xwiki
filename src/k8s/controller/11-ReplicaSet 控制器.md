@@ -9,7 +9,7 @@ date: 2024-04-16T16:01:32
 
 **例如，ReplicaSet 控制器负责维护集群中运行的 Pod 数量；Node 控制器负责监控节点的状态，并在节点出现故障时及时做出响应。**<br />总而言之，在 Kubernetes 中，每个控制器只负责某种类型的特定资源。
 ## 控制器
-Kubernetes 控制器会监听资源的 `**创建/更新/删除**` 事件，并触发 Reconcile 调谐函数作为响应，整个调整过程被称作 “**Reconcile Loop**”（调谐循环） 或者 **“Sync Loop”**（同步循环）。<br />Reconcile 是一个使用资源对象的命名空间和资源对象名称来调用的函数，使得资源对象的实际状态与 资源清单中定义的状态保持一致。调用完成后，Reconcile 会将资源对象的状态更新为当前实际状态。我们可以用下面的一段伪代码来表示这个过程：
+Kubernetes 控制器会监听资源的 `创建/更新/删除` 事件，并触发 Reconcile 调谐函数作为响应，整个调整过程被称作 “**Reconcile Loop**”（调谐循环） 或者 **“Sync Loop”**（同步循环）。<br />Reconcile 是一个使用资源对象的命名空间和资源对象名称来调用的函数，使得资源对象的实际状态与 资源清单中定义的状态保持一致。调用完成后，Reconcile 会将资源对象的状态更新为当前实际状态。我们可以用下面的一段伪代码来表示这个过程：
 ```go
 for {
   desired := getDesiredState()  // 期望的状态
@@ -57,7 +57,7 @@ spec:
             - containerPort: 80
 ```
 
-上面的 YAML 文件结构和我们之前定义的 Pod 看上去没太大两样，有常见的 `**apiVersion**`、`kind`、`metadata`，在 `spec` 下面描述 `ReplicaSet` 的基本信息，其中包含 3 个重要内容：
+上面的 YAML 文件结构和我们之前定义的 Pod 看上去没太大两样，有常见的 `apiVersion`、`kind`、`metadata`，在 `spec` 下面描述 `ReplicaSet` 的基本信息，其中包含 3 个重要内容：
 
 - `replias`：表示期望的 Pod 的副本数量
 - `selector`：`Label Selector`，用来匹配要控制的 Pod 标签，需要和下面的 Pod 模板中的标签一致
