@@ -23,7 +23,7 @@ function HeroBanner() {
 
           {/* 社交图标部分 */}
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.socialIcon} >
+            <a href="https://www.yuque.com/ryanxx" className={styles.socialIcon} >
                <img src="img/yuque.svg" alt="yuque" /> {/* Use an SVG for Xiaohongshu */}
             </a>
             <a href="https://www.instagram.com/rain.sz1?igsh=NTR0bDc1dDF2aWoz&utm_source=qr" className={styles.socialIcon} style={{ backgroundColor: '#E1306C' }}>
