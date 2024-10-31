@@ -32,7 +32,7 @@ function HeroBanner() {
             <a href="https://www.xiaohongshu.com/user/profile/620f22950000000021024021?xhsshare=CopyLink&appuid=620f22950000000021024021&apptime=1730278633&share_id=3ea0aafbe8094696ae28c67d52d35f12" className={styles.socialIcon} >
                <img src="img/xiaohongshu-icon.svg" alt="Xiaohongshu" /> {/* Use an SVG for Xiaohongshu */}
             </a>
-            <a href="#" className={styles.socialIcon} >
+            <a href="https://www.yuque.com/ryanxx" className={styles.socialIcon} >
                <img src="img/yuque.svg" alt="yuque" /> {/* Use an SVG for Xiaohongshu */}
             </a>
           </div>
