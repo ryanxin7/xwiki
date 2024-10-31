@@ -23,7 +23,7 @@ function HeroBanner() {
 
           {/* 社交图标部分 */}
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#4267B2' }}>
+            <a href="https://facebook.com/xinnn999" className={styles.socialIcon} style={{ backgroundColor: '#4267B2' }}>
               <i className="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.instagram.com/rain.sz1?igsh=NTR0bDc1dDF2aWoz&utm_source=qr" className={styles.socialIcon} >
