@@ -23,17 +23,17 @@ function HeroBanner() {
 
           {/* 社交图标部分 */}
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.socialIcon} >
-               <img src="img/yuque.svg" alt="yuque" /> {/* Use an SVG for Xiaohongshu */}
+            <a href="#" className={styles.socialIcon} style={{ backgroundColor: '#4267B2' }}>
+              <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/rain.sz1?igsh=NTR0bDc1dDF2aWoz&utm_source=qr" className={styles.socialIcon} style={{ backgroundColor: '#E1306C' }}>
-              <i className="fab fa-instagram"></i> {/* Instagram icon */}
+            <a href="https://www.instagram.com/rain.sz1?igsh=NTR0bDc1dDF2aWoz&utm_source=qr" className={styles.socialIcon} >
+              <img src="img/instagram-1-svgrepo-com.svg" alt="instagram" /> {/* Instagram icon */}
             </a>    
-            <a href="https://www.reddit.com/u/Adventurous-Cat2770/s/BRJZF5CHzg" className={styles.socialIcon} style={{ backgroundColor: '#FF4500' }}>
-              <i className="fab fa-reddit-alien"></i> {/* Reddit icon */}
-            </a>
             <a href="https://www.xiaohongshu.com/user/profile/620f22950000000021024021?xhsshare=CopyLink&appuid=620f22950000000021024021&apptime=1730278633&share_id=3ea0aafbe8094696ae28c67d52d35f12" className={styles.socialIcon} >
                <img src="img/xiaohongshu-icon.svg" alt="Xiaohongshu" /> {/* Use an SVG for Xiaohongshu */}
+            </a>
+            <a href="#" className={styles.socialIcon} >
+               <img src="img/yuque.svg" alt="yuque" /> {/* Use an SVG for Xiaohongshu */}
             </a>
           </div>
         </div>
