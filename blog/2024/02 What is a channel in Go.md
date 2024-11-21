@@ -1,7 +1,8 @@
 ---
+##id: whatischannel
 title: "What is a channel in Go"
 description: "This is the third blog post."
-date: "2024-10-21"
+date: 2024-10-21
 authors: [Ryan]
 tags: [Golang, Channel]
 ---
